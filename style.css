@@ -23,7 +23,6 @@ body{
 
 h2{
     position: relative;
-    color: rgba(0, 0, 0, 0);
     font-size: 4vw;
     font-style: italic;
     -webkit-text-stroke: 0.1vw var(--bs-light);
@@ -83,7 +82,7 @@ span{
     position: relative;
     font-size: 1.8vw;
     font-weight: 600;
-    color: #888;
+    color: var(--bs-primary);
 }
 
 
@@ -97,6 +96,7 @@ img{
     position: relative;
     background-image: url(img/bros.gif);
     background-position-y:center;
+    background-position-x:center;
     opacity: 100%;
     background-size: cover;
     background-attachment: fixed;
@@ -136,7 +136,7 @@ img{
         font-size: 2.4vw;
     }
     .imagen{
-        margin: 0;
+        margin: -10vw 0 0 0;
     }
 }
 
