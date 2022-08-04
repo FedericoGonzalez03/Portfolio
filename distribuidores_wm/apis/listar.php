@@ -41,7 +41,8 @@ try {
                                 <input type="submit" onclick="agregarCarrito('.$data['id'].')" class="mx-0 btn btn-primary agregarCarrito" value="Agregar" style="font-size:14px;">
                             </form>
                         </div>
-                    </div>';
+                    </div>
+                    ';
     }
     echo $prods;
 } catch (PDOException $error) {
