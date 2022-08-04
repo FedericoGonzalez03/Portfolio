@@ -11,7 +11,7 @@ $pass = hash('sha512', $pass);
 
 try {
 
-    $conex = new PDO("mysql:host=localhost;port=3306;dbname=u147693105_distwm", 'u147693105_wm', 'distWM2022');
+    $conex = new PDO("mysql:host=localhost;dbname=u147693105_distwm", 'u147693105_wm', 'distWM2022');
     $conex->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $conex->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
     $verificarCorreo = $conex->query("SELECT * FROM usuarios WHERE email='$email'");
