@@ -9,7 +9,7 @@ $precio = isset($_POST['precio']) ? $_POST['precio'] : '';
 $imagen = isset($_POST['imagen']) ? $_POST['imagen'] : '';
 try {
 
-    $conex = new PDO("mysql:host=localhost;port=3306;dbname=distribuidoreswm", 'root', '');
+    $conex = new PDO("mysql:host=localhost;dbname=u147693105_distwm", 'u147693105_wm', 'distWM2022');
     $conex->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $conex->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
     $pdo = $conex->prepare("INSERT INTO productos(codigo, nombre, descripcion, categoria, medida, precio, imagen) VALUES('$codigo','$nombre','$descripcion', '$cat','$medida','$precio','$imagen')");
