@@ -46,7 +46,7 @@ try {
 
                     ';
     }
-    echo $prods;
+    echo json_encode($prods);
 } catch (PDOException $error) {
     echo $error->getMessage();
     die();
