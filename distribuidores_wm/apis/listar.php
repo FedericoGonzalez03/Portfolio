@@ -36,10 +36,10 @@ foreach($datas as $art){
 
 $orderby = "nombre";
 
-array_multisort($sortArray[$orderby],SORT_DESC,$people);
+array_multisort($sortArray[$orderby],SORT_DESC,$datas);
 
     $prods = '';
-    foreach($sortArray as $data){
+    foreach($datas as $data){
         
         $prods .=  
 '                  <div class="card text-center">
@@ -62,7 +62,7 @@ array_multisort($sortArray[$orderby],SORT_DESC,$people);
 
                     ';
     }
-    echo($prods);
+    echo json_encode($prods);
 } catch (PDOException $error) {
     echo $error->getMessage();
     die();
