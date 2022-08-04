@@ -36,7 +36,7 @@ foreach($datas as $art){
 
 $orderby = "precio";
 
-array_multisort($sortArray[$orderby],SORT_ASC,$datas);
+array_multisort($sortArray[$orderby],SORT_DESC,$datas);
 
     $prods = '';
     foreach($datas as $data){
