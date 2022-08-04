@@ -43,7 +43,7 @@ try {
                         </div>
                     </div>';
     }
-    echo json_encode($prods);
+    echo json_encode($datas);
 } catch (PDOException $error) {
     echo $error->getMessage();
     die();
