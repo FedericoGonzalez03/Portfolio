@@ -49,33 +49,7 @@ function listarSinPrecio() {
     fetch('./apis/listar.php')
         .then(res => res.json())
         .then(datas => {
-            datas.sort(function (a, b) {
-                if (parseInt(a.precio) > parseInt(b.precio)) {
-                    return 1;
-                }
-                if (parseInt(a.precio) < parseInt(b.precio)) {
-                    return -1;
-                }
-                return 0;
-            })
-            datas.map(elem => {
-
-                container.setAttribute('style', '');
-                container.innerHTML +=
-                    `
-                    <div class="card text-center">
-                        <img class="card-img-top" src="${elem.imagen}" alt="${elem.nombre}" style="object-fit:cover;height:100px;">
-                        <div class="card-body">
-                            <h5 class="productos card-title">${elem.nombre}</h5>
-                            <p class="card-text" style="font-size:14px;">${elem.descripcion}</p>
-                        </div>
-                        <div class="card-footer">
-                            <p class="card-text text-danger" style="font-size:14px;">Inicia sesión para ver más detalles.</p>
-                        </div>
-                    </div>
-                `;
-            })
-
+            container.innerHTML = datas
         })
 }
 
