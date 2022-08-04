@@ -22,8 +22,24 @@ try {
             'imagen' => $item->imagen
         ];
     }
+
+    $sortArray = array();
+
+foreach($datas as $art){
+    foreach($art as $key=>$value){
+        if(!isset($sortArray[$key])){
+            $sortArray[$key] = array();
+        }
+        $sortArray[$key][] = $value;
+    }
+}
+
+$orderby = "nombre";
+
+array_multisort($sortArray[$orderby],SORT_DESC,$people);
+
     $prods = '';
-    foreach($datas as $data){
+    foreach($sortArray as $data){
         
         $prods .=  
 '                  <div class="card text-center">
