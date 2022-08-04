@@ -22,7 +22,7 @@ try {
             'imagen' => $item->imagen
         ];
     }
-    $prods = 'hola';
+    $prods = '';
     foreach($datas as $data){
         
         $prods .=  '<div class="card text-center">
@@ -43,7 +43,7 @@ try {
                         </div>
                     </div>';
     }
-    echo $prods;
+    echo json_encode($prods);
 } catch (PDOException $error) {
     echo $error->getMessage();
     die();
