@@ -26,7 +26,7 @@ try {
     foreach($datas as $data){
         
         $prods .=  '<div class="card text-center">
-                        <img class="card-img-top" src="'.$data->imagen.'" alt="'.$data->nombre.'" style="object-fit:cover;height:100px;">
+                        <img class="card-img-top" src="'.$data.'" alt="'.$data->nombre.'" style="object-fit:cover;height:100px;">
                         <div class="card-body">
                             <h5 class="productos card-title">'.$data->nombre.'</h5>
                             <span class="text-primary" style="font-weight:700;">$$'.$data->precio.' + IVA</span>
