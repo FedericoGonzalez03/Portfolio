@@ -49,6 +49,7 @@ function listarSinPrecio() {
     fetch('./apis/listar.php')
         .then(datas => {
             container.innerHTML = `${datas}`
+            alert(datas)
         })
 }
 
