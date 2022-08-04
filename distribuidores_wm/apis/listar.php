@@ -30,7 +30,7 @@ try {
                         <img class="card-img-top" src="'.$data['imagen'].'" alt="'.$data['nombre'].'" style="object-fit:cover;height:100px;">
                         <div class="card-body">
                             <h5 class="productos card-title">'.$data['nombre'].'</h5>
-                            <span class="text-primary" style="font-weight:700;">$$'.$data['precio'].' + IVA</span>
+                            <span class="text-primary" style="font-weight:700;">$'.$data['precio'].' + IVA</span>
                             <p class="card-text" style="font-size:14px;">'.$data['descripcion'].'</p>
                         </div>
                         <div class="card-footer">
