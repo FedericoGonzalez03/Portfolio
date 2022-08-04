@@ -1,0 +1,100 @@
+
+body {
+    min-width: 100%;
+
+}
+#logo{
+    width: 100px;
+}
+header {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(200, 200, 200, 1) 100%);
+}
+
+#titulo {
+    margin-left: 15px;
+    display: inline-block;
+}
+#navBar {
+    position: sticky;
+}
+input[type=number]::-webkit-inner-spin-button .cant:not(){ 
+    
+    display: none;   /* Desactivo el spin de los input NUMBER, menos para los .cant*/
+}
+.card{
+    transition: all 100ms;
+}
+.card:hover{
+    box-shadow: 0px 0px 11px 5px rgba(0, 0, 0, 0.2);
+    transition: all 400ms;
+    z-index: 2;
+    transform: scale(1.2);
+
+}
+
+.cant{
+    height: 35px!important;
+}
+
+#fondo{
+    min-height:550px!important;
+}
+
+#gridCont {
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 15px;
+}
+.agregarCarrito{
+    width: 70%;
+    height: 100%;
+}
+
+#buscar {
+    margin-left: 25px;
+}
+
+.cardTitle {
+    font-size: 50px;
+}
+
+@media (max-width: 1399px) {
+    #gridCont {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 1199px) {
+    #gridCont {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    #buscar {
+        margin-left: 0;
+    }
+}
+
+
+@media (max-width: 767px) {
+    #gridCont {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 574px) {
+    #titulo {
+        display: block;
+        text-align: center;
+    }
+    
+    #logo {
+        display: block;
+        margin: auto;
+        width: 70px;
+    }
+    #gridCont {
+        grid-template-columns: repeat(2, 1fr);
+        }
+}

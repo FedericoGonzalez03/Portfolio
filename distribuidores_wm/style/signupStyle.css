@@ -1,0 +1,77 @@
+
+body {
+    min-width: 100%;
+
+}
+#logo{
+    width: 100px;
+}
+header {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(200, 200, 200, 1) 100%);
+}
+
+#titulo {
+    margin-left: 15px;
+    display: inline-block;
+}
+#navBar {
+    position: sticky;
+}
+input[type=number]::-webkit-inner-spin-button{ 
+    display: none;                                 /* Desactivo el spin de los input NUMBER */
+}
+
+#gridCont {
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 15px;
+}
+
+#buscar {
+    margin-left: 25px;
+}
+
+.cardTitle {
+    font-size: 50px;
+}
+
+@media (max-width: 1399px) {
+    #gridCont {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 1199px) {
+    #gridCont {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    #buscar {
+        margin-left: 0;
+    }
+}
+
+
+@media (max-width: 767px) {
+    #gridCont {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 574px) {
+    #titulo {
+        display: block;
+        text-align: center;
+    }
+    
+    #logo {
+        display: block;
+        margin: auto;
+        width: 70px;
+    }
+    #gridCont {
+        grid-template-columns: repeat(2, 1fr);
+        }
+}
