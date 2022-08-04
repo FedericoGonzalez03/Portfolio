@@ -23,26 +23,26 @@ try {
         ];
     }
     $prods = 'hola';
-    // foreach($datas as $data){
+    foreach($datas as $data){
         
-    //     $prods +=  '<div class="card text-center">
-    //                     <img class="card-img-top" src="'+$data->imagen+'" alt="'+$data->nombre+'" style="object-fit:cover;height:100px;">
-    //                     <div class="card-body">
-    //                         <h5 class="productos card-title">'+$data->nombre+'</h5>
-    //                         <span class="text-primary" style="font-weight:700;">$$'+$data->precio+' + IVA</span>
-    //                         <p class="card-text" style="font-size:14px;">'+$data->descripcion+'</p>
-    //                     </div>
-    //                     <div class="card-footer">
-    //                         <form action="#" method="POST" id="'+$data->id+'">
-    //                             <input hidden type="text" name="id" value="'+$data->id+'">
-    //                             <input hidden type="text" name="nombre" value="'+$data->nombre+'">
-    //                             <input hidden type="number" name="precio" value="'+$data->precio+'">
-    //                             <input type="number" name="cant" class="p-0 text-center mx-0 d-inline form-control w-25 cant align-middle" min="1" value="1">
-    //                             <input type="submit" onclick="agregarCarrito('+$data->id+')" class="mx-0 btn btn-primary agregarCarrito" value="Agregar" style="font-size:14px;">
-    //                         </form>
-    //                     </div>
-    //                 </div>';
-    // }
+        $prods .=  '<div class="card text-center">
+                        <img class="card-img-top" src="'.$data->imagen.'" alt="'.$data->nombre.'" style="object-fit:cover;height:100px;">
+                        <div class="card-body">
+                            <h5 class="productos card-title">'.$data->nombre.'</h5>
+                            <span class="text-primary" style="font-weight:700;">$$'.$data->precio.' + IVA</span>
+                            <p class="card-text" style="font-size:14px;">'.$data->descripcion.'</p>
+                        </div>
+                        <div class="card-footer">
+                            <form action="#" method="POST" id="'.$data->id.'">
+                                <input hidden type="text" name="id" value="'.$data->id.'">
+                                <input hidden type="text" name="nombre" value="'.$data->nombre.'">
+                                <input hidden type="number" name="precio" value="'.$data->precio.'">
+                                <input type="number" name="cant" class="p-0 text-center mx-0 d-inline form-control w-25 cant align-middle" min="1" value="1">
+                                <input type="submit" onclick="agregarCarrito('.$data->id.')" class="mx-0 btn btn-primary agregarCarrito" value="Agregar" style="font-size:14px;">
+                            </form>
+                        </div>
+                    </div>';
+    }
     echo $prods;
 } catch (PDOException $error) {
     echo $error->getMessage();
