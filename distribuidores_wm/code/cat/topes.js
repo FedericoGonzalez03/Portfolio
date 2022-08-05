@@ -1,7 +1,9 @@
 window.onload = inicio;
 
 function inicio() {
-    window.location.href = window.location.href + "?w1=" + 'Topes y Aislacion';
+    if(window.location.href !== 'https://distribuidoreswm.federicogs.com/routes/categorias/topes.html?w1=Topes%20y%20Aislacion'){
+        window.location.href = window.location.href + "?w1=" + 'Topes y Aislacion';
+    }
     verificarSesion();
     document.getElementById('buscar').addEventListener('keyup', actualizar);
     document.getElementById('logout').onclick = cerrarSesion;
