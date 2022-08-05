@@ -40,9 +40,13 @@ function listar() {
         })
 }
 
-function listarSinPrecio() {
-
+function listarSinPrecio() {   
+    let cat = document.createElement('input');
     let container = document.getElementById('gridCont');
+    container.appendChild(cat)
+    cat.classList.add('visually-hidden')
+    cat.value = 'Agropecuaria'
+    
     container.innerHTML = '<p id="sinRes" class="visually-hidden" style="grid-column: 1 / main-end;display:block;text-align:center;font-size:30px;vertical-align:middle;">No se encontraron productos para su busqueda...</p>'
     fetch('../../apis/listarSinPrecio.php')
         .then(res => res.json())
