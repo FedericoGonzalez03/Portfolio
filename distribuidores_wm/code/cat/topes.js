@@ -49,6 +49,11 @@ function listarSinPrecio() {
         .then(res => res.json())
         .then(datas => {
             container.innerHTML += datas
+            for(prod of container.children){
+                if(prod.children[1].children[2].innerHTML == 'Agropecuaria'){
+                    console.log('hola')
+                }
+            }
         })
 }
 

@@ -46,6 +46,7 @@ array_multisort($sortArray[$orderby],SORT_ASC,$datas);
                         <div class="card-body">
                             <h5 class="productos card-title">'.$data['nombre'].'</h5>
                             <p class="card-text" style="font-size:14px;">'.$data['descripcion'].'</p>
+                            <span class="visually-hidden">'.$data['categoria'].'</span>
                         </div>
                         <div class="card-footer">
                             <p class="card-text text-danger" style="font-size:14px;">Inicia sesión para ver más detalles.</p>
