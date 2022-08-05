@@ -33,47 +33,10 @@ function listar() {
 
     let container = document.getElementById('gridCont');
     container.innerHTML = '<p id="sinRes" class="visually-hidden" style="grid-column: 1 / main-end;display:block;text-align:center;font-size:30px;vertical-align:middle;">No se encontraron productos para su busqueda...</p>'
-    fetch('../../apis/listar.php')
+    fetch('./apis/listar.php')
         .then(res => res.json())
         .then(datas => {
-            datas.sort(function (a, b) {
-                if (parseInt(a.precio) > parseInt(b.precio)) {
-                    return 1;
-                }
-                if (parseInt(a.precio) < parseInt(b.precio)) {
-                    return -1;
-                }
-                return 0;
-            })
-            datas.map(elem => {
-                if (elem.categoria == 'Bazar') {
-
-                    container.setAttribute('style', '');
-                    container.innerHTML +=
-                        `
-                        <div class="card text-center">
-                            <img class="card-img-top" src="${elem.imagen}" alt="${elem.nombre}" style="object-fit:cover;height:100px;">
-                            <div class="card-body">
-                                <h5 class="productos card-title">${elem.nombre}</h5>
-                                <span class="text-primary" style="font-weight:700;">$${elem.precio} + IVA</span>
-                                <p class="card-text" style="font-size:14px;">${elem.descripcion}</p>
-                            </div>
-                            <div class="card-footer">
-                                <form action="#" method="POST" id="${elem.id}">
-                                    <input hidden type="text" name="id" value="${elem.id}">
-                                    <input hidden type="text" name="nombre" value="${elem.nombre}">
-                                    <input hidden type="number" name="precio" value="${elem.precio}">
-                                    <input type="number" name="cant" class="p-0 text-center mx-0 d-inline form-control w-25 cant align-middle" min="1" value="1">
-                                    <input type="submit" onclick="agregarCarrito(${elem.id})" class="mx-0 btn btn-primary agregarCarrito" value="Agregar" style="font-size:14px;">
-                                </form>
-                            </div>
-                        </div>
-                    `;
-
-                }
-
-            })
-
+            container.innerHTML += datas
         })
 }
 
@@ -81,40 +44,10 @@ function listarSinPrecio() {
 
     let container = document.getElementById('gridCont');
     container.innerHTML = '<p id="sinRes" class="visually-hidden" style="grid-column: 1 / main-end;display:block;text-align:center;font-size:30px;vertical-align:middle;">No se encontraron productos para su busqueda...</p>'
-    fetch('../../apis/listar.php')
+    fetch('./apis/listarSinPrecio.php')
         .then(res => res.json())
         .then(datas => {
-            datas.sort(function (a, b) {
-                if (parseInt(a.precio) > parseInt(b.precio)) {
-                    return 1;
-                }
-                if (parseInt(a.precio) < parseInt(b.precio)) {
-                    return -1;
-                }
-                return 0;
-            })
-            datas.map(elem => {
-                if (elem.categoria == 'Bazar') {
-
-                    container.setAttribute('style', '');
-                    container.innerHTML +=
-                        `
-                        <div class="card text-center">
-                            <img class="card-img-top" src="${elem.imagen}" alt="${elem.nombre}" style="object-fit:cover;height:100px;">
-                            <div class="card-body">
-                                <h5 class="productos card-title">${elem.nombre}</h5>
-                                <p class="card-text" style="font-size:14px;">${elem.descripcion}</p>
-                            </div>
-                            <div class="card-footer">
-                                <p class="card-text text-danger" style="font-size:14px;">Inicia sesión para ver más detalles.</p>
-                            </div>
-                        </div>
-                    `;
-
-                }
-
-            })
-
+            container.innerHTML += datas
         })
 }
 
