@@ -50,9 +50,9 @@ function listarSinPrecio() {
         .then(datas => {
             container.innerHTML += datas
             for(prod of container.children){
-                if(prod.children[1].children[2].innerHTML == 'Agropecuaria'){
+                // if(prod.children[1].children[2].innerHTML == 'Agropecuaria'){
                     console.log('hola')
-                }
+                // }
             }
         })
 }
