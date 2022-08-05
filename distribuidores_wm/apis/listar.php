@@ -8,7 +8,7 @@ try {
 
     $res = $conex->query('SELECT * FROM productos');
     $datas = [];
-    echo($res);
+    echo(json_encode($res));
     while ($item = $res->fetch(PDO::FETCH_OBJ)) {
 
         $datas[] = [
