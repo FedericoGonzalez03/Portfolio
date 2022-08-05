@@ -8,7 +8,7 @@ try {
 
     $res = $conex->query('SELECT * FROM productos');
     $datas = [];
-
+    echo($res);
     while ($item = $res->fetch(PDO::FETCH_OBJ)) {
 
         $datas[] = [
@@ -62,7 +62,7 @@ array_multisort($sortArray[$orderby],SORT_DESC,$datas);
 
                     ';
     }
-    echo json_encode($prods);
+    // echo json_encode($prods);
 } catch (PDOException $error) {
     echo $error->getMessage();
     die();

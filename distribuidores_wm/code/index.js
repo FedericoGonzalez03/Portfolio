@@ -46,7 +46,7 @@ function listarSinPrecio() {
 
     let container = document.getElementById('gridCont');
     container.innerHTML = '<p id="sinRes" class="visually-hidden" style="grid-column: 1 / main-end;display:block;text-align:center;font-size:30px;vertical-align:middle;">No se encontraron productos para su busqueda...</p>'
-    fetch('./apis/listar.php')
+    fetch('./apis/listarSinPrecio.php')
         .then(res => res.json())
         .then(datas => {
             container.innerHTML += datas
