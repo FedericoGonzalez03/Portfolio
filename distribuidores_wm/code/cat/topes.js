@@ -1,6 +1,7 @@
 window.onload = inicio;
 
 function inicio() {
+    window.location.href = window.location.href + "?w1=" + 'Topes y Aislacion';
     verificarSesion();
     document.getElementById('buscar').addEventListener('keyup', actualizar);
     document.getElementById('logout').onclick = cerrarSesion;
