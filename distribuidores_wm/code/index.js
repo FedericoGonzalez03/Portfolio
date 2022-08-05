@@ -38,7 +38,7 @@ function listar() {
     fetch('./apis/listar.php')
         .then(res => res.json())
         .then(datas => {
-            container.innerHTML = datas
+            container.innerHTML += datas
         })
 }
 
@@ -49,7 +49,7 @@ function listarSinPrecio() {
     fetch('./apis/listar.php')
         .then(res => res.json())
         .then(datas => {
-            container.innerHTML = datas
+            container.innerHTML += datas
         })
 }
 
