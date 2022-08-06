@@ -8,7 +8,7 @@ try {
     if($file == ''){
         $res = $conex->query('SELECT * FROM productos');
     }else{
-        $res = $conex->query('SELECT * FROM productos WHERE categoria="'.$w1.'"');
+        $res = $conex->query('SELECT * FROM productos WHERE categoria="'.$file.'"');
     }
     $datas = [];
     while ($item = $res->fetch(PDO::FETCH_OBJ)) {
