@@ -2,7 +2,7 @@ window.onload = inicio;
 
 function inicio() {
     if(window.location.href == 'https://distribuidoreswm.federicogs.com/routes/categorias/topes.html'){
-        window.location.href = window.location.href + "?w1=" + 'Topes y Aislacion';
+        window.location.href = window.location.href + "?w1=" + 'Sanitaria';
     }
     verificarSesion();
     document.getElementById('buscar').addEventListener('keyup', actualizar);
