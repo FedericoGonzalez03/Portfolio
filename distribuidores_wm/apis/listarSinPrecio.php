@@ -5,10 +5,10 @@ try {
     $conex = new PDO("mysql:host=localhost;dbname=u147693105_distwm", 'u147693105_wm', 'distWM2022');
     $conex->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $conex->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
-    if($file !== ''){
-        $res = $conex->query('SELECT * FROM productos WHERE categoria="'.$w1.'"');
-    }else{
+    if($file == ''){
         $res = $conex->query('SELECT * FROM productos');
+    }else{
+        $res = $conex->query('SELECT * FROM productos WHERE categoria="'.$w1.'"');
     }
     $datas = [];
     while ($item = $res->fetch(PDO::FETCH_OBJ)) {
