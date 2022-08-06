@@ -33,23 +33,25 @@ function listar() {
 
     let container = document.getElementById('gridCont');
     container.innerHTML = '<p id="sinRes" class="visually-hidden" style="grid-column: 1 / main-end;display:block;text-align:center;font-size:30px;vertical-align:middle;">No se encontraron productos para su busqueda...</p>'
-    fetch('../../apis/listar.php')
+    fetch('../../apis/listar.php',{method:'POST',body:category})
         .then(res => res.json())
         .then(datas => {
             container.innerHTML += datas
         })
 }
 
-function listarSinPrecio() {
+function listarSinPrecio() {   
 
     let container = document.getElementById('gridCont');
+    let category = new FormData(document.getElementById('cat'))
     container.innerHTML = '<p id="sinRes" class="visually-hidden" style="grid-column: 1 / main-end;display:block;text-align:center;font-size:30px;vertical-align:middle;">No se encontraron productos para su busqueda...</p>'
-    fetch('../../apis/listarSinPrecio.php')
+    fetch('../../apis/listarSinPrecio.php',{method:'POST',body:category})
         .then(res => res.json())
         .then(datas => {
             container.innerHTML += datas
         })
 }
+
 
 function verificarSesion() {
     let btnLogIn = document.getElementById('login');
