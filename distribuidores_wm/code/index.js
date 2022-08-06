@@ -12,7 +12,7 @@ function actualizar() {
     let container = document.getElementById('gridCont');
     let busqueda = document.getElementById('buscar').value;
     document.getElementById('sinRes').classList.add('visually-hidden')
-    document.querySelectorAll('.productos').forEach(producto => {
+    document.querySelectorAll('.productos').map(producto => {
         if (producto.textContent.toLowerCase().includes(busqueda.toLowerCase())) {
             producto.parentNode.parentNode.classList.remove('visually-hidden')
         } else {
