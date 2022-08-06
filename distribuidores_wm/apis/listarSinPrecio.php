@@ -1,12 +1,15 @@
 <?php
-$file = $_GET['w1'];
+$file = isset($_GET['w1']) ? $_GET['w1'] : '';
 try {
 
     $conex = new PDO("mysql:host=localhost;dbname=u147693105_distwm", 'u147693105_wm', 'distWM2022');
     $conex->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $conex->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
-
-    $res = $conex->query('SELECT * FROM productos WHERE categoria="'.$w1.'"');
+    if($file !== ''){
+        $res = $conex->query('SELECT * FROM productos WHERE categoria="'.$w1.'"');
+    }else{
+        $res = $conex->query('SELECT * FROM productos');
+    }
     $datas = [];
     while ($item = $res->fetch(PDO::FETCH_OBJ)) {
         
