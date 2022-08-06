@@ -6,7 +6,7 @@ try {
     $conex->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $conex->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 
-    $res = $conex->query('SELECT * FROM productos');
+    $res = $conex->query('SELECT * FROM productos WHERE categoria="'.$file.'"');
     $datas = [];
     while ($item = $res->fetch(PDO::FETCH_OBJ)) {
         
@@ -54,7 +54,7 @@ array_multisort($sortArray[$orderby],SORT_ASC,$datas);
                     </div>
 ';
     }
-    echo json_encode($file);
+    echo json_encode($prods);
 } catch (PDOException $error) {
     echo $error->getMessage();
     die();
