@@ -46,7 +46,7 @@ function listar() {
 function listarSinPrecio() {   
 
     let container = document.getElementById('gridCont');
-    let category = FormData(document.getElementById('cat'))
+    let category = new FormData(document.getElementById('cat'))
     container.innerHTML = '<p id="sinRes" class="visually-hidden" style="grid-column: 1 / main-end;display:block;text-align:center;font-size:30px;vertical-align:middle;">No se encontraron productos para su busqueda...</p>'
     fetch('../../apis/listarSinPrecio.php',{method:'POST',body:category})
         .then(res => res.json())
