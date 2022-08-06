@@ -6,7 +6,7 @@ try {
     $conex->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $conex->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 
-    $res = $conex->query('SELECT * FROM productos WHERE categoria="'.$file.'"');
+    $res = $conex->query('SELECT * FROM productos WHERE categoria="Ferreteria"');
     $datas = [];
     while ($item = $res->fetch(PDO::FETCH_OBJ)) {
         
