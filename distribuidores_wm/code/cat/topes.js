@@ -1,7 +1,7 @@
 window.onload = inicio;
 
 function inicio() {
-    if(window.location.href != 'topes.html?w1=Topes%20y%20Aislacion'){
+    if(window.location.href == 'topes.html'){
         window.location.href = window.location.href + "?w1=" + 'Topes y Aislacion';
     }
     verificarSesion();
