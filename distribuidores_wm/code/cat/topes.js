@@ -2,7 +2,7 @@ window.onload = inicio;
 
 function inicio() {
     if(window.location.href == 'https://distribuidoreswm.federicogs.com/routes/categorias/topes.html'){
-        window.location.href = window.location.href + "?cat=" + 'Sanitaria';
+        window.location.href = window.location.href + "?cat=" + 'Topes y Aislacion';
     }
     verificarSesion();
     document.getElementById('buscar').addEventListener('keyup', actualizar);
@@ -46,9 +46,9 @@ function listar() {
 function listarSinPrecio() {   
 
     let container = document.getElementById('gridCont');
-
-    container.innerHTML = '<p id="sinRes" class="visually-hidden" style="grid-column: 1 / main-end;display:block;text-align:center;font-size:30px;vertical-align:middle;">No se encontraron productos para su busqueda...</p> <input type="text" hidden value="Topes y Aislacion">'
-    fetch('../../apis/listarSinPrecio.php')
+    let category = FormData(document.getElementById('cat'))
+    container.innerHTML = '<p id="sinRes" class="visually-hidden" style="grid-column: 1 / main-end;display:block;text-align:center;font-size:30px;vertical-align:middle;">No se encontraron productos para su busqueda...</p>'
+    fetch('../../apis/listarSinPrecio.php',{method:'POST',body:category})
         .then(res => res.json())
         .then(datas => {
             container.innerHTML += datas
