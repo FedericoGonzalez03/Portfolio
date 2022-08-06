@@ -1,5 +1,5 @@
 <?php
-$file = $_GET['$w1'];
+$file = $_GET['w1'];
 try {
 
     $conex = new PDO("mysql:host=localhost;dbname=u147693105_distwm", 'u147693105_wm', 'distWM2022');
@@ -57,7 +57,7 @@ array_multisort($sortArray[$orderby],SORT_ASC,$datas);
                     </div>
 ';
     }
-    echo json_encode($file);
+    echo json_encode($prods);
 } catch (PDOException $error) {
     echo $error->getMessage();
     die();
