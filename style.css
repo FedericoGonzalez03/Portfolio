@@ -91,6 +91,7 @@ img{
     height: 20vw;
     border-radius: 50%;
     object-fit: cover;
+    background-position-y: start;
 }
 
 
