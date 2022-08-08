@@ -87,6 +87,7 @@ span{
 
 
 #img{    
+    display: block;
     width: 20vw;
     height: 20vw;
     background-image: url(img/fefinho.jpg);
