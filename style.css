@@ -86,12 +86,13 @@ span{
 }
 
 
-img{    
+#img{    
     width: 20vw;
     height: 20vw;
+    background-image: url(img/fefinho.jpg);
     border-radius: 50%;
-    object-fit: cover;
     background-position-y: start;
+    background-size: cover;
 }
 
 
@@ -99,7 +100,7 @@ img{
     position: relative;
     background-image: url(img/bros.gif);
     background-position-y:center;
-    background-position-x:center;
+    background-position-x: center;
     opacity: 100%;
     background-size: cover;
     background-attachment: fixed;
