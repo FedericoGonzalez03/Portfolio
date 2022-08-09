@@ -57,7 +57,7 @@ try {
                     </div>
 ';
 
-        if($prodsPerActualPage == 35){
+        if($prodsPerActualPage == 36){
             $page++;
             $prodsPerActualPage = 0;
         }
