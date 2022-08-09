@@ -86,6 +86,7 @@ function listarSinPrecio() {
                     productos.innerHTML += `<div style="margin-bottom:15px;" id="page${i}" class="gridCont visually-hidden">${datas[i]}</div>`;
                 }
             }
+            maxPages = datas.length;
             pages.innerHTML = `${actualPage + 1} de ${datas.length}`;
             container.innerHTML +=
                 '<p id="sinRes" class="visually-hidden" style="display:block;text-align:center;font-size:30px;vertical-align:middle;">No se encontraron productos para su busqueda...</p>';
