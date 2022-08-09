@@ -9,7 +9,7 @@ function inicio() {
 let actualPage = 0;
 
 function actualizar() {
-    let container = document.getElementById("gridCont");
+    let container = document.getElementById("productos");
     let busqueda = document.getElementById("buscar").value;
     document.getElementById("sinRes").classList.add("visually-hidden");
     document.querySelectorAll(".productos").forEach((producto) => {
@@ -33,7 +33,11 @@ function actualizar() {
     //     document.getElementById("sinRes").classList.remove("visually-hidden");
     // }
     if(busqueda == ''){
-        
+        for(elem of container.children){
+            if(!elem.classList.includes('active')){
+                elem.classList.add("visually-hidden")
+            }
+        }        
     }
 }
 function listar() {
