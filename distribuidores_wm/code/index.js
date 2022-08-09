@@ -16,39 +16,53 @@ function actualizar() {
         if (
             producto.textContent.toLowerCase().includes(busqueda.toLowerCase())
         ) {
-            producto.parentNode.parentNode.classList.remove("visually-hidden")
-            producto.parentNode.parentNode.parentNode.classList.remove("visually-hidden");
+            producto.parentNode.parentNode.classList.remove("visually-hidden");
+            producto.parentNode.parentNode.parentNode.classList.remove(
+                "visually-hidden"
+            );
         } else {
-            producto.parentNode.parentNode.classList.add("visually-hidden")
-            producto.parentNode.parentNode.parentNode.classList.add("visually-hidden");
+            producto.parentNode.parentNode.classList.add("visually-hidden");
+            producto.parentNode.parentNode.parentNode.classList.add(
+                "visually-hidden"
+            );
         }
     });
-    // let contador = 0;
-    // for (elem of container.children) {
-    //     if (elem.classList.contains("visually-hidden")) {
-    //         contador++;
-    //     }
-    // }
-    // if (contador == container.children.length) {
-    //     document.getElementById("sinRes").classList.remove("visually-hidden");
-    // }
-    if(busqueda == ''){
-        for(elem of container.children){
-            if(!elem.classList.contains('actualPage')){
-                elem.classList.add("visually-hidden")
+    let contador = 0;
+    for (elem of container.children) {
+        if (elem.classList.contains("visually-hidden")) {
+            contador++;
+        }
+    }
+    if (contador == container.children.length) {
+        document.getElementById("sinRes").classList.remove("visually-hidden");
+    }
+    if (busqueda == "") {
+        for (elem of container.children) {
+            if (!elem.classList.contains("actualPage")) {
+                elem.classList.add("visually-hidden");
             }
-        }        
+        }
     }
 }
 function listar() {
-    let container = document.getElementById("gridCont");
-    container.innerHTML =
-        '<p id="sinRes" class="visually-hidden" style="grid-column: 1 / main-end;display:block;text-align:center;font-size:30px;vertical-align:middle;">No se encontraron productos para su busqueda...</p>';
+    let container = document.querySelector(".container");
+    let productos = document.querySelector("#productos");
+    let pages = document.querySelector("#pages");
 
     fetch("./apis/listar.php")
         .then((res) => res.json())
         .then((datas) => {
-            container.innerHTML += datas;
+            productos.innerHTML = "";
+            for (i in datas) {
+                if (i == actualPage) {
+                    productos.innerHTML += `<div style="margin-bottom:15px;" id="page${i}" class="gridCont actualPage">${datas[i]}</div>`;
+                } else {
+                    productos.innerHTML += `<div style="margin-bottom:15px;" id="page${i}" class="gridCont visually-hidden">${datas[i]}</div>`;
+                }
+            }
+            pages.innerHTML = `${actualPage + 1} de ${datas.length}`;
+            container.innerHTML +=
+                '<p id="sinRes" class="visually-hidden" style="display:block;text-align:center;font-size:30px;vertical-align:middle;">No se encontraron productos para su busqueda...</p>';
         });
 }
 
@@ -56,23 +70,23 @@ function listarSinPrecio() {
     let container = document.querySelector(".container");
     let productos = document.querySelector("#productos");
     let pages = document.querySelector("#pages");
-    
+
     fetch("./apis/listarSinPrecio.php")
-    .then((res) => res.json())
-    .then((datas) => {
-        productos.innerHTML = '';
-        for (i in datas) {
-            if (i == actualPage) {
+        .then((res) => res.json())
+        .then((datas) => {
+            productos.innerHTML = "";
+            for (i in datas) {
+                if (i == actualPage) {
                     productos.innerHTML += `<div style="margin-bottom:15px;" id="page${i}" class="gridCont actualPage">${datas[i]}</div>`;
                 } else {
                     productos.innerHTML += `<div style="margin-bottom:15px;" id="page${i}" class="gridCont visually-hidden">${datas[i]}</div>`;
                 }
             }
-            pages.innerHTML = `${actualPage+1} de ${datas.length}`
+            pages.innerHTML = `${actualPage + 1} de ${datas.length}`;
             container.innerHTML +=
                 '<p id="sinRes" class="visually-hidden" style="display:block;text-align:center;font-size:30px;vertical-align:middle;">No se encontraron productos para su busqueda...</p>';
         });
-    }
+}
 
 function verificarSesion() {
     let btnLogIn = document.getElementById("login");
