@@ -9,6 +9,7 @@ function inicio() {
 let actualPage = 0;
 
 function actualizar() {
+    let pagination = document.getElementById("pagination");
     let container = document.getElementById("productos");
     let busqueda = document.getElementById("buscar").value;
     document.getElementById("sinRes").classList.add("visually-hidden");
@@ -36,12 +37,14 @@ function actualizar() {
     if (contador == container.children.length) {
         document.getElementById("sinRes").classList.remove("visually-hidden");
     }
+    pagination.classList.toggle('visually-hidden')
     if (busqueda == "") {
         for (elem of container.children) {
             if (!elem.classList.contains("actualPage")) {
                 elem.classList.add("visually-hidden");
             }
         }
+        pagination.classList.toggle('visually-hidden')
     }
 }
 function listar() {
