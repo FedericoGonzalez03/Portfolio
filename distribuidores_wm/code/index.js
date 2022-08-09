@@ -34,7 +34,7 @@ function actualizar() {
     // }
     if(busqueda == ''){
         for(elem of container.children){
-            if(!elem.classList.includes('active')){
+            if(!elem.classList.contains('active')){
                 elem.classList.add("visually-hidden")
             }
         }        
