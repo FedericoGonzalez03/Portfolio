@@ -60,7 +60,7 @@ function listarSinPrecio() {
                 } else {
                     container.innerHTML += `<div id="page${i}" class="gridCont visually-hidden">${datas[i]}</div>`;
                 }
-                pagination.innerHTML += `<a>${i}</a>`
+                pagination.innerHTML += `<a href="#">${i}</a>`
             }
         });
 }
