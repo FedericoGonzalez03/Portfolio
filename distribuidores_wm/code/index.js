@@ -50,7 +50,7 @@ function listarSinPrecio() {
         .then(res => res.json())
         .then(datas => {
             for(i in datas){
-                container.innerHTML += `<div id="page${i}">${datas[i]}</div>`
+                container.innerHTML += datas[i]
             }
         })
 }
