@@ -4,10 +4,12 @@ function inicio() {
     verificarSesion();
     document.getElementById("buscar").addEventListener("keyup", actualizar);
     document.getElementById("logout").onclick = cerrarSesion;
+    document.getElementById("prev").onclick = prevPage;
+    document.getElementById("next").onclick = nextPage;
 }
 
 let actualPage = 0;
-
+let maxPages;
 function actualizar() {
     let pagination = document.getElementById("pagination");
     let container = document.getElementById("productos");
@@ -63,6 +65,7 @@ function listar() {
                     productos.innerHTML += `<div style="margin-bottom:15px;" id="page${i}" class="gridCont visually-hidden">${datas[i]}</div>`;
                 }
             }
+            maxPages = datas.length;
             pages.innerHTML = `${actualPage + 1} de ${datas.length}`;
             container.innerHTML +=
                 '<p id="sinRes" class="visually-hidden" style="display:block;text-align:center;font-size:30px;vertical-align:middle;">No se encontraron productos para su busqueda...</p>';
@@ -140,4 +143,17 @@ function agregarCarrito(id) {
                 }
             });
     });
+}
+
+function prevPage(){
+    if(actualPage !== 1){
+        document.getElementById(`page${actualPage}`).classList.add('visually-hidden')
+        document.getElementById(`page${actualPage-1}`).classList.remove('visually-hidden')
+    }
+}
+function nextPage(){
+    if(actualPage !== maxPages){
+        document.getElementById(`page${actualPage}`).classList.add('visually-hidden')
+        document.getElementById(`page${actualPage+1}`).classList.remove('visually-hidden')
+    }
 }
