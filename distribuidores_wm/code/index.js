@@ -49,9 +49,9 @@ function listarSinPrecio() {
     fetch('./apis/listarSinPrecio.php')
         .then(res => res.json())
         .then(datas => {
-            for(i in datas){
-                container.innerHTML += datas[i]
-            }
+
+            container.innerHTML += datas[0]
+
         })
 }
 
