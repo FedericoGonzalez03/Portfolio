@@ -37,14 +37,14 @@ function actualizar() {
     if (contador == container.children.length) {
         document.getElementById("sinRes").classList.remove("visually-hidden");
     }
-    pagination.classList.toggle('visually-hidden')
+    pagination.classList.add('visually-hidden')
     if (busqueda == "") {
         for (elem of container.children) {
             if (!elem.classList.contains("actualPage")) {
                 elem.classList.add("visually-hidden");
             }
         }
-        pagination.classList.toggle('visually-hidden')
+        pagination.classList.remove('visually-hidden')
     }
 }
 function listar() {
