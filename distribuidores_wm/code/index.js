@@ -146,12 +146,14 @@ function agregarCarrito(id) {
 }
 
 function prevPage(){
+    console.log('anterior')
     if(actualPage !== 1){
         document.getElementById(`page${actualPage}`).classList.add('visually-hidden')
         document.getElementById(`page${actualPage-1}`).classList.remove('visually-hidden')
     }
 }
 function nextPage(){
+    console.log('siguiente')
     if(actualPage !== maxPages){
         document.getElementById(`page${actualPage}`).classList.add('visually-hidden')
         document.getElementById(`page${actualPage+1}`).classList.remove('visually-hidden')
