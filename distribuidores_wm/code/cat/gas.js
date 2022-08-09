@@ -51,8 +51,8 @@ function listar() {
     let container = document.querySelector(".container");
     let productos = document.querySelector("#productos");
     let pages = document.querySelector("#pages");
-
-    fetch("../../apis/listar.php")
+    let category = new FormData(document.getElementById('cat'))
+    fetch("../../apis/listar.php",{method:'POST',body:category})
         .then((res) => res.json())
         .then((datas) => {
             productos.innerHTML = "";
@@ -74,8 +74,8 @@ function listarSinPrecio() {
     let container = document.querySelector(".container");
     let productos = document.querySelector("#productos");
     let pages = document.querySelector("#pages");
-
-    fetch("../../apis/listarSinPrecio.php")
+    let category = new FormData(document.getElementById('cat'))
+    fetch("../../apis/listarSinPrecio.php",{method:'POST',body:category})
         .then((res) => res.json())
         .then((datas) => {
             productos.innerHTML = "";
