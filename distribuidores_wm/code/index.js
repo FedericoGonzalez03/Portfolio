@@ -16,19 +16,24 @@ function actualizar() {
         if (
             producto.textContent.toLowerCase().includes(busqueda.toLowerCase())
         ) {
-            producto.parentNode.parentNode.classList.remove("visually-hidden");
+            producto.parentNode.parentNode.classList.remove("visually-hidden")
+            producto.parentNode.parentNode.parentNode.classList.remove("visually-hidden");
         } else {
-            producto.parentNode.parentNode.classList.add("visually-hidden");
+            producto.parentNode.parentNode.classList.add("visually-hidden")
+            producto.parentNode.parentNode.parentNode.classList.add("visually-hidden");
         }
     });
-    let contador = 0;
-    for (elem of container.children) {
-        if (elem.classList.contains("visually-hidden")) {
-            contador++;
-        }
-    }
-    if (contador == container.children.length) {
-        document.getElementById("sinRes").classList.remove("visually-hidden");
+    // let contador = 0;
+    // for (elem of container.children) {
+    //     if (elem.classList.contains("visually-hidden")) {
+    //         contador++;
+    //     }
+    // }
+    // if (contador == container.children.length) {
+    //     document.getElementById("sinRes").classList.remove("visually-hidden");
+    // }
+    if(busqueda == ''){
+        
     }
 }
 function listar() {
@@ -54,7 +59,7 @@ function listarSinPrecio() {
         productos.innerHTML = '';
         for (i in datas) {
             if (i == actualPage) {
-                    productos.innerHTML += `<div id="page${i}" class="gridCont">${datas[i]}</div>`;
+                    productos.innerHTML += `<div id="page${i}" class="gridCont actualPage">${datas[i]}</div>`;
                 } else {
                     productos.innerHTML += `<div id="page${i}" class="gridCont visually-hidden">${datas[i]}</div>`;
                 }
