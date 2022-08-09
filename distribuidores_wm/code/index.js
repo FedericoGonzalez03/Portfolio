@@ -6,7 +6,6 @@ function inicio() {
     document.getElementById("logout").onclick = cerrarSesion;
 }
 
-let productos = new Array();
 let actualPage = 0;
 
 function actualizar() {
@@ -45,18 +44,18 @@ function listar() {
 }
 
 function listarSinPrecio() {
-    let container = document.querySelector("#productos");
+    let container = document.querySelector(".container");
+    let productos = document.querySelector("#productos");
     let pages = document.querySelector("#pages");
     
     fetch("./apis/listarSinPrecio.php")
     .then((res) => res.json())
     .then((datas) => {
-        productos = datas;
         for (i in datas) {
             if (i == actualPage) {
-                    container.innerHTML += `<div id="page${i}" class="gridCont">${datas[i]}</div>`;
+                    productos.innerHTML += `<div id="page${i}" class="gridCont">${datas[i]}</div>`;
                 } else {
-                    container.innerHTML += `<div id="page${i}" class="gridCont visually-hidden">${datas[i]}</div>`;
+                    productos.innerHTML += `<div id="page${i}" class="gridCont visually-hidden">${datas[i]}</div>`;
                 }
             }
             pages.innerHTML = `${actualPage+1} de ${datas.length}`
