@@ -60,8 +60,8 @@ function listarSinPrecio() {
                 } else {
                     container.innerHTML += `<div id="page${i}" class="gridCont visually-hidden">${datas[i]}</div>`;
                 }
-                pages.innerHTML += `${actualPage+1} de ${datas.length}`
             }
+            pages.innerHTML += `${actualPage+1} de ${datas.length}`
         });
 }
 
