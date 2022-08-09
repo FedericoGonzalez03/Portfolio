@@ -59,13 +59,13 @@ input[type=number]::-webkit-inner-spin-button .cant:not(){
 }
 
 @media (max-width: 1399px) {
-    #gridCont {
+    .gridCont {
         grid-template-columns: repeat(5, 1fr);
     }
 }
 
 @media (max-width: 1199px) {
-    #gridCont {
+    .gridCont {
         grid-template-columns: repeat(4, 1fr);
     }
 }
@@ -78,7 +78,7 @@ input[type=number]::-webkit-inner-spin-button .cant:not(){
 
 
 @media (max-width: 767px) {
-    #gridCont {
+    .gridCont {
         grid-template-columns: repeat(3, 1fr);
     }
 }
@@ -93,7 +93,7 @@ input[type=number]::-webkit-inner-spin-button .cant:not(){
         margin: auto;
         width: 70px;
     }
-    #gridCont {
+    .gridCont {
         grid-template-columns: repeat(2, 1fr);
         }
 }
