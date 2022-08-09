@@ -63,9 +63,9 @@ function listarSinPrecio() {
         productos.innerHTML = '';
         for (i in datas) {
             if (i == actualPage) {
-                    productos.innerHTML += `<div id="page${i}" class="gridCont actualPage">${datas[i]}</div>`;
+                    productos.innerHTML += `<div style="margin-bottom:15px;" id="page${i}" class="gridCont actualPage">${datas[i]}</div>`;
                 } else {
-                    productos.innerHTML += `<div id="page${i}" class="gridCont visually-hidden">${datas[i]}</div>`;
+                    productos.innerHTML += `<div style="margin-bottom:15px;" id="page${i}" class="gridCont visually-hidden">${datas[i]}</div>`;
                 }
             }
             pages.innerHTML = `${actualPage+1} de ${datas.length}`
