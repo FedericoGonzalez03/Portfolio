@@ -27,23 +27,23 @@ try {
 
     $sortArray = array();
 
-foreach($datas as $art){
-    foreach($art as $key=>$value){
-        if(!isset($sortArray[$key])){
-            $sortArray[$key] = array();
+    foreach($datas as $art){
+        foreach($art as $key=>$value){
+            if(!isset($sortArray[$key])){
+                $sortArray[$key] = array();
+            }
+            $sortArray[$key][] = $value;
         }
-        $sortArray[$key][] = $value;
     }
-}
+    $orderby = "precio";
+    array_multisort($sortArray[$orderby],SORT_ASC,$datas);
 
-$orderby = "precio";
-
-array_multisort($sortArray[$orderby],SORT_ASC,$datas);
-
-    $prods = '';
+    $page = 0;
+    $prodsPerActualPage = 0;
+    $prods = [];
     foreach($datas as $data){
-        
-        $prods .=  
+        $prodsPerActualPage++;
+        $prods[$page] .=  
 '                  <div class="card text-center">
                         <img class="card-img-top" src="'.$data['imagen'].'" alt="'.$data['nombre'].'" style="object-fit:cover;height:100px;">
                         <div class="card-body">
@@ -56,6 +56,10 @@ array_multisort($sortArray[$orderby],SORT_ASC,$datas);
                         </div>
                     </div>
 ';
+
+        if($prodsPerActualPage == 35){
+            $page++;
+        }
     }
     echo json_encode($prods);
 } catch (PDOException $error) {
