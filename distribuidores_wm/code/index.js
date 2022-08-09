@@ -144,18 +144,22 @@ function agregarCarrito(id) {
 }
 
 function prevPage(){
+    let pages = document.querySelector("#pages");
     console.log('anterior')
     if(actualPage !== 0){
         document.getElementById(`page${actualPage}`).classList.add('visually-hidden')
         document.getElementById(`page${actualPage-1}`).classList.remove('visually-hidden')
         actualPage--;
     }
+    pages.innerHTML = `${actualPage + 1} de ${datas.length}`;
 }
 function nextPage(){
+    let pages = document.querySelector("#pages");
     console.log('siguiente')
     if(actualPage !== maxPages-1){
         document.getElementById(`page${actualPage}`).classList.add('visually-hidden')
         document.getElementById(`page${actualPage+1}`).classList.remove('visually-hidden')
         actualPage++;
     }
+    pages.innerHTML = `${actualPage + 1} de ${datas.length}`;
 }
