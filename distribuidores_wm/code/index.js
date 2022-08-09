@@ -34,7 +34,7 @@ function actualizar() {
     // }
     if(busqueda == ''){
         for(elem of container.children){
-            if(!elem.classList.contains('active')){
+            if(!elem.classList.contains('actualPage')){
                 elem.classList.add("visually-hidden")
             }
         }        
