@@ -36,8 +36,8 @@ function listar() {
     let container = document.getElementById("gridCont");
     container.innerHTML =
         '<p id="sinRes" class="visually-hidden" style="grid-column: 1 / main-end;display:block;text-align:center;font-size:30px;vertical-align:middle;">No se encontraron productos para su busqueda...</p>';
-    
-        fetch("./apis/listar.php")
+
+    fetch("./apis/listar.php")
         .then((res) => res.json())
         .then((datas) => {
             container.innerHTML += datas;
@@ -48,13 +48,17 @@ function listarSinPrecio() {
     let container = document.querySelector(".container");
     container.innerHTML =
         '<p id="sinRes" class="visually-hidden" style="grid-column: 1 / main-end;display:block;text-align:center;font-size:30px;vertical-align:middle;">No se encontraron productos para su busqueda...</p>';
-    
-        fetch("./apis/listarSinPrecio.php")
+
+    fetch("./apis/listarSinPrecio.php")
         .then((res) => res.json())
         .then((datas) => {
             productos = datas;
             for (i in datas) {
-                container.innerHTML += `<div id="page${i}" class="gridCont">${datas[i]}</div>`;
+                if (i == actualPage) {
+                    container.innerHTML += `<div id="page${i}" class="gridCont">${datas[i]}</div>`;
+                } else {
+                    container.innerHTML += `<div id="page${i}" class="gridCont visually-hidden">${datas[i]}</div>`;
+                }
             }
         });
 }
