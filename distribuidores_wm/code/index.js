@@ -47,20 +47,20 @@ function listar() {
 function listarSinPrecio() {
     let container = document.querySelector("#productos");
     let pages = document.querySelector("#pages");
-    container.innerHTML =
-        '<p id="sinRes" class="visually-hidden" style="grid-column: 1 / main-end;display:block;text-align:center;font-size:30px;vertical-align:middle;">No se encontraron productos para su busqueda...</p>';
-
+    
     fetch("./apis/listarSinPrecio.php")
-        .then((res) => res.json())
-        .then((datas) => {
-            productos = datas;
-            for (i in datas) {
-                if (i == actualPage) {
+    .then((res) => res.json())
+    .then((datas) => {
+        productos = datas;
+        for (i in datas) {
+            if (i == actualPage) {
                     container.innerHTML += `<div id="page${i}" class="gridCont">${datas[i]}</div>`;
                 } else {
                     container.innerHTML += `<div id="page${i}" class="gridCont visually-hidden">${datas[i]}</div>`;
                 }
             }
+            container.innerHTML =
+                '<p id="sinRes" class="visually-hidden" style="grid-column: 1 / main-end;display:block;text-align:center;font-size:30px;vertical-align:middle;">No se encontraron productos para su busqueda...</p>';
             pages.innerHTML = `${actualPage+1} de ${datas.length}`
         });
 }
