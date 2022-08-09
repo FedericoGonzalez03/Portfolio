@@ -151,7 +151,7 @@ function prevPage(){
         document.getElementById(`page${actualPage-1}`).classList.remove('visually-hidden')
         actualPage--;
     }
-    pages.innerHTML = `${actualPage + 1} de ${datas.length}`;
+    pages.innerHTML = `${actualPage + 1} de ${maxPages}`;
 }
 function nextPage(){
     let pages = document.querySelector("#pages");
@@ -161,5 +161,5 @@ function nextPage(){
         document.getElementById(`page${actualPage+1}`).classList.remove('visually-hidden')
         actualPage++;
     }
-    pages.innerHTML = `${actualPage + 1} de ${datas.length}`;
+    pages.innerHTML = `${actualPage + 1} de ${maxPages}`;
 }
