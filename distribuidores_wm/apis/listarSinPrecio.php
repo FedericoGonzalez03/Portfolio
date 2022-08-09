@@ -59,6 +59,7 @@ try {
 
         if($prodsPerActualPage == 35){
             $page++;
+            $prodsPerActualPage = 0;
         }
     }
     echo json_encode($prods);
