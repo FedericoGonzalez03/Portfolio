@@ -6,7 +6,8 @@ function inicio() {
     document.getElementById('logout').onclick = cerrarSesion;
 
 }
-
+let productos = new Array;
+let actualPage = 0
 
 function actualizar() {
     let container = document.getElementById('gridCont');
@@ -49,9 +50,9 @@ function listarSinPrecio() {
     fetch('./apis/listarSinPrecio.php')
         .then(res => res.json())
         .then(datas => {
-
-            container.innerHTML += datas[0]
-
+            productos = datas
+            for(i in datas)
+            container.innerHTML += `<div id="page${i}" class="gridCont">${datas[i]}</div>`
         })
 }
 
