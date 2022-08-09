@@ -4,8 +4,6 @@ function inicio() {
     verificarSesion();
     document.getElementById("buscar").addEventListener("keyup", actualizar);
     document.getElementById("logout").onclick = cerrarSesion;
-    document.getElementById("prev").onclick = prevPage;
-    document.getElementById("next").onclick = nextPage;
 }
 
 let actualPage = 0;
@@ -150,6 +148,7 @@ function prevPage(){
     if(actualPage !== 0){
         document.getElementById(`page${actualPage}`).classList.add('visually-hidden')
         document.getElementById(`page${actualPage-1}`).classList.remove('visually-hidden')
+        actualPage--;
     }
 }
 function nextPage(){
@@ -157,5 +156,6 @@ function nextPage(){
     if(actualPage !== maxPages-1){
         document.getElementById(`page${actualPage}`).classList.add('visually-hidden')
         document.getElementById(`page${actualPage+1}`).classList.remove('visually-hidden')
+        actualPage++;
     }
 }
