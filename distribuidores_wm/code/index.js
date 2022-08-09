@@ -51,6 +51,7 @@ function listarSinPrecio() {
     fetch("./apis/listarSinPrecio.php")
     .then((res) => res.json())
     .then((datas) => {
+        productos.innerHTML = '';
         for (i in datas) {
             if (i == actualPage) {
                     productos.innerHTML += `<div id="page${i}" class="gridCont">${datas[i]}</div>`;
