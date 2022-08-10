@@ -9,7 +9,7 @@ body{
 }
 
 .cont{
-    background-color: #102;
+    background-color: rgb(8, 0, 15);
     display: flex;
     flex-direction: row;
     align-items: center;
