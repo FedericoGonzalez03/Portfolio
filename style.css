@@ -97,8 +97,7 @@ span{
     background-size: cover;
 }
 
-
-#parallax{
+.parallax1{
     position: relative;
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(4, 4, 8, 0.8)), url(img/bros.gif);
     background-position-y:center;
@@ -107,6 +106,17 @@ span{
     background-size: cover;
     background-attachment: fixed;
 }
+.parallax2{
+    position: relative;
+    background: linear-gradient(rgba(5, 4, 8, 0.9), rgba(5, 4, 8, 0.9)), url(img/dws.gif);
+    background-position-y:center;
+    background-position-x: center;
+    opacity: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
 
 
 @media all and (orientation:portrait){
@@ -114,7 +124,7 @@ span{
         font-size: 8vw;
     }
     img{
-        width: 30vw;
+        width: 50vw;
     }
     h1{
         font-size: 9.5vw;
