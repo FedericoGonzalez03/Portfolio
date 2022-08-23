@@ -13,15 +13,15 @@ function actualizar() {
     let pagination = document.getElementById("pagination");
     let container = document.getElementById("productos");
     let busqueda = document.getElementById("buscar").value;
-
     actualPageDiv.classList.add('visually-hidden')
-
+    
     document.getElementById("sinRes").classList.add("visually-hidden");
-
     document.querySelectorAll(".content").forEach((producto) => {
-
         producto.parentNode.classList.add("visually-hidden");
         producto.parentNode.parentNode.classList.add("visually-hidden");
+    });
+
+    document.querySelectorAll(".content").forEach((producto) => {
 
         if (producto.innerHTML.toLowerCase().includes(busqueda.toLowerCase())) {
 
