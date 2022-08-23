@@ -24,10 +24,10 @@ function actualizar() {
         } else {
             
             producto.parentNode.parentNode.classList.add("visually-hidden");
-            if(!producto.parentNode.parentNode.parentNode.classList.contains("visually-hidden")){
+            // if(!producto.parentNode.parentNode.parentNode.classList.contains("visually-hidden")){
 
-                producto.parentNode.parentNode.parentNode.classList.add("visually-hidden");
-            }
+            //     producto.parentNode.parentNode.parentNode.classList.add("visually-hidden");
+            // }
 
         }
     });
