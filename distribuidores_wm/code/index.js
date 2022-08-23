@@ -160,8 +160,8 @@ function nextPage(){
     let pages = document.querySelector("#pages");
     console.log('siguiente')
     if(actualPage !== maxPages-1){
-        let prev = document.querySelector(`.page${actualPage+1}`);
-        let next = document.querySelector(`.page${actualPage+2}`);
+        let prev = document.querySelectorAll(`.page${actualPage+1}`);
+        let next = document.querySelectorAll(`.page${actualPage+2}`);
         for(prod of prev){
             prod.classList.add('visually-hidden');
         }
