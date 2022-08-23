@@ -46,7 +46,7 @@ try {
         if($page == 0){
             $prods[$page] .= 
     '                  <div class="card text-center">
-                            <span class="visually-hidden">'.$data['categoria'].' '.$data['nombre'].' '.$data['descripcion'].'</span>
+                            <span class="visually-hidden content">'.$data['categoria'].' '.$data['nombre'].' '.$data['descripcion'].'</span>
                             <img class="card-img-top" src="'.$data['imagen'].'" alt="'.$data['nombre'].'" style="object-fit:cover;height:100px;">
                             <div class="card-body">
                                 <h5 class="productos card-title">'.$data['nombre'].'</h5>
@@ -59,8 +59,8 @@ try {
 ';
         }else{
             $prods[$page] .= 
-    '                  <div class="card text-center visually-hidden">
-                            <span class="visually-hidden">'.$data['categoria'].' '.$data['nombre'].' '.$data['descripcion'].'</span>
+    '                  <div class="card text-center">
+                            <span class="visually-hidden content">'.$data['categoria'].' '.$data['nombre'].' '.$data['descripcion'].'</span>
                             <img class="card-img-top" src="'.$data['imagen'].'" alt="'.$data['nombre'].'" style="object-fit:cover;height:100px;">
                             <div class="card-body">
                                 <h5 class="productos card-title">'.$data['nombre'].'</h5>

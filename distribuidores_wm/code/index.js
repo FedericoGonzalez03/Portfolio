@@ -9,23 +9,26 @@ function inicio() {
 let actualPage = 0;
 let maxPages;
 function actualizar() {
+    let actualPageDiv = document.getElementById('page'+actualPage);
+    actualPageDiv.classList.add('visually-hidden')
     let pagination = document.getElementById("pagination");
     let container = document.getElementById("productos");
     let busqueda = document.getElementById("buscar").value;
     document.getElementById("sinRes").classList.add("visually-hidden");
-    document.querySelectorAll(".productos").forEach((producto) => {
-        if (
-            producto.textContent.toLowerCase().includes(busqueda.toLowerCase())
-        ) {
+    document.querySelectorAll(".content").forEach((producto) => {
+        if (producto.innerHTML.toLowerCase().includes(busqueda.toLowerCase())) {
+
             producto.parentNode.parentNode.classList.remove("visually-hidden");
-            producto.parentNode.parentNode.parentNode.classList.remove(
-                "visually-hidden"
-            );
+            producto.parentNode.parentNode.parentNode.classList.remove("visually-hidden");
+
         } else {
+            
             producto.parentNode.parentNode.classList.add("visually-hidden");
-            producto.parentNode.parentNode.parentNode.classList.add(
-                "visually-hidden"
-            );
+            if(!producto.parentNode.parentNode.parentNode.classList.contains("visually-hidden")){
+
+                producto.parentNode.parentNode.parentNode.classList.add("visually-hidden");
+            }
+
         }
     });
     let contador = 0;
