@@ -144,8 +144,14 @@ function prevPage(){
     let pages = document.querySelector("#pages");
     console.log('anterior')
     if(actualPage !== 0){
-        document.querySelector(`.page${actualPage+1}`).classList.add('visually-hidden')
-        document.querySelector(`.page${actualPage}`).classList.remove('visually-hidden')
+        let prev = document.querySelectorAll(`.page${actualPage+1}`);
+        let next = document.querySelectorAll(`.page${actualPage}`);
+        for(prod of prev){
+            prod.classList.add('visually-hidden');
+        }
+        for(prod of next){
+            prod.classList.remove('visually-hidden');
+        }
         actualPage--;
     }
     pages.innerHTML = `${actualPage + 1} de ${maxPages}`;
@@ -154,8 +160,8 @@ function nextPage(){
     let pages = document.querySelector("#pages");
     console.log('siguiente')
     if(actualPage !== maxPages-1){
-        document.querySelector(`.page${actualPage+1}`).classList.add('visually-hidden')
-        document.querySelector(`.page${actualPage+2}`).classList.remove('visually-hidden')
+        let prev = document.querySelector(`.page${actualPage+1}`).classList.add('visually-hidden')
+        let next = document.querySelector(`.page${actualPage+2}`).classList.remove('visually-hidden')
         actualPage++;
     }
     pages.innerHTML = `${actualPage + 1} de ${maxPages}`;
