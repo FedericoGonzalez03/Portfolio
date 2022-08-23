@@ -10,26 +10,25 @@ let actualPage = 0;
 let maxPages;
 function actualizar() {
     let actualPageDiv = document.getElementById('page'+actualPage);
-    actualPageDiv.classList.add('visually-hidden')
     let pagination = document.getElementById("pagination");
     let container = document.getElementById("productos");
     let busqueda = document.getElementById("buscar").value;
+
+    actualPageDiv.classList.add('visually-hidden')
+
     document.getElementById("sinRes").classList.add("visually-hidden");
+
     document.querySelectorAll(".content").forEach((producto) => {
+
+        producto.parentNode.classList.add("visually-hidden");
+        producto.parentNode.parentNode.classList.add("visually-hidden");
+
         if (producto.innerHTML.toLowerCase().includes(busqueda.toLowerCase())) {
 
             producto.parentNode.classList.remove("visually-hidden");
             producto.parentNode.parentNode.classList.remove("visually-hidden");
 
-        } else {
-            
-            producto.parentNode.classList.add("visually-hidden");
-            if(!producto.parentNode.parentNode.classList.contains("visually-hidden")){
-
-                producto.parentNode.parentNode.classList.add("visually-hidden");
-            }
-
-        }
+        } 
     });
     let contador = 0;
     for (elem of container.children) {
