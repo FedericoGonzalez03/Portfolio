@@ -144,8 +144,8 @@ function prevPage(){
     let pages = document.querySelector("#pages");
     console.log('anterior')
     if(actualPage !== 0){
-        document.querySelecor(`.page${actualPage+1}`).classList.add('visually-hidden')
-        document.querySelecor(`.page${actualPage}`).classList.remove('visually-hidden')
+        document.querySelector(`.page${actualPage+1}`).classList.add('visually-hidden')
+        document.querySelector(`.page${actualPage}`).classList.remove('visually-hidden')
         actualPage--;
     }
     pages.innerHTML = `${actualPage + 1} de ${maxPages}`;
@@ -154,8 +154,8 @@ function nextPage(){
     let pages = document.querySelector("#pages");
     console.log('siguiente')
     if(actualPage !== maxPages-1){
-        document.querySelecor(`.page${actualPage+1}`).classList.add('visually-hidden')
-        document.querySelecor(`.page${actualPage+2}`).classList.remove('visually-hidden')
+        document.querySelector(`.page${actualPage+1}`).classList.add('visually-hidden')
+        document.querySelector(`.page${actualPage+2}`).classList.remove('visually-hidden')
         actualPage++;
     }
     pages.innerHTML = `${actualPage + 1} de ${maxPages}`;
