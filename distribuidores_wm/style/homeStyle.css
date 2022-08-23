@@ -33,7 +33,7 @@ input[type=number]::-webkit-inner-spin-button .cant:not(){
 }
 
 #loading{
-    
+    grid-column: main-start / main-end;
 }
 
 .cant{
