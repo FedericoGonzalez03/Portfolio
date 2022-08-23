@@ -18,16 +18,16 @@ function actualizar() {
     document.querySelectorAll(".content").forEach((producto) => {
         if (producto.innerHTML.toLowerCase().includes(busqueda.toLowerCase())) {
 
+            producto.parentNode.classList.remove("visually-hidden");
             producto.parentNode.parentNode.classList.remove("visually-hidden");
-            producto.parentNode.parentNode.parentNode.classList.remove("visually-hidden");
 
         } else {
             
-            producto.parentNode.parentNode.classList.add("visually-hidden");
-            // if(!producto.parentNode.parentNode.parentNode.classList.contains("visually-hidden")){
+            producto.parentNode.classList.add("visually-hidden");
+            if(!producto.parentNode.parentNode.classList.contains("visually-hidden")){
 
-            //     producto.parentNode.parentNode.parentNode.classList.add("visually-hidden");
-            // }
+                producto.parentNode.parentNode.classList.add("visually-hidden");
+            }
 
         }
     });
