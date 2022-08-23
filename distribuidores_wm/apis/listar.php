@@ -43,26 +43,49 @@ array_multisort($sortArray[$orderby],SORT_ASC,$datas);
     $prods = [];
     foreach($datas as $data){
         $prodsPerActualPage++;
-        $prods[$page] .=  
-'                  <div class="card text-center">
-                        <img class="card-img-top" src="'.$data['imagen'].'" alt="'.$data['nombre'].'" style="object-fit:cover;height:100px;">
-                        <div class="card-body">
-                            <h5 class="productos card-title">'.$data['nombre'].'</h5>
-                            <span class="text-primary" style="font-weight:700;">$'.$data['precio'].' + IVA</span>
-                            <p class="card-text" style="font-size:14px;">'.$data['descripcion'].'</p>
+        if($page == 0){
+            $prods[$page] .=  
+    '                  <div class="card text-center">
+                            <span class="visually-hidden">'.$data['categoria'].' '.$data['nombre'].' '.$data['descripcion'].'</span>
+                            <img class="card-img-top" src="'.$data['imagen'].'" alt="'.$data['nombre'].'" style="object-fit:cover;height:100px;">
+                            <div class="card-body">
+                                <h5 class="productos card-title">'.$data['nombre'].'</h5>
+                                <span class="text-primary" style="font-weight:700;">$'.$data['precio'].' + IVA</span>
+                            </div>
+                            <div class="card-footer">
+                                <form action="#" method="POST" id="'.$data['id'].'">
+                                    <input hidden type="text" name="id" value="'.$data['id'].'">
+                                    <input hidden type="text" name="nombre" value="'.$data['nombre'].'">
+                                    <input hidden type="number" name="precio" value="'.$data['precio'].'">
+                                    <input type="number" name="cant" class="p-0 text-center mx-0 d-inline form-control w-25 cant align-middle" min="1" value="1">
+                                    <input type="submit" onclick="agregarCarrito('.$data['id'].')" class="mx-0 btn btn-primary agregarCarrito" value="Agregar" style="font-size:14px;">
+                                </form>
+                            </div>
                         </div>
-                        <div class="card-footer">
-                            <form action="#" method="POST" id="'.$data['id'].'">
-                                <input hidden type="text" name="id" value="'.$data['id'].'">
-                                <input hidden type="text" name="nombre" value="'.$data['nombre'].'">
-                                <input hidden type="number" name="precio" value="'.$data['precio'].'">
-                                <input type="number" name="cant" class="p-0 text-center mx-0 d-inline form-control w-25 cant align-middle" min="1" value="1">
-                                <input type="submit" onclick="agregarCarrito('.$data['id'].')" class="mx-0 btn btn-primary agregarCarrito" value="Agregar" style="font-size:14px;">
-                            </form>
+    
+    ';      
+        }else{
+            $prods[$page] .=  
+    '                  <div class="card text-center">
+                            <span class="visually-hidden">'.$data['categoria'].' '.$data['nombre'].' '.$data['descripcion'].'</span>
+                            <img class="card-img-top" src="'.$data['imagen'].'" alt="'.$data['nombre'].'" style="object-fit:cover;height:100px;">
+                            <div class="card-body">
+                                <h5 class="productos card-title">'.$data['nombre'].'</h5>
+                                <span class="text-primary" style="font-weight:700;">$'.$data['precio'].' + IVA</span>
+                            </div>
+                            <div class="card-footer">
+                                <form action="#" method="POST" id="'.$data['id'].'">
+                                    <input hidden type="text" name="id" value="'.$data['id'].'">
+                                    <input hidden type="text" name="nombre" value="'.$data['nombre'].'">
+                                    <input hidden type="number" name="precio" value="'.$data['precio'].'">
+                                    <input type="number" name="cant" class="p-0 text-center mx-0 d-inline form-control w-25 cant align-middle" min="1" value="1">
+                                    <input type="submit" onclick="agregarCarrito('.$data['id'].')" class="mx-0 btn btn-primary agregarCarrito" value="Agregar" style="font-size:14px;">
+                                </form>
+                            </div>
                         </div>
-                    </div>
-
-';
+    
+    ';    
+        }
         if($prodsPerActualPage == 36){
             $page++;
             $prodsPerActualPage = 0;

@@ -43,20 +43,35 @@ try {
     $prods = [];
     foreach($datas as $data){
         $prodsPerActualPage++;
-        $prods[$page] .=  
-'                  <div class="card text-center">
-                        <img class="card-img-top" src="'.$data['imagen'].'" alt="'.$data['nombre'].'" style="object-fit:cover;height:100px;">
-                        <div class="card-body">
-                            <h5 class="productos card-title">'.$data['nombre'].'</h5>
-                            <p class="card-text" style="font-size:14px;">'.$data['descripcion'].'</p>
-                            <span class="visually-hidden">'.$data['categoria'].'</span>
-                        </div>
-                        <div class="card-footer">
-                            <p class="card-text text-danger" style="font-size:14px;">Inicia sesión para ver más detalles.</p>
-                        </div>
-                    </div>
+        if($page == 0){
+            $prods[$page] .= 
+    '                  <div class="card text-center">
+                            <span class="visually-hidden">'.$data['categoria'].' '.$data['nombre'].' '.$data['descripcion'].'</span>
+                            <img class="card-img-top" src="'.$data['imagen'].'" alt="'.$data['nombre'].'" style="object-fit:cover;height:100px;">
+                            <div class="card-body">
+                                <h5 class="productos card-title">'.$data['nombre'].'</h5>
+                                <p class="card-text" style="font-size:14px;">'.$data['descripcion'].'</p>
+                            </div>
+                            <div class="card-footer">
+                                <p class="card-text text-danger" style="font-size:14px;">Inicia sesión para ver más detalles.</p>
+                            </div>
+                        </div>       
 ';
-
+        }else{
+            $prods[$page] .= 
+    '                  <div class="card text-center visually-hidden">
+                            <span class="visually-hidden">'.$data['categoria'].' '.$data['nombre'].' '.$data['descripcion'].'</span>
+                            <img class="card-img-top" src="'.$data['imagen'].'" alt="'.$data['nombre'].'" style="object-fit:cover;height:100px;">
+                            <div class="card-body">
+                                <h5 class="productos card-title">'.$data['nombre'].'</h5>
+                                <p class="card-text" style="font-size:14px;">'.$data['descripcion'].'</p>
+                            </div>
+                            <div class="card-footer">
+                                <p class="card-text text-danger" style="font-size:14px;">Inicia sesión para ver más detalles.</p>
+                            </div>
+                        </div>       
+';
+        }
         if($prodsPerActualPage == 36){
             $page++;
             $prodsPerActualPage = 0;

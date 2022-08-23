@@ -1,15 +1,35 @@
-*{
+* {
     border: 0;
     padding: 0;
     margin: 0;
 }
 
-body{
+body {
     overflow-x: hidden;
 }
 
-.cont{
-    background-color: rgb(5, 5, 10);
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: rgb(6, 6, 11);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: #bbb;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--bs-primary);
+}
+
+.cont {
+    background-color: rgb(6, 6, 11);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -18,11 +38,12 @@ body{
     width: 100%;
     height: 100vh;
 }
-.info{
+
+.info {
     max-width: 65%;
 }
 
-h2{
+h2 {
     position: relative;
     font-size: 4vw;
     font-style: italic;
@@ -31,13 +52,13 @@ h2{
 }
 
 
-.imagen{
+.imagen {
     margin: 0 0 0 5vw;
     flex-flow: row;
 }
 
 
-p{
+p {
     color: #bbb;
     margin-top: 10px;
     text-align: justify;
@@ -45,7 +66,7 @@ p{
     margin: 0;
 }
 
-h1{
+h1 {
     margin: 0;
     position: relative;
     color: #bbb;
@@ -53,7 +74,9 @@ h1{
     white-space: pre;
     font-style: italic;
     font-weight: 900;
-}h1::before{
+}
+
+h1::before {
     content: attr(data-text);
     position: absolute;
     top: 0;
@@ -64,7 +87,9 @@ h1{
     overflow: hidden;
     color: var(--bs-primary);
     animation: animate 10s ease-in-out infinite;
-}h1::after{
+}
+
+h1::after {
     content: attr(data-text);
     position: absolute;
     top: 0;
@@ -78,7 +103,7 @@ h1{
 }
 
 
-span{
+span {
 
     position: relative;
     font-size: 1.8vw;
@@ -87,7 +112,7 @@ span{
 }
 
 
-#img{    
+#img {
     display: block;
     width: 20vw;
     height: 20vw;
@@ -97,51 +122,59 @@ span{
     background-size: cover;
 }
 
-.parallax1{
+.parallax1 {
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(4, 4, 8, 0.8)), url(img/bros.gif);
-    background-position-y:center;
-    background-position-x: center;
-    opacity: 100%;
-    background-size: cover;
-    background-attachment: fixed;
-}
-.parallax2{
-    position: relative;
-    background: linear-gradient(rgba(5, 4, 8, 0.9), rgba(5, 4, 8, 0.9)), url(img/dws.gif);
-    background-position-y:center;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(4, 4, 8, 0.7)), url(img/bros.gif);
+    background-position-y: center;
     background-position-x: center;
     opacity: 100%;
     background-size: cover;
     background-attachment: fixed;
 }
 
+.parallax2 {
+    position: relative;
+    background: linear-gradient(rgba(5, 4, 8, 0.85), rgba(5, 4, 8, 0.85)), url(img/dws.gif);
+    background-position-y: center;
+    background-position-x: center;
+    opacity: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+}
 
 
 
-@media all and (orientation:portrait){
-    h2{
+
+@media all and (orientation:portrait) {
+    h2 {
         font-size: 8vw;
     }
-    img{
+
+    img {
         width: 50vw;
     }
-    h1{
+
+    h1 {
         font-size: 9.5vw;
     }
-    span{
+
+    span {
         font-size: 3.6vw;
     }
-    .cont{
+
+    .cont {
         flex-direction: column-reverse;
     }
-    .info{
+
+    .info {
         max-width: 75%;
     }
-    p{
+
+    p {
         font-size: 2.4vw;
     }
-    .imagen{
+
+    .imagen {
         margin: -10vw 0 0 0;
     }
 }
@@ -166,32 +199,43 @@ span{
 
 
 @keyframes animate {
-    0%{
+    0% {
         opacity: 100%;
         width: 0;
     }
-    50%,100%{
+
+    50%,
+    100% {
         width: 100%;
     }
-    60%{
+
+    60% {
         opacity: 100%;
     }
-    70%,100%{
+
+    70%,
+    100% {
         opacity: 0%;
     }
 }
+
 @keyframes animate2 {
-    15%{
+    15% {
         opacity: 100%;
         width: 0;
     }
-    60%,100%{
+
+    60%,
+    100% {
         width: 100%;
     }
-    70%{
+
+    70% {
         opacity: 100%;
     }
-    80%,100%{
+
+    80%,
+    100% {
         opacity: 0%;
     }
 }
