@@ -9,6 +9,7 @@ function inicio() {
 let actualPage = 0;
 let maxPages;
 function actualizar() {
+    let contador = 0;
     let actualPageDiv = document.getElementById('page'+actualPage);
     let pagination = document.getElementById("pagination");
     let container = document.getElementById("productos");
@@ -27,16 +28,12 @@ function actualizar() {
 
             producto.parentNode.classList.remove("visually-hidden");
             producto.parentNode.parentNode.classList.remove("visually-hidden");
+            contador++;
 
         } 
     });
-    let contador = 0;
-    for (elem of container.children) {
-        if (elem.classList.contains("visually-hidden")) {
-            contador++;
-        }
-    }
-    if (contador == container.children.length) {
+   
+    if (contador == 0) {
         document.getElementById("sinRes").classList.remove("visually-hidden");
     }
     pagination.classList.add('visually-hidden')
