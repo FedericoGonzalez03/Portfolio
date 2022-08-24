@@ -45,30 +45,14 @@ try {
         $prodsPerActualPage++;
         if($page == 0){
             $prods[$page] .= 
-    '                  <div class="card text-center actualPage page'.($page+1).'">'
-                            // <span class="visually-hidden content">'.$data['nombre'].' '.$data['descripcion'].'</span>
-                            // <img class="card-img-top" src="'.$data['imagen'].'" alt="'.$data['nombre'].'" style="object-fit:cover;height:100px;">
-                            // <div class="card-body">
-                            //     <h5 class="productos card-title">'.$data['nombre'].'</h5>
-                            //     <p class="card-text" style="font-size:14px;">'.$data['descripcion'].'</p>
-                            // </div>
-                            // <div class="card-footer">
-                            //     <p class="card-text text-danger" style="font-size:14px;">Inicia sesión para ver más detalles.</p>
-                            // </div>
-                        .'</div>       
+    '                  <div class="card text-center actualPage page'.($page+1).'">
+                         
+                        </div>       
 ';
         }else{
             $prods[$page] .= 
     '                  <div class="card text-center visually-hidden page'.($page+1).'">
-                            <span class="visually-hidden content">'.$data['nombre'].' '.$data['descripcion'].'</span>
-                            <img class="card-img-top" src="'.$data['imagen'].'" alt="'.$data['nombre'].'" style="object-fit:cover;height:100px;">
-                            <div class="card-body">
-                                <h5 class="productos card-title">'.$data['nombre'].'</h5>
-                                <p class="card-text" style="font-size:14px;">'.$data['descripcion'].'</p>
-                            </div>
-                            <div class="card-footer">
-                                <p class="card-text text-danger" style="font-size:14px;">Inicia sesión para ver más detalles.</p>
-                            </div>
+                          
                         </div>       
 ';
         }
