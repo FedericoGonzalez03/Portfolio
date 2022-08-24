@@ -52,7 +52,9 @@ try {
                                 <h5 class="productos card-title">'.$data['nombre'].'</h5>
                                 <p class="card-text" style="font-size:14px;">'.$data['descripcion'].'</p>
                             </div>
-
+                            <div class="card-footer">
+                                <p class="card-text text-danger" style="font-size:14px;">Inicia sesión para ver más detalles.</p>
+                            </div>
                         </div>       
 ';
         }else{
@@ -64,7 +66,9 @@ try {
                                 <h5 class="productos card-title">'.$data['nombre'].'</h5>
                                 <p class="card-text" style="font-size:14px;">'.$data['descripcion'].'</p>
                             </div>
-
+                            <div class="card-footer">
+                                <p class="card-text text-danger" style="font-size:14px;">Inicia sesión para ver más detalles.</p>
+                            </div>
                         </div>       
 ';
         }
