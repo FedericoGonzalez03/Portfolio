@@ -32,8 +32,37 @@ input[type=number]::-webkit-inner-spin-button .cant:not(){
 
 }
 
-#loading{
-    grid-column: 1 / 5;
+.loading{
+    grid-column: 1 / -1;
+    position: relative;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.loading::before{
+    position: absolute;
+    content: attr(data-text);
+    width: 0%;
+    top: 0;
+    left: 0;
+    width: 0;
+    white-space: pre;
+    height: 100%;
+    overflow: hidden;
+    color: var(--bs-primary);
+    animation: load 3s ease-out infinite;
+}
+@keyframes load{
+    0%{
+        opacity: 1;
+        width: 0%;
+    }
+    70%{
+        opacity: 1;
+        width: 100%;
+    }
+    100%{
+        opacity: 0;
+        width: 100%;
+    }
 }
 
 .cant{
