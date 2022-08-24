@@ -76,11 +76,7 @@ function listarSinPrecio() {
         .then((datas) => {
             productos.innerHTML = "";
             for (i in datas) {
-                if (i == actualPage) {
-                    productos.innerHTML += datas[i];
-                } else {
-                    productos.innerHTML += datas[i];
-                }
+                productos.innerHTML += datas[i];
             }
             pages.innerHTML = `${actualPage + 1} de ${datas.length}`;
             maxPages = datas.length;

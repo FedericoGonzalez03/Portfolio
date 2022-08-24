@@ -35,7 +35,8 @@ input[type=number]::-webkit-inner-spin-button .cant:not(){
 .loading{
     grid-column: 1 / -1;
     position: relative;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
 }
 .loading::before{
     position: absolute;
