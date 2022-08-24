@@ -25,18 +25,18 @@ try {
         ];
     }
 
-    $sortArray = array();
+    // $sortArray = array();
 
-    foreach($datas as $art){
-        foreach($art as $key=>$value){
-            if(!isset($sortArray[$key])){
-                $sortArray[$key] = array();
-            }
-            $sortArray[$key][] = $value;
-        }
-    }
-    $orderby = "precio";
-    array_multisort($sortArray[$orderby],SORT_ASC,$datas);
+    // foreach($datas as $art){
+    //     foreach($art as $key=>$value){
+    //         if(!isset($sortArray[$key])){
+    //             $sortArray[$key] = array();
+    //         }
+    //         $sortArray[$key][] = $value;
+    //     }
+    // }
+    // $orderby = "precio";
+    // array_multisort($sortArray[$orderby],SORT_ASC,$datas);
 
     $page = 0;
     $prodsPerActualPage = 0;
