@@ -1,10 +1,6 @@
 window.onload = inicio;
 
 function inicio() {
-    document.getElementById('btn').onclick = agregar;
-}
-
-function agregar() {
 
     let form = document.getElementById('formId');
 
@@ -16,13 +12,13 @@ function agregar() {
             .then(res => res.json())
             .then(data => {
                 if (data == "true") {
-
+                    window.location = 'index.html'
                 } else {
                     console.log(data);
+                    window.location = 'index.html'
                 }
             })
             window.location = 'index.html'
     })
-
 
 }
