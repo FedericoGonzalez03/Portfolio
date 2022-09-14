@@ -132,5 +132,5 @@ input[type=number]::-webkit-inner-spin-button .cant:not(){
         }
 }
 .card-body{
-    justify-items: space-between;
+    align-items: flex-end;
 }
