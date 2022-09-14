@@ -50,7 +50,7 @@ array_multisort($sortArray[$orderby],SORT_ASC,$datas);
                             <span class="visually-hidden content">'.$data['nombre'].' '.$data['descripcion'].'</span>
                             <img class="card-img-top" src="'.$data['imagen'].'" alt="'.$data['nombre'].'" style="object-fit:cover;height:100px;">
                             <div class="card-body">
-                                <h5 class="productos card-title" style="'.$fontSize.'px">'.$data['nombre'].'</h5>
+                                <h5 class="productos card-title" style="font-size:'.$fontSize.'px;">'.$data['nombre'].'</h5>
                                 <span class="text-primary" style="font-weight:700;">$'.$data['precio'].' + IVA</span>
                             </div>
                             <div class="card-footer">
