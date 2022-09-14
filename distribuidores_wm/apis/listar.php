@@ -43,7 +43,7 @@ array_multisort($sortArray[$orderby],SORT_ASC,$datas);
     $prods = [];
     foreach($datas as $data){
         $prodsPerActualPage++;
-        $fontSize = strlen($data['nombre']) > 25 ? 10 : strlen($data['nombre']) > 20 ? 15 : 20;
+        $fontSize = strlen($data['nombre']) >= 24 ? 10 : strlen($data['nombre']) >= 20 ? 15 : 20;
         if($page == 0){
             $prods[$page] .=  
     '                  <div class="card text-center actualPage page'.($page+1).'">
