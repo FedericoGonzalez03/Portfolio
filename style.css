@@ -248,6 +248,12 @@ span {
     .imagen {
         margin: -10vw 0 0 0;
     }
+
+    #skillset{
+        
+        grid-template-columns: 1fr 1fr ;
+
+    }
 }
 
 
