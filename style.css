@@ -222,7 +222,10 @@ span {
     img {
         width: 50vw;
     }
-
+    #img{
+        width: 50vw;
+        height: 50vw;
+    }
     h1 {
         font-size: 9.5vw;
     }
