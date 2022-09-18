@@ -1,3 +1,7 @@
+:root {
+    --skills-size: 15vw;
+}
+
 * {
     border: 0;
     padding: 0;
@@ -64,7 +68,7 @@ p {
     color: #bbb;
     margin-top: 10px;
     text-align: justify;
-    font-size: 1.2vw;
+    font-size: 1.6vw;
     margin: 0;
 }
 
@@ -123,20 +127,20 @@ span {
     background-position-y: start;
     background-size: cover;
 }
-
+/* linear-gradient(rgba(0, 0, 0, 0.7), rgba(4, 4, 8, 0.7)), url(img/bros.gif) */
 .parallax1 {
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(4, 4, 8, 0.7)), url(img/bros.gif);
+    background: linear-gradient(rgba(5, 4, 8, 0.85), rgba(5, 4, 8, 0.85)), url(img/dws.gif);
     background-position-y: center;
     background-position-x: center;
     opacity: 100%;
     background-size: cover;
     background-attachment: fixed;
 }
-
+/*  linear-gradient(rgba(5, 4, 8, 0.85), rgba(5, 4, 8, 0.85)), url(img/dws.gif) */
 .parallax2 {
     position: relative;
-    background: linear-gradient(rgba(5, 4, 8, 0.85), rgba(5, 4, 8, 0.85)), url(img/dws.gif);
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(4, 4, 8, 0.7)), url(img/bros.gif);
     background-position-y: center;
     background-position-x: center;
     opacity: 100%;
@@ -156,69 +160,72 @@ span {
     width: 65vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 150px 150px;
+    grid-template-rows: var(--skills-size);
     gap: 2vw;
 }
 
 .skillsBg{
-    height: 150px;
+    height: var(--skills-size);
     background-size: cover;
     background-position-x:center;
+    transition: all 1s;
 }
-.skillsBg:nth-of-type(1){
-    background-image: url(./img/htmlbg.svg);
+.skillsBg1{
+    background-image: -webkit-gradient(linear, left center, left bottom, from(rgba(0,0,0,0)), to(rgb(112, 45, 25)));
+    border-bottom: #bbb 2px solid;
 }
-.skillsBg:nth-of-type(2){
-    background-image: url(./img/cssbg.svg);
+.skillsBg2{
+    background-image: -webkit-gradient(linear, left center, left bottom, from(rgba(0,0,0,0)), to(rgb(25, 77, 112)));
+    border-bottom: #bbb 2px solid;
 }
-.skillsBg:nth-of-type(3){
-    background-image: url(./img/jsbg.svg);
+.skillsBg3{
+    background-image: -webkit-gradient(linear, left center, left bottom, from(rgba(0,0,0,0)), to(rgb(112, 99, 25)));
+    border-bottom: #bbb 2px solid;
 }
-.skillsBg:nth-of-type(4){
-    background-image: url(./img/bsbg.svg);
+.skillsBg4{
+    background-image: -webkit-gradient(linear, left center, left bottom, from(rgba(0,0,0,0)), to(rgb(66, 25, 112)));
+    border-bottom: #bbb 2px solid;
 }
 
-
-.skills{
-    height: 150px;
-    background-size: cover;
-    background-position-x:center;
+.skill{
+    transition: all 0.5s;
 }
-.skills1{
+.skill1{
     background-image: url(./img/html.svg);
-    height: 150px;
+    height: var(--skills-size);
     background-size: cover;
     background-position-x:center;
 }
-.skills2{
+.skill2{
     background-image: url(./img/css.svg);
-    height: 150px;
+    height: var(--skills-size);
     background-size: cover;
     background-position-x:center;
 }
-.skills3{
+.skill3{
     background-image: url(./img/js.svg);
-    height: 150px;
+    height: var(--skills-size);
     background-size: cover;
     background-position-x:center;
 }
-.skills4{
+.skill4{
     background-image: url(./img/bs.svg);
-    height: 150px;
+    height: var(--skills-size);
     background-size: cover;
     background-position-x:center;
 }
 
-
-
-
+.skillsBg:hover div{
+    transform: scale(1.45);
+    transition: all 0.5s;
+}
 
 
 @media all and (max-width:900px) {
     h2 {
         font-size: 8vw;
     }
-
+    
     img {
         width: 40vw;
     }
@@ -229,46 +236,72 @@ span {
     h1 {
         font-size: 9.5vw;
     }
-
+    
     span {
         font-size: 3.6vw;
     }
-
+    
     .cont {
         flex-direction: column-reverse;
     }
-
+    
     .info {
         max-width: 75%;
     }
-
+    
     p {
         font-size: 2.4vw;
     }
-
+    
     .imagen {
         margin: 0 0 0 0;
     }
-
-    #skillset{
-        
-        grid-template-columns: 1fr 1fr ;
-
+    
+    
+    
+    @media all and (max-width:700px) {
+        p{
+            font-size: 16.6px;
+        }
+        span{
+            font-size: 25px;
+        }
+        :root{
+            --skills-size: 30vw ;
+        }
+        #skillset{
+            
+            grid-template-columns: 1fr 1fr ;
+            
+        }
     }
 }
 
 
-@media all and (max-width:700px) {
+
+@media all and (max-height:500px) {
+    #img{
+        width: 20vw;
+        height: 20vw;
+    }
     p{
-        font-size: 16.6px;
+        font-size: 12px;
     }
-    span{
-        font-size: 25px;
+    h1{
+        font-size: 7.7vw;
     }
+    .cont {
+        flex-direction: row;
+    }
+    .imagen {
+        margin: 0 0 0 5vw;
+    }
+    .info {
+        max-width: 60vw;
+    }
+    
+    
 }
-
-
-
 
 
 
