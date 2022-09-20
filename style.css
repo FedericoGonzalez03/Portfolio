@@ -130,7 +130,7 @@ span {
 /* linear-gradient(rgba(0, 0, 0, 0.7), rgba(4, 4, 8, 0.7)), url(img/bros.gif) */
 .parallax1 {
     position: relative;
-    background: linear-gradient(rgba(5, 4, 8, 0.85), rgba(5, 4, 8, 0.85)), url(img/dws.gif);
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(4, 4, 8, 0.7)), url(img/bros.gif);
     background-position-y: center;
     background-position-x: center;
     opacity: 100%;
@@ -140,7 +140,7 @@ span {
 /*  linear-gradient(rgba(5, 4, 8, 0.85), rgba(5, 4, 8, 0.85)), url(img/dws.gif) */
 .parallax2 {
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(4, 4, 8, 0.7)), url(img/bros.gif);
+    background: linear-gradient(rgba(5, 4, 8, 0.85), rgba(5, 4, 8, 0.85)), url(img/dws.gif);
     background-position-y: center;
     background-position-x: center;
     opacity: 100%;
