@@ -221,7 +221,7 @@ span {
 }
 
 
-@media all and (max-width:900px) {
+@media all and (max-width:701px) {
     h2 {
         font-size: 8vw;
     }
