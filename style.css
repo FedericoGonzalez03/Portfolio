@@ -165,28 +165,17 @@ span {
 }
 
 .skillsBg{
-    height: var(--skills-size);
-    background-size: cover;
-    background-position-x:center;
-    transition: all 1s;
-}
-.skillsBg1{
-    background-image: -webkit-gradient(linear, left center, left bottom, from(rgba(0,0,0,0)), to(rgb(112, 45, 25)));
-    border-bottom: #bbb 2px solid;
-}
-.skillsBg2{
-    background-image: -webkit-gradient(linear, left center, left bottom, from(rgba(0,0,0,0)), to(rgb(25, 77, 112)));
-    border-bottom: #bbb 2px solid;
-}
-.skillsBg3{
-    background-image: -webkit-gradient(linear, left center, left bottom, from(rgba(0,0,0,0)), to(rgb(112, 99, 25)));
-    border-bottom: #bbb 2px solid;
-}
-.skillsBg4{
-    background-image: -webkit-gradient(linear, left center, left bottom, from(rgba(0,0,0,0)), to(rgb(66, 25, 112)));
-    border-bottom: #bbb 2px solid;
+    border-bottom: #bbb 4px solid;
 }
 
+
+
+/*    HTML   -   HTML   -   HTML   -   HTML   -   HTML   -   HTML   -   HTML   -   HTML   -   HTML   -   HTML   -    */
+
+
+.skillsBg1{
+    background-image: -webkit-gradient(linear, left 35%, left bottom, from(rgba(0,0,0,0)), to(rgb(112, 45, 25)));
+}
 .skill{
     transition: all 0.5s;
 }
@@ -195,30 +184,75 @@ span {
     height: var(--skills-size);
     background-size: cover;
     background-position-x:center;
+}.skill1:hover{
+    transform: scale(1.1) skew(-0.01turn, 5deg);
+}
+
+/*    CSS   -   CSS   -   CSS   -   CSS   -   CSS   -   CSS   -   CSS   -   CSS   -   CSS   -   CSS   */
+
+
+.skillsBg2{
+    background-image: -webkit-gradient(linear, left 35%, left bottom, from(rgba(0,0,0,0)), to(rgb(25, 77, 112)));
 }
 .skill2{
     background-image: url(./img/css.svg);
     height: var(--skills-size);
     background-size: cover;
     background-position-x:center;
+}.skill2:hover{
+    transform: scale(1.1) skew(-0.01turn, 5deg);
+}
+
+
+/*    JavaScript   -   JavaScript   -   JavaScript   -   JavaScript   -   JavaScript   -   JavaScript   -   JavaScript   */
+
+
+.skillsBg3{
+    background-image: -webkit-gradient(linear, left 35%, left bottom, from(rgba(0,0,0,0)), to(rgb(112, 99, 25)));
 }
 .skill3{
     background-image: url(./img/js.svg);
     height: var(--skills-size);
     background-size: cover;
     background-position-x:center;
+}.skill3:hover{
+    transform: scale(1.1) skew(-0.01turn, 5deg);
+}
+
+
+
+/*    BootStrap   -   BootStrap   -   BootStrap   -   BootStrap   -   BootStrap   -   BootStrap   -   BootStrap   -   BootStrap    */
+
+
+.skillsBg4{
+    background-image: -webkit-gradient(linear, left 35%, left bottom, from(rgba(0,0,0,0)), to(rgb(66, 25, 112)));
 }
 .skill4{
     background-image: url(./img/bs.svg);
     height: var(--skills-size);
     background-size: cover;
     background-position-x:center;
+}.skill4:hover{
+    transform: scale(1.1) skew(-0.01turn, 5deg);
 }
 
-.skillsBg:hover div{
-    transform: scale(1.45);
-    transition: all 0.5s;
+
+
+
+
+
+.skillsBg5{
+    background-image: -webkit-gradient(linear, left 35%, left bottom, from(rgba(0,0,0,0)), to(rgb(32, 112, 25)));
 }
+.skill5{
+    background-image: url(./img/sql.svg);
+    height: var(--skills-size);
+    background-size: cover;
+    background-position-x:center;
+}.skill5:hover{
+    transform: scale(1.1) skew(-0.01turn, 5deg);
+}
+
 
 
 @media all and (max-width:701px) {
@@ -259,24 +293,24 @@ span {
     
     
     
-    @media all and (max-width:700px) {
-        p{
-            font-size: 16.6px;
-        }
-        span{
-            font-size: 25px;
-        }
-        :root{
-            --skills-size: 30vw ;
-        }
-        #skillset{
-            
-            grid-template-columns: 1fr 1fr ;
-            
-        }
-    }
 }
 
+@media all and (max-width:700px) {
+    p{
+        font-size: 16.6px;
+    }
+    span{
+        font-size: 25px;
+    }
+    :root{
+        --skills-size: 30vw ;
+    }
+    #skillset{
+        
+        grid-template-columns: 1fr 1fr ;
+        
+    }
+}
 
 
 @media all and (max-height:500px) {
