@@ -67,7 +67,7 @@ async function listarSinPrecio() {
     let productos = document.querySelector("#productos");
     let pages = document.querySelector("#pages");
 
-    await fetch("./apis/listarSinPrecio.php")
+    fetch("./apis/listarSinPrecio.php")
         .then((res) => res.json())
         .then((datas) => {
             productos.innerHTML = "";
