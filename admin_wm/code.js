@@ -12,13 +12,10 @@ function inicio() {
             .then(res => res.json())
             .then(data => {
                 if (data == "true") {
-                    window.location = 'index.html'
                 } else {
                     console.log(data);
-                    window.location = 'index.html'
                 }
             })
-            window.location = 'index.html'
     })
 
 }

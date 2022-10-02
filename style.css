@@ -248,11 +248,10 @@ span {
     background-image: url(./img/sql.svg);
     height: var(--skills-size);
     background-size: cover;
-    background-position-x:center;
+    background-position-x:49.1%;
 }.skill5:hover{
     transform: scale(1.1) skew(-0.01turn, 5deg);
 }
-
 
 
 @media all and (max-width:701px) {
