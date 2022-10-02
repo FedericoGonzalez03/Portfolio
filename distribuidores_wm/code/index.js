@@ -1,6 +1,6 @@
 window.onload = inicio;
 
-function inicio() {
+async function inicio() {
     verificarSesion();
     document.getElementById("buscar").addEventListener("keyup", actualizar);
     document.getElementById("logout").onclick = cerrarSesion;
@@ -62,12 +62,12 @@ function listar() {
         });
 }
 
-function listarSinPrecio() {
+async function listarSinPrecio() {
     let container = document.querySelector(".container");
     let productos = document.querySelector("#productos");
     let pages = document.querySelector("#pages");
 
-    fetch("./apis/listarSinPrecio.php")
+    await fetch("./apis/listarSinPrecio.php")
         .then((res) => res.json())
         .then((datas) => {
             productos.innerHTML = "";
