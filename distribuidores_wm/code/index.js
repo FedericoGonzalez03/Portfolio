@@ -1,7 +1,7 @@
 window.onload = inicio;
 
-async function inicio() {
-    await verificarSesion();
+function inicio() {
+    verificarSesion();
     document.getElementById("buscar").addEventListener("keyup", actualizar);
     document.getElementById("logout").onclick = cerrarSesion;
 }
@@ -81,7 +81,7 @@ async function listarSinPrecio() {
         });
 }
 
-function verificarSesion() {
+async function verificarSesion() {
     let btnLogIn = document.getElementById("login");
     let btnSignUp = document.getElementById("signup");
     let btnLogOut = document.getElementById("logout");
