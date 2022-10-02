@@ -1,7 +1,7 @@
 window.onload = inicio;
 
 async function inicio() {
-    verificarSesion();
+    await verificarSesion();
     document.getElementById("buscar").addEventListener("keyup", actualizar);
     document.getElementById("logout").onclick = cerrarSesion;
 }
