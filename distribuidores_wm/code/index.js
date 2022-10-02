@@ -62,12 +62,12 @@ function listar() {
         });
 }
 
-async function listarSinPrecio() {
+function listarSinPrecio() {
     let container = document.querySelector(".container");
     let productos = document.querySelector("#productos");
     let pages = document.querySelector("#pages");
 
-    await fetch("./apis/listarSinPrecio.php")
+    fetch("./apis/listarSinPrecio.php")
         .then((res) => res.json())
         .then((datas) => {
             productos.innerHTML = "";
@@ -81,7 +81,7 @@ async function listarSinPrecio() {
         });
 }
 
-async function verificarSesion() {
+function verificarSesion() {
     let btnLogIn = document.getElementById("login");
     let btnSignUp = document.getElementById("signup");
     let btnLogOut = document.getElementById("logout");
