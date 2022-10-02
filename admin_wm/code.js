@@ -1,10 +1,10 @@
 window.onload = inicio;
 
-function inicio() {
+async function inicio() {
 
     let form = document.getElementById('formId');
 
-    form.addEventListener('submit', function (e) {
+    await form.addEventListener('submit', function (e) {
         e.preventDefault();
         let formulario = new FormData(form);
 
