@@ -155,8 +155,8 @@ span {
 .projects{
     height: 100%;
     width: 100%;
-    border-left: 2px solid #000;
-    border-right: 2px solid #000;
+    border-left: 0.1vw solid #000;
+    border-right: 0.1vw solid #000;
     transition: all 1s;
 }.projects:hover{
     transition: all 1s;
@@ -167,8 +167,23 @@ span {
 #wm{
     background: url(./img/wm.svg);
     background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+}#bt{
+    background: url(./img/bt.svg);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+}#obl1s1{
+    background: url(./img/obl1s1.svg);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
 }
 
+#projectsSet a{
+    background-color: rgba(6, 6, 11,0.7);
+}
 
 #projectsSet{
     position:relative;
