@@ -166,6 +166,7 @@ span {
 
 #wm{
     background: url(./img/wm.svg);
+    background-size: cover;
 }
 
 
