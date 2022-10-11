@@ -152,28 +152,49 @@ span {
 }
 
 
-
-
 .projects{
-    height: 25vh;
+    height: 100%;
     width: 100%;
-    background-color:white;
-    border:2px solid black;
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+    transition: all 1s;
+}.projects:hover{
+    transition: all 1s;
+    filter: opacity(0.5);
+    z-index: 1;
 }
+
+#wm{
+    background: url(./img/wm.svg);
+}
+
 
 #projectsSet{
     position:relative;
     width: 65vw;
     display: grid;
     grid-template-columns: 8.125vw repeat(7, 16.25vw) 8.125vw;
-    grid-template-rows: var(--skills-size);
+    grid-template-rows: 25vh;
     overflow-x:scroll;
-    transition:all 1s;
     -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 100%);
-    scroll-behavior: smooth;
+}#projectsSet::-webkit-scrollbar {
+    display: none;
 }
 
+#btnRightPrj{
+    right: 17.5vw;
+}
 
+.btnPrj{
+    position: absolute;
+    height: 25vh;
+    font-size: 10vh;
+    width: 7vw;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--bs-light);
+    z-index: 1;
+    background-color: rgb(0, 0, 0, 0);
+}
 
 
 #skillset{
@@ -411,6 +432,27 @@ span {
         width: 50%;
         top: 40%;
     }
+    #btnLeftPrj{
+        display: none;
+    }
+    #btnRightPrj{
+        display: none;
+    }
+    #projectsSet{
+        height: 65vh;
+        grid-template-rows: 12.5vh repeat(7, 20vh) 12.5vh;
+        grid-template-columns: 45vw;
+        -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 100%);
+    }
+    .projects{
+        border-left: none;
+        border-right: none;
+        border-top: 2px solid #000;
+        border-bottom: 2px solid #000;
+    }
+    #projectsSet{
+        margin-left: 15vw;
+    }
 }
 
 
@@ -434,10 +476,20 @@ span {
     .info {
         max-width: 60vw;
     }
+    #projectsSet{
+        margin-left: 7.5vw;
+    }
     
     
 }
 
+@media all and (max-width:500px) {
+    #projectsSet{
+        grid-template-columns: 60vw;
+        margin-left: 5vw;
+        
+    }
+}
 
 
 
