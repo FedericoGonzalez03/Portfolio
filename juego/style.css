@@ -24,9 +24,24 @@
     font-weight: 600;
 }
 
-
+#divOrientation{
+    display: none;
+    position: absolute;
+}
 @media all and (max-width:750px) {
     #canvas{
         scale: 0.6;
+    }
+}
+@media  (orientation: portrait) {
+    #divOrientation{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: black;
+        height: 100vh;
+        width: 100vw;
+        color: white;
     }
 }
