@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    background-color: rgb(6, 6, 11);
+}
+
+#canvas{
+    background:url(./img/Hills\ Free\ \(update\ 3.0\).png);
+    background-size: cover;
+    scale: 1;
+}
+
+#scoreDiv{
+    margin: 10px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+}
