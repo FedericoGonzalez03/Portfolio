@@ -43,5 +43,6 @@
         height: 100vh;
         width: 100vw;
         color: white;
+        z-index: 200;
     }
 }
