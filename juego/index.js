@@ -1,3 +1,12 @@
+const splash = document.querySelector('.splash')
+document.addEventListener('DOMContentLoaded', (e)=>{
+    setTimeout(()=>{
+        splash.classList.add('display-none')
+    })
+})
+
+
+
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 canvas.width = 750;
