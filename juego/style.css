@@ -1,31 +1,3 @@
-.splash{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgb(6,6,11);
-    z-index: 200;
-    color: #fff;
-    text-align: center;
-    line-height: 90vh;
-}
-
-
-
-@keyframes fadeIn{
-    to{
-        opacity: 0;
-    }
-}
-
-
-.fadeIn{
-    opacity: 0;
-    animation: fadeIn 1s ease-in forwards;
-}
-
-
 *{
     margin: 0;
     padding: 0;
