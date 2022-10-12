@@ -2,13 +2,16 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background-color: rgb(6, 6, 11);
+}
+    
 #container{
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; 
-    background-color: rgb(6, 6, 11);
 }
 
 #canvas{
@@ -18,7 +21,7 @@
 }
 
 #scoreDiv{
-    margin: 10px;
+    margin: 2vh;
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 600;
@@ -28,8 +31,15 @@
     display: none;
     position: absolute;
 }
-@media all and (max-width:750px) {
+
+@media all and (min-width:1600px) {
     #canvas{
+        scale: 2;
+    }
+}
+
+@media all and (max-height:600px) {
+    #container{
         scale: 0.6;
     }
 }
