@@ -62,11 +62,20 @@ document.addEventListener('keyup', e => {
     if (e.keyCode === 68 && player.dir === 'der') player.dir = 'idle';
 })
 
+let inicio = true;
+let instImg = new Image();
+instImg.src = './img/instructions.svg'
+setTimeout(()=>{inicio = false}, 5000)
+function instrucions(){
+    ctx.drawImage(instImg, 50, 50);
+}
+
 
 function update() {
     gravity = (delta == 1 ? 0.48 : 0.1);
     player.vx = vx
     frames++;
+    instrucions();
     frame = Math.floor(frames / delta) % 60;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     coins.map(cn => cn.draw())

@@ -179,6 +179,11 @@ span {
     background-size: cover;
     background-position-x: center;
     background-position-y: center;
+}#juego{
+    background: url(./img/gameIcon.svg);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
 }
 
 #projectsSet a{
