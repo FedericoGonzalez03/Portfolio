@@ -33,9 +33,6 @@ body{
 }
 
 @media all and (min-width:1600px) {
-    #canvas{
-        scale: 2;
-    }
 }
 
 @media all and (max-height:600px) {

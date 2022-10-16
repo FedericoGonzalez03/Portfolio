@@ -1,5 +1,4 @@
 let gravity;
-
 gravity = (delta == 1 ? 0.24 : 0.1);
 
 class Sprite {
@@ -10,6 +9,7 @@ class Sprite {
         this.h = h;
         this.color = color;
         this.vy = 0
+        this.prevY = 0;
     }
 
     draw() {
@@ -18,8 +18,9 @@ class Sprite {
     }
 
     gravity() {
-
-        this.vy += gravity
+        if (!this.inGround()) {
+            this.vy += gravity
+        }
 
     }
     movement() {
@@ -29,6 +30,22 @@ class Sprite {
         } else {
             this.y = Math.round(this.y + this.vy);
         }
+    }
+
+    inGround() {
+        for (let gnd of ground) {
+            if (this.prevY < this.y && this.y >= gnd.y - this.h && this.y <= gnd.y &&
+                this.x > gnd.x - this.w && this.x < gnd.x + gnd.w) {
+
+                if (this.prevY >= gnd.y - this.h) {
+                    this.prevY = 0
+                }
+                this.y = gnd.y - this.h;
+                this.vy = 0
+                return true;
+            }
+        }
+        this.prevY = this.y
     }
 }
 
@@ -233,10 +250,9 @@ class Player extends Sprite {
         if (!this.recentlyAttacked) {
             if (x > this.x + 15) {
                 attackingR = true;
-                console.log('attack')
                 for (let enemy of enemies) {
                     if (enemy.x <= this.x + 55 && enemy.x >= this.x - 15
-                        && enemy.y <= this.y+this.h && enemy.y >= this.y) {
+                        && enemy.y <= this.y + this.h && enemy.y >= this.y) {
                         enemy.hp -= 50
                         if (enemy.hp == 0) {
                             enemies.splice(enemies.indexOf(enemy), 1);
@@ -247,10 +263,9 @@ class Player extends Sprite {
                 }
             } else {
                 attackingL = true;
-                console.log('attack')
                 for (let enemy of enemies) {
-                    if (enemy.x+30 >= this.x - 25 && enemy.x<=this.x + 15
-                        && enemy.y <= this.y+this.h && enemy.y >= this.y) {
+                    if (enemy.x + 30 >= this.x - 25 && enemy.x <= this.x + 15
+                        && enemy.y <= this.y + this.h && enemy.y >= this.y) {
                         enemy.hp -= 50
                         if (enemy.hp == 0) {
                             enemies.splice(enemies.indexOf(enemy), 1);
@@ -263,16 +278,45 @@ class Player extends Sprite {
         }
     }
 
-    inGround() {
-        for (let gnd of ground) {
-            if (this.y >= gnd.y - 40 && this.y <= gnd.y - 30 &&
-                this.x > gnd.x - 30 && this.x < gnd.x + gnd.w) {
-                this.y = gnd.y - 40;
-                this.vy = 0
-                return true;
-            }
+
+}
+
+class Ground extends Sprite {
+    constructor(x, y, w, h, color) {
+        super(x, y, w, h, color);
+    }
+
+    gravity() {
+        // No gravity
+    }
+
+}
+
+class DangerZone extends Sprite {
+    constructor(x, y, w, h, color) {
+        super(x, y, w, h, color);
+    }
+
+    gravity() {
+        // No gravity
+    }
+
+    draw() {
+        this.trigger();
+        ctx.fillStyle = this.color;
+        ctx.fillRect(this.x, this.y, this.w, this.h);
+    }
+
+    trigger() {
+        if (player.y >= this.y - player.w && player.y <= this.y + this.h &&
+            player.x > this.x - player.w && player.x < this.x + this.w) {
+                players.splice(coins.indexOf(player), 1);
+                score = 'Game Over';
+                document.getElementById('score').innerHTML = score
+
         }
     }
+
 }
 
 
@@ -282,6 +326,10 @@ class Coin extends Sprite {
         this.img = new Image();
         this.img.src = './img/Coin.png';
         this.taken = false;
+    }
+
+    gravity() {
+        //   No gravity
     }
 
     draw() {
@@ -311,7 +359,7 @@ class Coin extends Sprite {
 
     isTaken() {
         if (player.y >= this.y - 40 && player.y <= this.y + ((this.img.height) * 0.015) &&
-            player.x > this.x - ((this.img.width) * 0.015) && player.x < this.x + ((this.img.width) * 0.015)) {
+            player.x > this.x - player.w && player.x < this.x + ((this.img.width) * 0.015)) {
 
             coins.splice(coins.indexOf(this), 1);
             score++;
