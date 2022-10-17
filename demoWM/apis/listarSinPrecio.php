@@ -82,3 +82,4 @@ try {
     echo $error->getMessage();
     die();
 }
+?>

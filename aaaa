@@ -1,0 +1,20 @@
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        let formulario = new FormData(form);
+
+        let send = {
+            razonSocial: document.querySelector('#razonSocial').value,
+            tel: document.querySelector('#tel').value,
+            direccion: document.querySelector('#dir').value,
+            email: document.querySelector('#email').value,
+            pass512: document.querySelector('#pass512').value
+        }
+        emailjs.send('service_4', 'template_vgz0szh', send);
+
+        fetch('../../apis/registrar.php', { method: 'POST', body: formulario })
+            .then(res => res.json())
+            .then(datas => {
+                alert(datas)
+                location.href = './login.html';
+            })
+    })
