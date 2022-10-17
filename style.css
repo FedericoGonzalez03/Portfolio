@@ -1,7 +1,5 @@
 :root {
     --skills-size: 15vw;
-    --my-start-width: 0;
-    --my-end-width: 280px;
 }
 * {
     border: 0;
@@ -388,11 +386,16 @@ span {
 
 
 
+#contact{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 
 
-
-
-@media all and (max-width:701px) {
+@media all and (max-width:900px) {
     h2 {
         font-size: 8vw;
     }
@@ -427,8 +430,6 @@ span {
     .imagen {
         margin: 0 0 0 0;
     }
-    
-    
     
 }
 
