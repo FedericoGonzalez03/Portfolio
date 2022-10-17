@@ -1,0 +1,254 @@
+:root{
+    --color: rgb(70, 92, 126);
+    --color2:rgb(39, 75, 131);
+}
+@font-face {
+    font-family: caviarDreams;
+    src: url(../estilos/CaviarDreams.ttf);
+}
+@font-face {
+    font-family: lemonMilk;
+    src: url(../estilos/LEMONMILK-Regular.otf);
+}
+* {
+    margin: 0px;
+    color: var(--color);
+    font-family: caviarDreams;
+    font-weight: 900;
+}
+header{
+    padding-top: 20px;
+    height: 65px;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(200,200,200,1) 100%);
+}
+body{
+    overflow-x: hidden;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+#actual{
+    color: rgb(0, 0, 0);
+}
+h1{
+
+    font-family: lemonMilk;
+    color:var(--color2);
+    text-align: center;
+}
+nav{
+    display: flex;
+    text-align: center;
+    height: 42px;
+    margin: 0;
+    background: rgb(70,92,123);
+    background: linear-gradient(0deg, rgba(70,92,123,1) 0%, rgba(39,75,131,1) 50%, rgba(39,75,131,1) 100%);
+    padding-top: 14px;
+}
+a{
+    font-size: 22px;
+    color: white;
+    text-decoration: none;
+    margin: 0 auto;
+}
+#agregarCliente{
+    display: inline-block;
+    width: 15%;
+}
+#agregarCliente button{
+    width: 100%;
+    height: 33px;
+    margin: 0;
+}
+#selectClientes{
+    margin: 10px 0 30px 34%;
+    display: inline-block;
+}
+button {
+    background-color: white;
+    border-radius: 45px;
+    box-shadow: 0px 0px 5px 1px var(--color);
+    border: 5px solid rgb(255, 255, 255);
+    width: 25%;
+    margin-left: 37.5%;
+    height: 40px;
+    min-width: 90px;
+}
+input[type=number]::-webkit-inner-spin-button{ 
+    display: none;                                 /* Desactivo el spin de los input NUMBER */
+}
+input {
+    border-radius: 45px;
+    box-shadow: 0px 0px 5px 1px var(--color);
+    border: 5px solid rgb(255, 255, 255);
+    text-align: center;
+    width: calc(50% - 16px);
+    margin: 0 25% 30px;
+    min-width: 180px;
+    height: 20px;
+}
+select {
+    display: block;
+    border-radius: 45px;
+    box-shadow: 0px 0px 5px 1px var(--color);
+    border: 5px solid rgb(255, 255, 255);
+    text-align: center;
+    text-align-last:center;
+    width: 15%;
+    margin: 10px 42.5% 30px;
+    height: 33px;
+    min-width: 100px;
+}
+input::placeholder {
+    color: var(--color);
+}
+#act{
+    margin-top: 10px;
+}
+h2{
+    font-family: lemonMilk;
+    text-align: center;
+    margin-bottom: 30px;
+}
+section{
+    padding: 30px 0 ;
+    min-width: 308px;
+    margin: 30px auto 30px;
+    width: 90%;
+    background-color: rgb(235, 235, 235);
+    border-radius: 20px;
+    box-shadow: 0px 0px 19px 5px var(--color);
+    border: 5px solid rgb(255, 255, 255);
+
+}
+#grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+#grid2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+.one{
+    grid-column: 1/2;
+}
+.two{
+    padding: 0;
+    text-align: center;
+}
+table{
+    width: 100%;
+    text-align: center;
+}
+#gen{
+    width: 20%;
+    margin-left: 40%;
+}
+th{
+    font-family: lemonMilk;
+    font-size: 21px;
+}
+td{
+    font-size: 13px;
+}
+footer{
+    display: flex;
+    height: 42px;
+    background: rgb(70,92,123);
+    background: linear-gradient(180deg, rgba(70,92,123,1) 0%, rgba(39,75,131,1) 50%, rgba(39,75,131,1) 100%);
+    margin-top: auto;
+    text-align: center;
+    color: white;
+    width: 100%;padding-top: 20px;
+}
+span{
+    margin: 0 auto;
+    color: white;
+}
+div span{
+    margin: 0;
+    color: var(--color2);
+    display: inline-block;
+    width: 2%;
+    text-align: center;
+}
+img{
+    position: absolute;
+    height: 60px;
+    left: 10px;
+    top: 12.5px;
+}
+@media (max-width: 600px){
+    a{
+        font-size: 13px;
+        margin-top: 6px;
+    }
+    th{
+        text-transform:capitalize;
+    }
+    h1{
+        float: right;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+    header{
+        height: 65px;
+    }
+    h2{
+        font-size: 15.5px;
+        margin-bottom: 10px;
+    }
+    th{
+        font-size: 12px;
+    }
+    .visibleInputs{
+
+        display: block;
+        margin: auto auto 10px;
+        width: 90%;
+
+    }
+    button{
+        display: block;
+        margin: auto auto 10px;
+        width: 50%;
+    }
+    section{
+        padding: 10px 0 0;
+    }
+    #grid{
+        display: block;
+    }
+    #grid2{
+        display: block;
+    }
+    #gen{
+        width: 90%;
+        margin: auto auto 10px;
+    }
+    #agregarCliente{
+        display: inline-block;
+        width: 70%;
+        margin: 0 15% 15px;
+    }
+    #agregarCliente button{
+        width: 100%;
+        height: 33px;
+        margin: 0;
+    }
+    #selectClientes{
+        margin: 10px 5% 0 5%;
+        display: inline-block;
+    }
+    div span{
+        margin: 0 5% 5px;
+        width: 90%;
+        text-align: center;
+        display: inline-block;
+
+    }
+}

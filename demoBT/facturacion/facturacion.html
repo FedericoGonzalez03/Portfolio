@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href='../estilos/estilosFact.css'>
+</head>
+
+<body>
+    <header>
+        <img src="../img/ultimateLogo.png" alt="Logo">
+        <h1>Control de Stock</h1>
+    </header>
+    <nav>
+        <a href="../home.html">Inicio</a>
+        <a href="../agregar/agregar.html">Agregar artículo</a>
+        <a href="../ventas/ventas.html">Ventas</a>
+        <a href="../compras/compras.html">Compras</a>
+        <a id="actual" href="facturacion.html">Facturacion</a>
+    </nav>
+    <section id="grid">
+        <div class="one">
+            <h2>Agregar Artículo a la factura</h2>
+            <form id="formCons" method="POST">
+
+                <input class="visibleInputs" type="number" id="inpId" name="inpId" placeholder="ID" required>
+                <input class="visibleInputs" type="number" id="inpCant" name="inpCant" placeholder="CANTIDAD" required>
+                <input type="text" id="inpCode" name="inpCode" hidden>
+                <input type="text" id="phpId" name="phpId" hidden>
+                <button id="add" type="submit">Agregar a factura</button>
+
+            </form>
+        </div>
+        <div class="two">
+            <table id="tablaP">
+                <th>Productos a facturar:</th>
+            </table>
+        </div>
+
+    </section>
+    <section>
+        <div >
+            <h2>Datos del Cliente para la Factura</h2>
+            <select class="visibleInputs" id="selectClientes">
+            </select>
+            <span>o</span>
+            <a href="../clientes/clientes.html" id="agregarCliente"> <button>Crear Cliente</button></a>
+        
+            <select class="visibleInputs" id="cobro">
+                <option value="contado">Contado</option>
+                <option value="tarjeta">Tarjeta</option>
+            </select>
+            <button id="gen">Generar factura</button>
+        </div>
+    </section>
+    <footer>
+        <span>Distribuidora BT</span> - <span>094 598 808</span> - <span>Carlos Salomón</span>
+    </footer>
+
+    <script src="../scripts/facturacion.js"></script>
+</body>
+
+</html>
