@@ -10,11 +10,11 @@
 
     try{
 
-        $conex = new PDO("mysql:host=localhost;port=3306;dbname=DB_prueba",'root','');
+        $conex = new PDO("mysql:host=localhost;dbname=u147693105_portfolio", 'u147693105_federicogs', 'Portfolio20102022');
         $conex->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $conex->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
         echo json_encode('connected');
-        $pdo = $conex->prepare('INSERT INTO clientes(nombreFantasia,razonSocial,rut,telefono,contacto,direccion) VALUES(?,?,?,?,?,?)');
+        $pdo = $conex->prepare('INSERT INTO clientesbt(nombreFantasia,razonSocial,rut,telefono,contacto,direccion) VALUES(?,?,?,?,?,?)');
         $pdo->bindParam(1, $nombreFant);
         $pdo->bindParam(2, $razonSocial);
         $pdo->bindParam(3, $rut);

@@ -3,13 +3,11 @@
         let formulario = new FormData(form);
 
         let send = {
-            razonSocial: document.querySelector('#razonSocial').value,
-            tel: document.querySelector('#tel').value,
-            direccion: document.querySelector('#dir').value,
-            email: document.querySelector('#email').value,
-            pass512: document.querySelector('#pass512').value
+            from_name: document.querySelector('#nombre').value,
+            from_email: document.querySelector('#email').value,
+            message: document.querySelector('#message').value
         }
-        emailjs.send('service_4', 'template_vgz0szh', send);
+        emailjs.send('service_p5cw83c', 'template_k5tppxg', send);
 
         fetch('../../apis/registrar.php', { method: 'POST', body: formulario })
             .then(res => res.json())
@@ -18,3 +16,14 @@
                 location.href = './login.html';
             })
     })
+
+
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("NDb0KtrvGF9IhjsdY");
+        })();
+    </script>
