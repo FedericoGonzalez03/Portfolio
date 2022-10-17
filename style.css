@@ -1,6 +1,7 @@
 :root {
     --skills-size: 15vw;
 }
+
 * {
     border: 0;
     padding: 0;
@@ -52,12 +53,20 @@ body {
 }
 
 h2 {
-    color: #222;
+    color: rgb(83, 170, 37);
     position: relative;
     font-size: 4vw;
-    font-style: italic;
-    -webkit-text-stroke: 0.15vw rgb(83, 170, 37);
     font-weight: 900;
+}
+
+h3 {
+
+    color: rgb(13, 75, 0);
+    position: relative;
+    font-size: 2vw;
+    font-weight: 900;
+    margin-bottom: 5vh;
+
 }
 
 
@@ -130,6 +139,7 @@ span {
     background-position-y: start;
     background-size: cover;
 }
+
 /* linear-gradient(rgba(0, 0, 0, 0.7), rgba(4, 4, 8, 0.7)), url(img/bros.gif) */
 .parallax1 {
     position: relative;
@@ -140,10 +150,23 @@ span {
     background-size: cover;
     background-attachment: fixed;
 }
+
 /*  linear-gradient(rgba(5, 4, 8, 0.85), rgba(5, 4, 8, 0.85)), url(img/dws.gif) */
 .parallax2 {
     position: relative;
-    background: linear-gradient(rgba(5, 4, 8, 0.85), rgba(5, 4, 8, 0.85)), url(img/dws.gif);
+    background: linear-gradient(rgba(5, 4, 8, 0.9), rgba(5, 4, 8, 0.9)), url(img/dws.gif);
+    background-position-y: center;
+    background-position-x: center;
+    opacity: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+}
+
+.parallax3 {
+    position: relative;
+    background: linear-gradient(rgba(5, 4, 8, 0.9), rgba(5, 4, 8, 0.9)), url(img/5927911.gif);
     background-position-y: center;
     background-position-x: center;
     opacity: 100%;
@@ -154,73 +177,84 @@ span {
 }
 
 
-.projects{
+.projects {
     height: 100%;
     width: 100%;
     border-left: 0.1vw solid #000;
     border-right: 0.1vw solid #000;
     transition: all 1s;
-}.projects:hover{
+}
+
+.projects:hover {
     transition: all 1s;
     filter: opacity(0.5);
     z-index: 1;
 }
 
-#wm{
+#wm {
     background: url(./img/wm.svg);
     background-size: cover;
     background-position-x: center;
     background-position-y: center;
-}#bt{
+}
+
+#bt {
     background: url(./img/bt.svg);
     background-size: cover;
     background-position-x: center;
     background-position-y: center;
-}#obl1s1{
+}
+
+#obl1s1 {
     background: url(./img/obl1s1.svg);
     background-size: cover;
     background-position-x: center;
     background-position-y: center;
-}#juego{
+}
+
+#juego {
     background: url(./img/gameIcon.svg);
     background-size: cover;
     background-position-x: center;
     background-position-y: center;
 }
 
-#projectsSet a{
-    background-color: rgba(6, 6, 11,0.7);
+#projectsSet a {
+    background-color: rgba(6, 6, 11, 0.7);
+    overflow-y: hidden;
 }
 
-#projectsSet{
-    position:relative;
+#projectsSet {
+    position: relative;
     width: 65vw;
     display: grid;
     grid-template-columns: 8.125vw repeat(4, 16.25vw) 8.125vw;
     grid-template-rows: 25vh;
-    overflow-x:scroll;
+    overflow-x: scroll;
     -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 100%);
-}#projectsSet::-webkit-scrollbar {
+}
+
+#projectsSet::-webkit-scrollbar {
     display: none;
 }
 
-#btnRightPrj{
+#btnRightPrj {
     right: 17.5vw;
 }
 
-.btnPrj{
+.btnPrj {
     position: absolute;
     height: 25vh;
     font-size: 10vh;
     width: 7vw;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: var(--bs-light);
     z-index: 1;
     background-color: rgb(0, 0, 0, 0);
 }
 
 
-#skillset{
+#skillset {
     width: 65vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -228,7 +262,7 @@ span {
     gap: 2vw;
 }
 
-.skillsBg{
+.skillsBg {
     border-bottom: #bbb 4px solid;
 }
 
@@ -237,33 +271,40 @@ span {
 /*    HTML   -   HTML   -   HTML   -   HTML   -   HTML   -   HTML   -   HTML   -   HTML   -   HTML   -   HTML   -    */
 
 
-.skillsBg1{
-    background-image: -webkit-gradient(linear, left 35%, left bottom, from(rgba(0,0,0,0)), to(rgb(112, 45, 25)));
+.skillsBg1 {
+    background-image: -webkit-gradient(linear, left 35%, left bottom, from(rgba(0, 0, 0, 0)), to(rgb(112, 45, 25)));
 }
-.skill{
+
+.skill {
     transition: all 0.5s;
 }
-.skill1{
+
+.skill1 {
     background-image: url(./img/html.svg);
     height: var(--skills-size);
     background-size: cover;
-    background-position-x:center;
-}.skill1:hover{
+    background-position-x: center;
+}
+
+.skill1:hover {
     transform: scale(1.1) skew(-0.01turn, 5deg);
 }
 
 /*    CSS   -   CSS   -   CSS   -   CSS   -   CSS   -   CSS   -   CSS   -   CSS   -   CSS   -   CSS   */
 
 
-.skillsBg2{
-    background-image: -webkit-gradient(linear, left 35%, left bottom, from(rgba(0,0,0,0)), to(rgb(25, 77, 112)));
+.skillsBg2 {
+    background-image: -webkit-gradient(linear, left 35%, left bottom, from(rgba(0, 0, 0, 0)), to(rgb(25, 77, 112)));
 }
-.skill2{
+
+.skill2 {
     background-image: url(./img/css.svg);
     height: var(--skills-size);
     background-size: cover;
-    background-position-x:center;
-}.skill2:hover{
+    background-position-x: center;
+}
+
+.skill2:hover {
     transform: scale(1.1) skew(-0.01turn, 5deg);
 }
 
@@ -271,15 +312,18 @@ span {
 /*    JavaScript   -   JavaScript   -   JavaScript   -   JavaScript   -   JavaScript   -   JavaScript   -   JavaScript   */
 
 
-.skillsBg3{
-    background-image: -webkit-gradient(linear, left 35%, left bottom, from(rgba(0,0,0,0)), to(rgb(112, 99, 25)));
+.skillsBg3 {
+    background-image: -webkit-gradient(linear, left 35%, left bottom, from(rgba(0, 0, 0, 0)), to(rgb(112, 99, 25)));
 }
-.skill3{
+
+.skill3 {
     background-image: url(./img/js.svg);
     height: var(--skills-size);
     background-size: cover;
-    background-position-x:center;
-}.skill3:hover{
+    background-position-x: center;
+}
+
+.skill3:hover {
     transform: scale(1.1) skew(-0.01turn, 5deg);
 }
 
@@ -288,15 +332,18 @@ span {
 /*    BootStrap   -   BootStrap   -   BootStrap   -   BootStrap   -   BootStrap   -   BootStrap   -   BootStrap   -   BootStrap    */
 
 
-.skillsBg4{
-    background-image: -webkit-gradient(linear, left 35%, left bottom, from(rgba(0,0,0,0)), to(rgb(66, 25, 112)));
+.skillsBg4 {
+    background-image: -webkit-gradient(linear, left 35%, left bottom, from(rgba(0, 0, 0, 0)), to(rgb(66, 25, 112)));
 }
-.skill4{
+
+.skill4 {
     background-image: url(./img/bs.svg);
     height: var(--skills-size);
     background-size: cover;
-    background-position-x:center;
-}.skill4:hover{
+    background-position-x: center;
+}
+
+.skill4:hover {
     transform: scale(1.1) skew(-0.01turn, 5deg);
 }
 
@@ -305,15 +352,18 @@ span {
 /*       SQL      -      SQL      -      SQL      -      SQL      -      SQL      -      SQL      -      SQL      -      SQL       */
 
 
-.skillsBg5{
-    background-image: -webkit-gradient(linear, left 35%, left bottom, from(rgba(0,0,0,0)), to(rgb(32, 112, 25)));
+.skillsBg5 {
+    background-image: -webkit-gradient(linear, left 35%, left bottom, from(rgba(0, 0, 0, 0)), to(rgb(32, 112, 25)));
 }
-.skill5{
+
+.skill5 {
     background-image: url(./img/sql.svg);
     height: var(--skills-size);
     background-size: cover;
-    background-position-x:center;
-}.skill5:hover{
+    background-position-x: center;
+}
+
+.skill5:hover {
     transform: scale(1.1) skew(-0.01turn, 5deg);
 }
 
@@ -323,15 +373,18 @@ span {
 
 
 
-.skillsBg6{
-    background-image: -webkit-gradient(linear, left 35%, left bottom, from(rgba(0,0,0,0)), to(rgb(50, 41, 124)));
+.skillsBg6 {
+    background-image: -webkit-gradient(linear, left 35%, left bottom, from(rgba(0, 0, 0, 0)), to(rgb(50, 41, 124)));
 }
-.skill6{
+
+.skill6 {
     background-image: url(./img/php.svg);
     height: var(--skills-size);
     background-size: cover;
-    background-position-x:center;
-}.skill6:hover{
+    background-position-x: center;
+}
+
+.skill6:hover {
     transform: scale(1.1) skew(-0.01turn, 5deg);
 }
 
@@ -341,15 +394,18 @@ span {
 
 
 
-.skillsBg7{
-    background-image: -webkit-gradient(linear, left 35%, left bottom, from(rgba(0,0,0,0)), to(rgb(162, 98, 43)));
+.skillsBg7 {
+    background-image: -webkit-gradient(linear, left 35%, left bottom, from(rgba(0, 0, 0, 0)), to(rgb(162, 98, 43)));
 }
-.skill7{
+
+.skill7 {
     background-image: url(./img/java.svg);
     height: var(--skills-size);
     background-size: cover;
-    background-position-x:center;
-}.skill7:hover{
+    background-position-x: center;
+}
+
+.skill7:hover {
     transform: scale(1.1) skew(-0.01turn, 5deg);
 }
 
@@ -358,31 +414,39 @@ span {
 
 
 
-.skillsBg8{
-    background-image: -webkit-gradient(linear, left 35%, left bottom, from(rgba(0,0,0,0)), to(rgb(48, 48, 48)));
+.skillsBg8 {
+    background-image: -webkit-gradient(linear, left 35%, left bottom, from(rgba(0, 0, 0, 0)), to(rgb(48, 48, 48)));
     position: relative;
 }
-.skill8{
+
+.skill8 {
     background-image: url(./img/react.svg);
     height: var(--skills-size);
     background-size: cover;
-    background-position-x:center;
-}.skill8:hover{
+    background-position-x: center;
+}
+
+.skill8:hover {
     transform: scale(1.1) skew(-0.01turn, 5deg);
-}.soon{
-    filter:blur(4px);
-}.content{
+}
+
+.soon {
+    filter: blur(4px);
+}
+
+.content {
     transition: all 0.2s;
     position: absolute;
     text-align: center;
-    color: rgba(255,255, 255, 0);
+    color: rgba(255, 255, 255, 0);
     top: 50%;
     font-size: 1vw;
     right: 26%;
     text-shadow: 2px 2px rgba(0, 0, 0, 0);
-    
+
 }
-.skillsBg8:hover .content{
+
+.skillsBg8:hover .content {
     transition: all 0.2s;
     color: rgba(255, 255, 255, 1);
     text-shadow: 2px 2px rgba(0, 0, 0, 1)
@@ -390,15 +454,41 @@ span {
 
 
 
-#contact{
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+#email,
+#name {
+    width: 50vw;
 }
 
-#splash{
+#message {
+    width: 50vw;
+    height: 20vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#splash {
     position: fixed;
     display: flex;
     flex-direction: row;
@@ -407,12 +497,13 @@ span {
     top: 0;
     height: 100vh;
     width: 100vw;
-    background-color: rgb(6,6,11);
+    background-color: rgb(6, 6, 11);
     z-index: 200;
     /* opacity: 1; */
     transition: all ease-in-out 1s;
 }
-#splash.active{
+
+#splash.active {
     /* opacity: 0; */
     position: fixed;
     flex-direction: row;
@@ -421,7 +512,7 @@ span {
     justify-content: center;
     height: 100vh;
     width: 100vw;
-    background-color: rgb(6,6,11);
+    background-color: rgb(6, 6, 11);
     z-index: 200;
     transition: all ease-in-out 1s;
 }
@@ -432,80 +523,91 @@ span {
     h2 {
         font-size: 8vw;
     }
-    
+
     img {
         width: 40vw;
     }
-    #img{
+
+    #img {
         width: 50vw;
         height: 50vw;
     }
+
     h1 {
         font-size: 9.5vw;
     }
-    
+
     span {
         font-size: 3.6vw;
     }
-    
+
     .cont {
         flex-direction: column-reverse;
     }
-    
+
     .info {
         max-width: 75%;
     }
-    
+
     p {
         font-size: 2.4vw;
     }
-    
+
     .imagen {
         margin: 0 0 0 0;
     }
-    
+
 }
 
 @media all and (max-width:899px) {
-    p{
+    p {
         font-size: 16.6px;
     }
-    span{
+
+    span {
         font-size: 25px;
     }
-    :root{
-        --skills-size: 30vw ;
+
+    :root {
+        --skills-size: 30vw;
     }
-    #skillset{
-        
-        grid-template-columns: 1fr 1fr ;
-        
+
+    #skillset {
+
+        grid-template-columns: 1fr 1fr;
+
     }
-    .content{
+
+    .content {
         font-size: 3vw;
         right: 25%;
         width: 50%;
         top: 40%;
     }
-    #btnLeftPrj{
+
+    #btnLeftPrj {
         display: none;
     }
-    #btnRightPrj{
+
+    #btnRightPrj {
         display: none;
     }
-    #projectsSet{
+
+    #projectsSet {
         height: 65vh;
         grid-template-rows: 12.5vh repeat(4, 20vh) 12.5vh;
         grid-template-columns: 45vw;
         -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 100%);
     }
-    .projects{
+
+    .projects {
         border-left: none;
         border-right: none;
         border-top: 2px solid #000;
         border-bottom: 2px solid #000;
     }
-    #projectsSet{
+
+    #projectsSet {
         margin-left: 15vw;
     }
 }
@@ -513,37 +615,43 @@ span {
 
 
 @media all and (max-height:500px) {
-    #img{
+    #img {
         width: 20vw;
         height: 20vw;
     }
-    p{
+
+    p {
         font-size: 12px;
     }
-    h1{
+
+    h1 {
         font-size: 7.7vw;
     }
+
     .cont {
         flex-direction: row;
     }
+
     .imagen {
         margin: 0 0 0 5vw;
     }
+
     .info {
         max-width: 60vw;
     }
-    #projectsSet{
+
+    #projectsSet {
         margin-left: 7.5vw;
     }
-    
-    
+
+
 }
 
 @media all and (max-width:500px) {
-    #projectsSet{
+    #projectsSet {
         grid-template-columns: 60vw;
         margin-left: 5vw;
-        
+
     }
 }
 

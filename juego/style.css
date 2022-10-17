@@ -33,6 +33,12 @@ body{
 }
 
 @media all and (min-width:1600px) {
+    *{
+        overflow: hidden;
+    }
+    #container{
+        scale: 1.8;
+    }
 }
 
 @media all and (max-height:600px) {

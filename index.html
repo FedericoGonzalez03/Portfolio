@@ -176,6 +176,7 @@
                 </a>
                 
             </div>
+            <small class="text-center d-block">Login with {email: 123@prueba.com, password: 123} </small>
             <div>
             </div>
         </div>
@@ -192,11 +193,24 @@
             
         </p>
     </div>
-    <div id="contact">
-        <form>
-            <input type="text" class="form-control">
-            <input type="text" class="form-control">
-        </form>
+    <div id="contact" class="parallax3 cont">
+        <div>
+            <h2>CONTACT ME</h2>
+            <h3>OR JUST LEAVE A FEEDBACK!</h3>
+            <form id="formContact">
+                <input type="text" id="email" class="form-control mb-4" placeholder="Your Email">
+                <input type="text" id="name" class="form-control mb-4" placeholder="Name">
+                <textarea id="message" class="form-control d-block mb-4" placeholder="Message"></textarea>
+                <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+            </script>
+            <script type="text/javascript">
+                (function () {
+                    emailjs.init("j5lMQ-wRsIfM65Dbe");
+                })();
+            </script>
+        </div>
     </div>
     <script src="./script.js"></script>
 </body>
