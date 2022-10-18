@@ -522,7 +522,7 @@ small{
 
 
 
-@media all and (max-width:900px) {
+@media all and (max-width:901px) {
     h2 {
         font-size: 8vw;
     }
@@ -549,7 +549,7 @@ small{
     }
 
     .info {
-        max-width: 75%;
+        max-width: 80%;
     }
 
     p {
@@ -562,7 +562,7 @@ small{
 
 }
 
-@media all and (max-width:899px) {
+@media all and (max-width:900px) {
     p {
         font-size: 16.6px;
     }
@@ -577,7 +577,8 @@ small{
 
     #skillset {
 
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 80vw;
 
     }
 
@@ -615,8 +616,15 @@ small{
     }
 }
 
+@media all and (max-width:600px) {
+    #skillset {
+    
+            grid-template-columns: 1fr 1fr;
+            width: 65vw;
+    
+        }
 
-
+}
 @media all and (max-height:500px) {
     #img {
         width: 20vw;
