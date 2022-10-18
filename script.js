@@ -23,7 +23,6 @@ window.addEventListener("DOMContentLoaded", ()=>{
 
 form.addEventListener('submit', function (e) {
   e.preventDefault();
-  let formulario = new FormData(form);
 
   let send = {
       from_name: document.querySelector('#name').value,
