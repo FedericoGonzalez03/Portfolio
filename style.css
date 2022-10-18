@@ -612,7 +612,7 @@ small{
     }
 
     #projectsSet {
-        margin-left: 18vw;
+        margin-left: 17vw;
     }
 }
 
@@ -659,9 +659,10 @@ small{
 }
 
 @media all and (max-width:500px) {
+    
     #projectsSet {
-        grid-template-columns: 60vw;
-        margin-left: 8vw;
+        grid-template-columns: 50vw;
+        margin-left: 15vw;
 
     }
 }
