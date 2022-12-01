@@ -263,7 +263,8 @@ span {
 }
 
 .skillsBg {
-    border-bottom: #bbb 4px solid;
+    border-bottom: #444 4px solid;
+    position: relative;
 }
 
 small{
@@ -276,6 +277,15 @@ small{
 
 .skillsBg1 {
     background-image: -webkit-gradient(linear, left 35%, left bottom, from(rgba(0, 0, 0, 0)), to(rgb(112, 45, 25)));
+}
+.skillsBg1::after {
+    content: '';
+    border-bottom: #bbb 4px solid;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 80%;
+    height: 1%;
 }
 
 .skill {
@@ -300,6 +310,16 @@ small{
     background-image: -webkit-gradient(linear, left 35%, left bottom, from(rgba(0, 0, 0, 0)), to(rgb(25, 77, 112)));
 }
 
+.skillsBg2::after {
+    content: '';
+    border-bottom: #bbb 4px solid;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 70%;
+    height: 1%;
+}
+
 .skill2 {
     background-image: url(./img/css.svg);
     height: var(--skills-size);
@@ -318,7 +338,15 @@ small{
 .skillsBg3 {
     background-image: -webkit-gradient(linear, left 35%, left bottom, from(rgba(0, 0, 0, 0)), to(rgb(112, 99, 25)));
 }
-
+.skillsBg3::after {
+    content: '';
+    border-bottom: #bbb 4px solid;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 75%;
+    height: 1%;
+}
 .skill3 {
     background-image: url(./img/js.svg);
     height: var(--skills-size);
@@ -338,7 +366,15 @@ small{
 .skillsBg4 {
     background-image: -webkit-gradient(linear, left 35%, left bottom, from(rgba(0, 0, 0, 0)), to(rgb(66, 25, 112)));
 }
-
+.skillsBg4::after {
+    content: '';
+    border-bottom: #bbb 4px solid;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 60%;
+    height: 1%;
+}
 .skill4 {
     background-image: url(./img/bs.svg);
     height: var(--skills-size);
@@ -358,7 +394,15 @@ small{
 .skillsBg5 {
     background-image: -webkit-gradient(linear, left 35%, left bottom, from(rgba(0, 0, 0, 0)), to(rgb(32, 112, 25)));
 }
-
+.skillsBg5::after {
+    content: '';
+    border-bottom: #bbb 4px solid;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 40%;
+    height: 1%;
+}
 .skill5 {
     background-image: url(./img/sql.svg);
     height: var(--skills-size);
@@ -379,7 +423,15 @@ small{
 .skillsBg6 {
     background-image: -webkit-gradient(linear, left 35%, left bottom, from(rgba(0, 0, 0, 0)), to(rgb(50, 41, 124)));
 }
-
+.skillsBg6::after {
+    content: '';
+    border-bottom: #bbb 4px solid;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 55%;
+    height: 1%;
+}
 .skill6 {
     background-image: url(./img/php.svg);
     height: var(--skills-size);
@@ -400,7 +452,15 @@ small{
 .skillsBg7 {
     background-image: -webkit-gradient(linear, left 35%, left bottom, from(rgba(0, 0, 0, 0)), to(rgb(162, 98, 43)));
 }
-
+.skillsBg7::after {
+    content: '';
+    border-bottom: #bbb 4px solid;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 70%;
+    height: 1%;
+}
 .skill7 {
     background-image: url(./img/java.svg);
     height: var(--skills-size);
@@ -419,9 +479,16 @@ small{
 
 .skillsBg8 {
     background-image: -webkit-gradient(linear, left 35%, left bottom, from(rgba(0, 0, 0, 0)), to(rgb(48, 48, 48)));
-    position: relative;
 }
-
+.skillsBg8::after {
+    content: '';
+    border-bottom: #bbb 4px solid;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 55%;
+    height: 1%;
+}
 .skill8 {
     background-image: url(./img/react.svg);
     height: var(--skills-size);
