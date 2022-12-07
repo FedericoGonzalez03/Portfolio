@@ -7,39 +7,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to my Portfolio. Hi, I'm a Systems Engineering student looking for my first IT experience">
+    <meta name="description"
+        content="Welcome to my Portfolio. Hi, I'm a Systems Engineering student looking for my first IT experience">
     <meta name="author" content="Federico Gonzalez Salomon">
     <meta name="keywords" content="Portfolio, Junior, Developer, HTML, CSS, JavaScript">
     <meta name="robots" content="follow">
     <meta name='url' content='http://www.federicogs.com'>
     <meta name='identifier-URL' content='http://www.federicogs.com'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-    crossorigin="anonymous"></script>
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css" media="screen">
     <link rel="stylesheet" href="./print.css" media="print">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,600;0,700;0,900;1,600;1,700;1,900&display=swap');
-        </style>
+    </style>
 </head>
 
 <body>
     <div id="splash">
-        <img src="./img/logoPortfolio.svg" alt="logoSplash">
+        <img class="img" src="./img/logoPortfolio.svg" alt="logoSplash">
     </div>
+
+
+    <nav class="navbar navbar-expand-lg px-2">
+        <a class="navbar-brand text-light" href="#">
+            <img src="./img/logoPortfolio.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+            Federico GS
+        </a>
+        <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" ></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNav">
+            <ul class="navbar-nav right">
+                <li class="nav-item">
+                    <a class="text-light nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="text-light nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="text-light nav-link" href="#">Pricing</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
     <div class="cont">
         <div class="info d-inline-block">
             <h1 data-text="Federico González">Federico González</h1>
-            <span data-text="Junior Developer">Junior Developer</span>
+            <span data-text="Freelance Developer">Freelance Developer</span>
             <p>
-                
+
                 I am studying Systems
                 Engineering and working as
                 cashier in Disco SA.
-                I have knowledge in frontend design, 
-                basic API uses and database with SQL, 
+                I have knowledge in frontend design,
+                basic API uses and database with SQL,
                 also in graphic design, specifically
                 vector desing.
                 Basic knowledge of Unity, Unreal
@@ -51,136 +79,137 @@
                 environment.
                 I am 18 years old
                 (16/11/03).
-                
+
             </p>
         </div>
         <div class="imagen d-inline-block">
             <span id="img"></span>
         </div>
     </div>
-    
+
     <div class="cont parallax1">
         <div class="info">
             <h2 class="text-center mb-5">SKILL SET</h2>
             <div id="skillset">
-                
+
                 <div>
                     <div class="skillsBg skillsBg1">
                         <div class="skill skill1"></div>
                     </div>
                 </div>
-                
+
                 <div>
                     <div class="skillsBg skillsBg2">
                         <div class="skill skill2"></div>
                     </div>
                 </div>
-                
+
                 <div>
                     <div class="skillsBg skillsBg3">
                         <div class="skill skill3"></div>
                     </div>
                 </div>
-                
+
                 <div>
                     <div class="skillsBg skillsBg4">
                         <div class="skill skill4"></div>
                     </div>
                 </div>
-                
+
                 <div>
                     <div class="skillsBg skillsBg5">
                         <div class="skill skill5"></div>
                     </div>
                 </div>
-                
+
                 <div>
                     <div class="skillsBg skillsBg6">
                         <div class="skill skill6"></div>
                     </div>
                 </div>
-                
+
                 <div>
                     <div class="skillsBg skillsBg7">
                         <div class="skill skill7"></div>
                     </div>
                 </div>
-                
+
                 <div>
                     <div class="skillsBg skillsBg8">
                         <div class="skill skill8">
                         </div>
                     </div>
                 </div>
-                
-                
+
+
             </div>
         </div>
-        
+
     </div>
-    
+
     <div class="cont">
-        
+
         <p class="info">
-            
+
             I'm in touch with the awesome programming world since I started playing to make games in Unity
             at 2017 viewing nodician videos on YouTube (when i started studying Java in the University I remembered
             those days trying to understand C# with 13 years old), then I started with Unreal Engine and I have
             learned the basics of its blueprint visual scripting system. I liked it, so in 2019 I completed an Udemy
-            Unity and C# course, there i obtained a <a target="_blank" href="https://ude.my/UC-P9Y88HSG">certificate</a>. At December of 2021 (when I finished the high
+            Unity and C# course, there i obtained a <a target="_blank"
+                href="https://ude.my/UC-P9Y88HSG">certificate</a>. At December of 2021 (when I finished the high
             school)
             I started learning web development in YouTube with SoyDalto courses. Nowadays I am studying Systems
             Engineering at ORT University
-            
+
         </p>
     </div>
     <div class="parallax2 cont">
         <div class="info">
             <h2 class="text-center d-block mb-4">PROJECTS</h2>
-            
+
             <button id="btnLeftPrj" class="btnPrj" onclick="slideLeft()">
                 <div>
                     < </div>
-                </button>
-                <button id="btnRightPrj" class="btnPrj" onclick="slideRight()">
-                    <div>
-                        >
-                    </div>
-                </button>
-                
-                <div id="projectsSet">
-                    
-                    <a href="#">
-                        <div class="projects d-inline-block">
-                        </div>
-                    </a>
-                    
-                    <a target="_blank" href="https://obls1.federicogs.com/">
-                        <div class="projects d-inline-block" id="obl1s1">
-                        </div>
-                    </a>
-                    
-                    
-                    <a target="_blank" href="https://demobt.federicogs.com/">
-                        <div class="projects d-inline-block" id="bt">
-                        </div>
-                    </a>
-                    
-                    <a target="_blank" href="https://demowm.federicogs.com/">
-                        <div class="projects d-inline-block" id="wm">
-                        </div>
-                    </a>
-                    
-                    <a target="_blank" href="https://juego.federicogs.com/">
-                        <div class="projects d-inline-block" id="juego">
-                        </div>
-                    </a>
-                    
-                    <a target="_blank" href="">
+            </button>
+            <button id="btnRightPrj" class="btnPrj" onclick="slideRight()">
+                <div>
+                    >
+                </div>
+            </button>
+
+            <div id="projectsSet">
+
+                <a href="#">
                     <div class="projects d-inline-block">
                     </div>
                 </a>
-                
+
+                <a target="_blank" href="https://obls1.federicogs.com/">
+                    <div class="projects d-inline-block" id="obl1s1">
+                    </div>
+                </a>
+
+
+                <a target="_blank" href="https://demobt.federicogs.com/">
+                    <div class="projects d-inline-block" id="bt">
+                    </div>
+                </a>
+
+                <a target="_blank" href="https://demowm.federicogs.com/">
+                    <div class="projects d-inline-block" id="wm">
+                    </div>
+                </a>
+
+                <a target="_blank" href="https://juego.federicogs.com/">
+                    <div class="projects d-inline-block" id="juego">
+                    </div>
+                </a>
+
+                <a target="_blank" href="">
+                    <div class="projects d-inline-block">
+                    </div>
+                </a>
+
             </div>
             <div>
             </div>
@@ -188,14 +217,14 @@
     </div>
     <div class="cont">
         <p class="info">
-            
+
             Till this date, i haven't been working on any company as developer,
             but I've done some jobs for members of my family, like for
             DistribuidoresWM, an e-shop with categories,
             cart, login and signup system. For BT Distribuidora I made
             a stock control panel and e-billing system and all the branding. I also have done
             some projects just to acquire practice and experience.
-            
+
         </p>
     </div>
     <div id="contact" class="parallax3 cont">
@@ -215,7 +244,7 @@
                     emailjs.init("j5lMQ-wRsIfM65Dbe");
                 })();
             </script>
-            
+
         </div>
     </div>
     <footer>
@@ -224,4 +253,5 @@
     </footer>
     <script src="./script.js"></script>
 </body>
+
 </html>
