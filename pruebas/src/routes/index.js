@@ -4,8 +4,8 @@ const {createPool} = require('mysql')
 
 const pool = createPool({
     host: 'pruebas.federicogs.com',
-    user: 'u147693105_wm',
-    password: 'distWM2022',
+    user: 'fefo',
+    password: 'Karen2014',
     database: 'u147693105_distwm',
     connectionLimit: 10
 });
@@ -13,8 +13,8 @@ const pool = createPool({
 router.get('/', (req,res) =>{
     pool.query('SELECT * FROM productos', (err, resp) => {
         console.log(resp);
-        res.sendStatus(200);
         res.send(err)
+        alert(err)
     });
 });
 
