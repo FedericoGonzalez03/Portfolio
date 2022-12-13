@@ -5,7 +5,7 @@ const {createPool} = require('mysql')
 const pool = createPool({
     host: 'pruebas.federicogs.com',
     user: 'u147693105_wm',
-    password: 'DistWM2020',
+    password: 'distWM2022',
     database: 'u147693105_distwm',
     connectionLimit: 10
 });
