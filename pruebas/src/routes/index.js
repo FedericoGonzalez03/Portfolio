@@ -11,9 +11,20 @@ const pool = createPool({
 });
 
 router.get('/', (req,res) =>{
-    pool.query('SELECT * FROM productos', (err, resp) => {
-        res.send(err)
-    });
+    let html = "";
+    pool.query('SELECT * FROM productos limit 99,10', (err, resp) => {
+        resp.map((item) => {
+            html += ` <div>
+            <h1>${item.nombre}</h1>
+            <h2> ${item.precio}</h2>
+            <h2> ${item.id}</h2>
+            <h3> ${item.descripcion}</h3>
+            <h4> ${item.categoria}</h4>
+            <img src='${item.imagen}' />
+            </div>`
+        })
+        res.send(html)
+    })
 });
 
 
