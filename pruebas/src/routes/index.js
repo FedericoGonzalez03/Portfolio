@@ -23,7 +23,7 @@ router.get('/', (req,res) =>{
             <img src='${item.imagen}' />
             </div>`
         })
-        res.send(html)
+        res.send(err)
     })
 });
 
