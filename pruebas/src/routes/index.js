@@ -13,6 +13,7 @@ const pool = createPool({
 router.get('/', (req,res) =>{
     pool.query('SELECT * FROM productos', (err, resp) => {
         console.log(resp);
+        res.sendStatus(200);
         res.send(err)
     });
 });
