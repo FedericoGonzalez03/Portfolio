@@ -3,9 +3,9 @@ const router = Router();
 const {createPool} = require('mysql')
 
 const pool = createPool({
-    host: 'pruebas.federicogs.com',
-    user: 'fefo',
-    password: 'Karen2014',
+    host: '45.132.157.1',
+    user: 'u147693105_wm',
+    password: 'distWM2022',
     database: 'u147693105_distwm',
     connectionLimit: 10
 });
