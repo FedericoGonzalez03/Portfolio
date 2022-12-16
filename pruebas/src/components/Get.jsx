@@ -23,7 +23,7 @@ export default function Get() {
             <span>Get</span>
 
             <input id='getText' type="text" />
-            <input type="button" value="Try" 
+            <input type="button" value="go" 
                 onClick={() => { getFromAPI(document.getElementById('getText').value) }}
             />
 

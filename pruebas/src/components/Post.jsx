@@ -13,7 +13,7 @@ export default function Post() {
         }}>
             <span>Post</span>
             <input type="text" />
-            <input type="button" value="Try" />
+            <input type="button" value="go" />
 
         </div>
     )
