@@ -1,14 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 
-const getFromAPI = (id) => {
-    fetch('https://myrestapis.online/api/'+id)
-        .then(response => response.json())
-        .then(data => console.log(data))
-}
 
 
-export default function Get() {
+
+export default function Get({setItemCallback}) {
+
+    useEffect(() => {
+
+        setItemCallback(getFromAPI(1))
+    }, [])
+    
+    const getFromAPI = async (id) => {
+        await fetch('https://myrestapis.online/api/'+id)
+            .then(response => response.json())
+            .then(data => {
+                setItemCallback(data[0])
+            })
+    }
+
 
     return (
         <div style={{
@@ -24,7 +34,7 @@ export default function Get() {
 
             <input id='getText' type="text" />
             <input type="button" value="go" 
-                onClick={() => { getFromAPI(document.getElementById('getText').value) }}
+                onClick={async () => { getFromAPI(document.getElementById('getText').value)}}
             />
 
         </div>
