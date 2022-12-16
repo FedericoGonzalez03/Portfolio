@@ -1,4 +1,3 @@
-import reactLogo from './assets/react.svg'
 import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Item from './pages/Item'
