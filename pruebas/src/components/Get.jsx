@@ -12,7 +12,7 @@ export default function Get({setItemCallback}) {
     }, [])
     
     const getFromAPI = async (id) => {
-        await fetch('https://myrestapis.online/api/'+id)
+        await fetch('https://rest-apis.onrender.com/api/'+id)
             .then(response => response.json())
             .then(data => {
                 setItemCallback(data[0])
