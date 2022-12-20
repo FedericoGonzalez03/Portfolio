@@ -147,7 +147,7 @@ span {
     display: block;
     width: 20vw;
     height: 20vw;
-    background-image: url(img/fefinho3.jpg);
+    background-image: url(img/fefinho.jpg);
     border-radius: 50%;
     background-position-y: start;
     background-size: cover;
@@ -302,7 +302,7 @@ small{
 }
 
 .skill {
-    transition: all 0.5s;
+    transition: transform 0.5s;
 }
 
 .skill1 {
@@ -385,7 +385,7 @@ small{
     position: absolute;
     top: 100%;
     left: 0;
-    width: 60%;
+    width: 40%;
     height: 1%;
 }
 .skill4 {
@@ -413,7 +413,7 @@ small{
     position: absolute;
     top: 100%;
     left: 0;
-    width: 40%;
+    width: 60%;
     height: 1%;
 }
 .skill5 {
