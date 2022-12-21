@@ -1,24 +1,14 @@
-import React, { useEffect } from 'react'
-
+import React, { useEffect, componentDidMount } from 'react'
+import getFromAPI from '../services/getFromAPI'
 
 
 
 
 export default function Get({setItemCallback}) {
-
-    useEffect(() => {
-
-        setItemCallback(getFromAPI(1))
-    }, [])
     
-    const getFromAPI = async (id) => {
-        await fetch('https://rest-apis.onrender.com/api/'+id)
-            .then(response => response.json())
-            .then(data => {
-                setItemCallback(data[0])
-            })
-    }
-
+    useEffect(() => {
+        getFromAPI({id: 1, setItemCallback})
+    }, [])
 
     return (
         <div style={{
@@ -34,7 +24,7 @@ export default function Get({setItemCallback}) {
 
             <input id='getText' type="text" />
             <input type="button" value="go" 
-                onClick={async () => { getFromAPI(document.getElementById('getText').value)}}
+                onClick={async () => { getFromAPI({id: document.getElementById('getText').value, setItemCallback})}}
             />
 
         </div>
