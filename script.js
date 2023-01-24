@@ -78,8 +78,4 @@ window.addEventListener('scroll', function () {
     });
     navLinks[3].classList.add('active')
   }
-  console.log(this.window.scrollY)
 })
-
-
-console.log(contact.offsetTop)

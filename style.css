@@ -28,23 +28,98 @@ body {
     border-radius: 10px;
 }
 
-.navbar{
-    position: fixed;
-    z-index: 10;
-    width: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 25%, rgba(0, 0, 0, 0.7) 75%, rgba(0, 0, 0, 0.7) 100%);
-    padding-top: 0;
-    backdrop-filter: blur(30px);
-}
-
-.navbar-toggler{
-    transform: scale(0.5);
-}
-
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background-color: rgb(83, 170, 37);
 }
+
+
+
+
+
+nav{
+    position: fixed;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.975);
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(20px);
+}
+.navBrand{
+    margin-left: 20px;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+.navBrand:hover{
+    color: #fffd;
+}
+
+nav button{
+    display: none;
+}
+nav ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin-right: 20px;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 0 10px;
+    color: #fff;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #aaa;
+}
+nav ul li a[class="active"]{
+    color: rgb(83, 170, 37);
+}
+nav ul li a:hover{
+    color: #fff;
+}
+
+
+
+@media all and (max-width:500px) {
+
+    nav button{
+        display: block;
+        background-color: #fff;
+        width: 30px;
+        margin-right: 20px;
+    }
+
+    nav ul{
+        display: none;
+    }
+
+    nav ul[class="active"]{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top:50px;
+        left: 60%;
+        width: 40%;
+        height: 20vh;
+        background-color: rgba(0, 0, 0, 0.975);
+    }
+}
+
+
+
+
+
 
 .info a {
     color: rgb(83, 170, 37);
@@ -686,7 +761,7 @@ footer{
 
     #projectsSet {
         height: 65vh;
-        grid-template-rows: 12.5vh repeat(4, 20vh) 12.5vh;
+        grid-template-rows: 12.5vh repeat(3, 20vh) 12.5vh;
         grid-template-columns: 45vw;
         -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 100%);
     }
