@@ -1,0 +1,30 @@
+#root {
+  width:50%;
+  margin: 0 auto;
+  text-align: center;
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  gap:50px
+}
+section{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.inp{
+  width: 100%;
+}
+.btn{
+  width: 50%;
+  align-self: center;
+}
