@@ -1,6 +1,7 @@
 {
   "name": "admincollecting",
   "private": true,
+  "homepage": "https://collectingadm.federicogs.com",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
