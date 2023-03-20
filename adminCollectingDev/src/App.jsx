@@ -46,7 +46,7 @@ function App() {
               tel: tel,
               mail: mail}
 
-            fetch('https://www.myrestapis.space/collecting/add-business', {
+            fetch('http://www.myrestapis.space/collecting/add-business', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json'
@@ -133,7 +133,7 @@ function App() {
           />
           <Button color="info" className="btn" variant="contained"
           onClick={()=>{
-            fetch('https://myrestapis.space/collecting/buss').then(res => res.json()).then(data =>{
+            fetch('http://myrestapis.space/collecting/buss').then(res => res.json()).then(data =>{
               console.log('data', data)
             })
           }}>
