@@ -131,7 +131,12 @@ function App() {
             label="Longitud"
             variant="standard"
           />
-          <Button color="info" className="btn" variant="contained">
+          <Button color="info" className="btn" variant="contained"
+          onClick={()=>{
+            fetch('https://myrestapis.space/collecting/buss').then(res => res.json()).then(data =>{
+              console.log('data', data)
+            })
+          }}>
             Agregar
           </Button>
         </form>
