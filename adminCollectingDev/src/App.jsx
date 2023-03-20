@@ -46,7 +46,7 @@ function App() {
               tel: tel,
               mail: mail}
 
-            fetch('http://www.myrestapis.space/collecting/add-business', {
+            fetch('http:aa//www.myrestapis.space/collecting/add-business', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json'
