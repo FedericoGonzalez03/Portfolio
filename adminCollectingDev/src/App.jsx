@@ -48,9 +48,6 @@ function App() {
               //.. http NO https
               fetch("http://myrestapis.space/collecting/add-business", {
                 method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                },
                 body: data,
               })
                 .then((response) => {
