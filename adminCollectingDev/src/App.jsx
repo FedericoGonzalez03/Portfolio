@@ -64,12 +64,12 @@ function App() {
               const mail = document.querySelector("#mailBusiness").value;
               const data = { razon: razon, tel: tel, mail: mail };
               //.. http NO https
-              fetch("http://myrestapis.space/collecting/add-business", {
+              fetch("https://myrestapis.space/collecting/add-business", {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json",
                 },
-                body: data,
+                body: JSON.stringify(data),
               })
                 .then((response) => {
                   console.log("response", response);
@@ -86,9 +86,10 @@ function App() {
       <Divider></Divider>
       <section>
         <h2>Alta de empresa</h2>
-        <form action="">
+        <form id="form" action="">
           <InputLabel className="lbl">Es cliente de:</InputLabel>
           <Select
+            id="buss"
             color="error"
             className="inp"
             label="Es cliente de:"
@@ -104,6 +105,7 @@ function App() {
           </Select>
 
           <TextField
+            id="razon"
             className="inp"
             color="error"
             label="Razon Social"
@@ -111,12 +113,14 @@ function App() {
           />
 
           <TextField
+            id="dir"
             className="inp"
             color="error"
             label="Direccion"
             variant="standard"
           />
           <TextField
+            id="tel"
             className="inp"
             color="error"
             label="Telefono"
@@ -124,6 +128,7 @@ function App() {
           />
 
           <TextField
+            id="fecha"
             className="inp"
             color="error"
             label="Fecha (día / día1-día2 / día-fin)"
@@ -131,6 +136,7 @@ function App() {
           />
 
           <TextField
+            id="horario"
             className="inp"
             color="error"
             label="Horario (hora1 - hora2)"
@@ -138,18 +144,21 @@ function App() {
           />
 
           <TextField
+            id="demora"
             className="inp"
             color="error"
             label="Demora (minutos)"
             variant="standard"
           />
           <TextField
+            id="lat"
             className="inp"
             color="error"
             label="Latitud"
             variant="standard"
           />
           <TextField
+            id="long"
             className="inp"
             color="error"
             label="Longitud"
@@ -160,10 +169,39 @@ function App() {
             className="btn"
             variant="contained"
             onClick={() => {
-              fetch("http://myrestapis.space/collecting/buss")
-                .then((res) => res.json())
-                .then((data) => {
-                  console.log("data", data);
+              const buss = document.querySelector("#buss").value,
+                razon = document.querySelector("#razon").value,
+                dir = document.querySelector("#dir").value,
+                tel = document.querySelector("#tel").value,
+                fecha = document.querySelector("#fecha").value,
+                horario = document.querySelector("#horario").value,
+                demora = document.querySelector("#demora").value,
+                lat = document.querySelector("#lat").value,
+                long = document.querySelector("#long").value;
+
+              let data = {
+                razon: razon,
+                business: buss,
+                direccion: dir,
+                tel: tel,
+                fecha: fecha,
+                horario: horario,
+                demora: demora,
+                lat: lat,
+                long: long,
+              };
+              fetch("https://myrestapis.space/collecting/add-company", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+              })
+                .then((response) => {
+                  console.log("response", response);
+                })
+                .catch((error) => {
+                  console.log("error", error);
                 });
             }}
           >
