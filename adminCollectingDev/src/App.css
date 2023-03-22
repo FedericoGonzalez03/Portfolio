@@ -27,3 +27,6 @@ form{
   width: 50%;
   align-self: center;
 }
+.lbl{
+  text-align: start;
+}

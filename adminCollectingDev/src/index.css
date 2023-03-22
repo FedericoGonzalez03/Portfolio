@@ -15,6 +15,7 @@
 }
 h2{
   overflow: hidden;
+  margin-bottom: 50px;
 }
 * {
   overflow-x: hidden;
