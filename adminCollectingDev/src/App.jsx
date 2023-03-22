@@ -6,13 +6,13 @@ import { TextField, Autocomplete, Button, Divider } from "@mui/material";
 const empresas = [];
 
 function App() {
-
   return (
     <div className="App">
       <section>
         <h2>Alta de Cliente</h2>
-        <form action="">
+        <form id="form">
           <TextField
+            name="razon"
             id="razonBusiness"
             className="inp"
             color="error"
@@ -21,6 +21,7 @@ function App() {
           />
 
           <TextField
+            name="tel"
             id="telBusiness"
             className="inp"
             color="error"
@@ -29,6 +30,7 @@ function App() {
           />
 
           <TextField
+            name="mail"
             id="mailBusiness"
             className="inp"
             color="error"
@@ -36,30 +38,29 @@ function App() {
             variant="standard"
           />
 
-          <Button color="info" className="btn" variant="contained"
-          onClick={()=>{
-            const razon = document.querySelector('#razonBusiness').value;
-            const tel = document.querySelector('#telBusiness').value;
-            const mail = document.querySelector('#mailBusiness').value;
-            const data = 
-              {razon: razon,
-              tel: tel,
-              mail: mail}
-            //.. http NO https                                            
-            fetch('http://myrestapis.space/collecting/add-business', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json'
-              },
-              body: JSON.stringify(data)
-            }).then(response => {
-              console.log('response', response);
-            })
-            .catch(error => {
-              console.log('error', error);
-            });
-
-          }}>
+          <Button
+            color="info"
+            className="btn"
+            variant="contained"
+            onClick={() => {
+              const form = document.querySelector("#form");
+              let data = new FormData(form)
+              //.. http NO https
+              fetch("http://myrestapis.space/collecting/add-business", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: data,
+              })
+                .then((response) => {
+                  console.log("response", response);
+                })
+                .catch((error) => {
+                  console.log("error", error);
+                });
+            }}
+          >
             Agregar
           </Button>
         </form>
@@ -131,12 +132,18 @@ function App() {
             label="Longitud"
             variant="standard"
           />
-          <Button color="info" className="btn" variant="contained"
-          onClick={()=>{
-            fetch('http://myrestapis.space/collecting/buss').then(res => res.json()).then(data =>{
-              console.log('data', data)
-            })
-          }}>
+          <Button
+            color="info"
+            className="btn"
+            variant="contained"
+            onClick={() => {
+              fetch("http://myrestapis.space/collecting/buss")
+                .then((res) => res.json())
+                .then((data) => {
+                  console.log("data", data);
+                });
+            }}
+          >
             Agregar
           </Button>
         </form>
