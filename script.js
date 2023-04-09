@@ -16,11 +16,6 @@ function slideRight() {
 }
 
 
-window.addEventListener("DOMContentLoaded", () => {
-  setTimeout(() => splashscreen.classList.add('active'), 1500)
-
-})
-
 form.addEventListener('submit', function (e) {
   e.preventDefault();
 
@@ -50,29 +45,29 @@ navLinks.forEach(link => {
 
 
 const resume = document.querySelector('#resume');
-const skills = document.querySelector('#skills');
+const about = document.querySelector('#about');
 const projects = document.querySelector('#projects');
 const contact = document.querySelector('#contact');
 
 
 window.addEventListener('scroll', function () {
-  if (window.scrollY <= 300) {
+  if (window.scrollY < resume.offsetTop + resume.scrollHeight) {
     navLinks.forEach(navLink => {
 
       navLink.classList.remove('active')
     });
     navLinks[0].classList.add('active')
-  } else if (window.scrollY < skills.offsetTop + 300) {
+  } else if (window.scrollY < about.offsetTop + about.scrollHeight) {
     navLinks.forEach(navLink => {
       navLink.classList.remove('active')
     });
     navLinks[1].classList.add('active')
-  } else if (window.scrollY < projects.offsetTop + 300) {
+  } else if (window.scrollY < projects.offsetTop + projects.scrollHeight) {
     navLinks.forEach(navLink => {
       navLink.classList.remove('active')
     });
     navLinks[2].classList.add('active')
-  } else if (window.scrollY < contact.offsetTop + 300) {
+  } else if (window.scrollY < contact.offsetTop + contact.scrollHeight) {
     navLinks.forEach(navLink => {
       navLink.classList.remove('active')
     });

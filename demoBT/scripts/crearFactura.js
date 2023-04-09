@@ -9,7 +9,7 @@ function inicio() {
 
         num.innerHTML = `<span class="cav">${data}</span></br>
         Fecha: <span class="cav">${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}</span></br>
-        Hora: <span class="cav">${date.getHours()}:${date.getMinutes()}</span></br>
+        Hora: <span class="cav">${date.getHours()}:${date.getMinutes()<10? "0" + date.getMinutes() :date.getMinutes()}</span></br>
         ${cobro}`;
 
     })
