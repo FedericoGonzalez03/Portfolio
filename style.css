@@ -271,7 +271,7 @@ span {
   z-index: 1;
 }
 .pCard {
-  background-color: rgb(8, 8, 14);
+  background-color: rgb(9, 9, 16);
   border-radius: 20px;
   width: 100%;
   box-shadow: 0px 0px 35px 3px rgba(0, 0, 0, 0.88);
@@ -281,8 +281,9 @@ span {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  padding: 2.5% 0;
+  gap: 60px;
+  padding: 2.5% 60px;
+  margin-bottom: 40px;
 }
 
 .pCard img {
@@ -488,7 +489,6 @@ small {
 
 /*    ReactJS   -   ReactJS   -   ReactJS   -   ReactJS   -   ReactJS   -   ReactJS   -   ReactJS   -   ReactJS    */
 
-
 .skill9 {
   background-image: url(./img/node-js.svg);
   background-size: cover;
@@ -557,6 +557,11 @@ footer {
 @media all and (max-width: 1300px) {
   .pCard {
     flex-direction: column;
+    padding: 2.5% 0;
+    gap:20px
+  }
+  .pCard:nth-child(odd){
+    flex-direction: column-reverse;
   }
   .pCard img {
     width: 90%;
