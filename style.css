@@ -3,6 +3,7 @@
 }
 
 * {
+  box-sizing: border-box;
   border: 0;
   padding: 0;
   margin: 0;
@@ -125,6 +126,7 @@ nav ul li a:hover {
 }
 
 .contProj {
+  padding: 80px 0;
   min-height: 100vh;
   background-color: rgb(6, 6, 11);
   display: flex;
@@ -213,7 +215,6 @@ span {
   display: block;
   width: 20vw;
   height: 20vw;
-  background-image: url(img/fefinho.jpg);
   border-radius: 50%;
   background-position-y: start;
   background-size: cover;
@@ -282,17 +283,33 @@ span {
   justify-content: center;
   align-items: center;
   gap: 60px;
-  padding: 2.5% 60px;
+  padding: 30px 10px;
   margin-bottom: 40px;
+  transition: transform 1s 0s;
+  cursor: pointer;
 }
-
-.pCard img {
-  border-radius: 20px;
+.imgCont {
+  overflow: hidden;
   width: 45%;
-  height: auto;
+  height: 50%;
   box-shadow: 0px 0px 15px -6px rgba(255, 255, 255, 1);
   -webkit-box-shadow: 0px 0px 15px -6px rgba(255, 255, 255, 1);
   -moz-box-shadow: 0px 0px 15px -6px rgba(255, 255, 255, 1);
+  border-radius: 20px;
+  transition: transform 1s 0s;
+}
+
+.imgCont:hover {
+  transform: scale(1.05);
+  transition: transform 1s 0s;
+}
+.pCard:hover {
+  transform: scale(1.05);
+  transition: transform 1s 0s;
+}
+
+.pCard img {
+  width: 100%;
 }
 .card-content {
   display: flex;
@@ -305,9 +322,12 @@ span {
 .pCard div p {
   font-size: 20px;
 }
-.pCard div div {
+.pSkillSet{
   width: 100%;
+}
+.pCard div div {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-evenly;
 }
@@ -343,30 +363,6 @@ h5 {
   background-position-y: center;
 }
 
-#projectsSet a {
-  background-color: rgba(6, 6, 11, 0.7);
-  overflow-y: hidden;
-}
-
-#projectsSet {
-  position: relative;
-  width: 65vw;
-  display: grid;
-  grid-template-columns: 8.125vw repeat(3, 16.25vw) 8.125vw;
-  grid-template-rows: 25vh;
-  overflow-x: scroll;
-  -webkit-mask-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 1) 25%,
-    rgba(0, 0, 0, 1) 75%,
-    rgba(0, 0, 0, 0) 100%
-  );
-}
-
-#projectsSet::-webkit-scrollbar {
-  display: none;
-}
 
 #btnRightPrj {
   right: 17.5vw;
@@ -385,7 +381,6 @@ h5 {
 }
 
 #skillset {
-  margin-top: 4rem;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -547,6 +542,8 @@ footer {
   background-position-x: center;
 }
 
+
+
 #linkedin {
   background-image: url(./img/linkedin.svg);
   width: 5vh;
@@ -554,23 +551,31 @@ footer {
   background-size: cover;
   background-position-x: center;
 }
+
 @media all and (max-width: 1300px) {
+  p{
+    font-size: 2vw;
+  }
   .pCard {
-    flex-direction: column;
-    padding: 2.5% 0;
-    gap:20px
-  }
-  .pCard:nth-child(odd){
     flex-direction: column-reverse;
+    padding: 30px 0;
+    gap: 20px;
   }
-  .pCard img {
+  #p2 {
+    flex-direction: column;
+  }
+  .pCard .imgCont {
     width: 90%;
   }
-  .pCard div {
+  .pCard .card-content {
     gap: 20px;
     width: 90%;
   }
+  h1{
+    font-size: 6vw;
+  }
 }
+
 @media all and (max-width: 901px) {
   h2 {
     font-size: 7vw;
@@ -581,8 +586,8 @@ footer {
   }
 
   #img {
-    width: 50vw;
-    height: 50vw;
+    width: 200px;
+    height: 200px;
   }
 
   h1 {
@@ -591,10 +596,6 @@ footer {
 
   span {
     font-size: 3.6vw;
-  }
-
-  .cont {
-    flex-direction: column-reverse;
   }
 
   .info {
@@ -619,15 +620,6 @@ footer {
     font-size: 25px;
   }
 
-  :root {
-    --skills-size: 30vw;
-  }
-
-  #skillset {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    width: 80vw;
-  }
-
   .content {
     font-size: 3vw;
     right: 25%;
@@ -643,42 +635,27 @@ footer {
     display: none;
   }
 
-  #projectsSet {
-    height: 65vh;
-    grid-template-rows: 12.5vh repeat(3, 20vh) 12.5vh;
-    grid-template-columns: 45vw;
-    -webkit-mask-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 1) 25%,
-      rgba(0, 0, 0, 1) 75%,
-      rgba(0, 0, 0, 0) 100%
-    );
-  }
-
   .projects {
     border-left: none;
     border-right: none;
     border-top: 2px solid #000;
     border-bottom: 2px solid #000;
   }
-
-  #projectsSet {
-    margin-left: 17vw;
-  }
 }
-
+.skill {
+  min-width: 55px;
+}
 @media all and (max-width: 600px) {
   #skillset {
-    grid-template-columns: 1fr 1fr;
-    width: 65vw;
+    flex-wrap: wrap;
+  }
+
+  #skillset:nth-child(1) {
+    background-color: #fff;
   }
 }
 @media all and (max-height: 500px) {
-  #img {
-    width: 20vw;
-    height: 20vw;
-  }
+
 
   p {
     font-size: 12px;
@@ -700,17 +677,8 @@ footer {
     max-width: 60vw;
   }
 
-  #projectsSet {
-    margin-left: 7.5vw;
-  }
 }
 
-@media all and (max-width: 500px) {
-  #projectsSet {
-    grid-template-columns: 50vw;
-    margin-left: 15vw;
-  }
-}
 
 /* ---------------  ANIMACIONES  ----------------- */
 
