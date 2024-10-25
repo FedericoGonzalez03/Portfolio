@@ -50,6 +50,9 @@ nav {
   font-size: 20px;
   color: #fff;
   text-decoration: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .navBrand:hover {
   color: #fffd;
@@ -70,12 +73,12 @@ nav ul {
 
 nav ul li {
   list-style: none;
-  margin: 0 10px;
   color: #fff;
 }
 nav ul li a {
   text-decoration: none;
   color: #aaa;
+  white-space: nowrap;
 }
 nav ul li a[class="active"] {
   color: rgb(83, 170, 37);
@@ -448,7 +451,7 @@ h5 {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
 
