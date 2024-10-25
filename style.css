@@ -137,37 +137,63 @@ nav ul li a:hover {
 }
 
 .info {
-  max-width: 65vw;
+  max-width: 75vw;
+  margin-bottom: 1rem;
 }
 
 h2 {
   color: rgb(83, 170, 37);
   position: relative;
-  font-size: 4vw;
+  font-size: min(5.5rem, 10vw);
   font-weight: 900;
 }
 
 h3 {
   color: rgb(13, 75, 0);
   position: relative;
-  font-size: 3vw;
+  font-size: min(4rem, 7vw);
   font-weight: 900;
   margin-bottom: 5vh;
 }
 
-.imagen {
-  margin: 0 17vw;
-  flex-flow: row;
-  align-self: start;
+h4 {
+  color: rgb(13, 75, 0);
+  position: relative;
+  font-size: 1.7rem;
+  font-weight: 900;
+  margin-bottom: 1vw;
 }
 
+.imagen {
+  margin: 0 24vw;
+  flex-flow: row;
+  align-self: start;
+  @media screen and (max-width: 1900px) {
+    margin: 0 23vw;
+  };
+  @media screen and (max-width: 1800px) {
+    margin: 0 22vw;
+  }
+  @media screen and (max-width: 1700px) {
+    margin: 0 21vw;
+  }
+  @media screen and (max-width: 1600px) {
+    margin: 0 20vw;
+  }
+  @media screen and (max-width: 1500px) {
+    margin: 0 19vw;
+  }
+  @media screen and (max-width: 1400px) {
+    margin: 0 18vw;
+  }
+}
 
 
 p {
   color: #bbb;
   margin-top: 10px;
   text-align: justify;
-  font-size: 1.6vw;
+  font-size: 1.5rem;
   margin: 0;
 }
 
@@ -216,13 +242,18 @@ span {
 
 #img {
   display: block;
-  width: 20vw;
-  height: 20vw;
+  width: auto;  /* Tamaño base para pantallas grandes */
+  max-width: 20vw;  /* Tamaño base para pantallas grandes */
+  height: auto; /* Mantiene la proporción de la imagen */
+  max-height: 30vh; /* Mantiene la proporción de la imagen */
+  max-width: 300px; /* Limita el tamaño máximo en dispositivos más grandes */
+  min-width: 150px; /* Asegura que no sea demasiado pequeña */
   border-radius: 10%;
   border-top-left-radius: 50%;
 
   background-position-y: start;
   background-size: cover;
+  transition: width 0.5s ease, height 0.5s ease;
 }
 
 /* linear-gradient(rgba(0, 0, 0, 0.7), rgba(4, 4, 8, 0.7)), url(img/bros.gif) */
@@ -241,7 +272,7 @@ span {
 .parallax2 {
   position: relative;
   background: linear-gradient(rgba(5, 4, 8, 0.9), rgba(5, 4, 8, 0.9)),
-    url(img/dws.gif);
+    url(img/i032d91obzk81.gif);
   background-position-y: center;
   background-position-x: center;
   opacity: 100%;
@@ -385,6 +416,34 @@ h5 {
   background-color: rgb(0, 0, 0, 0);
 }
 
+
+#knowledge .knowContainer{
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: min(4rem, 4vw);
+  gap: min(4rem, 4vw);
+  flex-wrap: wrap;
+}
+
+#knowledge .skill {
+  display: inline-block;
+}
+
+#knowledge .iknow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#knowledge span {
+  color: rgb(13, 75, 0);
+  font-size: 1.5rem;
+}
+
 #skillset {
   width: 100%;
   display: flex;
@@ -393,9 +452,46 @@ h5 {
   align-items: center;
 }
 
+#formContact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+#formContact label {
+  color: #bbb;
+}
+
+
+#formContact button {
+  margin-top: 15px;
+}
+
+#certifications {
+  padding: 0 50px;
+}
+
+.cert p {
+  font-size: min(1.5rem, 3vw);
+}
+
+.cert h4 {
+  font-size: min(2rem, 4vw);
+}
+
 small {
   color: #bbb;
 }
+
+.mainSkills {
+  text-align: center; 
+  color: rgb(83, 170, 37); 
+  margin-top: 20px;
+  font-size: min(1.5rem, 3vw);
+}
+
 
 /*    HTML   -   HTML   -   HTML   -   HTML   -   HTML   -   HTML   -   HTML   -   HTML   -   HTML   -   HTML   -    */
 
@@ -407,7 +503,7 @@ small {
 
 .skill1 {
   background-image: url(./img/html.svg);
-  background-size: cover;
+  background-size: 100% 100%;;
   background-position-x: center;
 }
 
@@ -419,7 +515,7 @@ small {
 
 .skill2 {
   background-image: url(./img/css.svg);
-  background-size: cover;
+  background-size: 100% 100%;;
   background-position-x: center;
 }
 
@@ -431,7 +527,7 @@ small {
 
 .skill3 {
   background-image: url(./img/js.svg);
-  background-size: cover;
+  background-size: 100% 100%;;
   background-position-x: center;
 }
 
@@ -443,7 +539,7 @@ small {
 
 .skill4 {
   background-image: url(./img/bs.svg);
-  background-size: cover;
+  background-size: 100% 100%;;
   background-position-x: center;
 }
 
@@ -455,7 +551,7 @@ small {
 
 .skill5 {
   background-image: url(./img/sql.svg);
-  background-size: cover;
+  background-size: 100% 100%;;
   background-position-x: center;
 }
 
@@ -467,7 +563,7 @@ small {
 
 .skill6 {
   background-image: url(./img/react.svg);
-  background-size: cover;
+  background-size: 100% 100%;
   background-position-x: center;
 }
 
@@ -479,7 +575,7 @@ small {
 
 .skill7 {
   background-image: url(./img/java.svg);
-  background-size: cover;
+  background-size: 100% 100%;;
   background-position-x: center;
 }
 
@@ -487,17 +583,147 @@ small {
   transform: scale(1.1) skew(-0.01turn, 5deg);
 }
 
-/*    ReactJS   -   ReactJS   -   ReactJS   -   ReactJS   -   ReactJS   -   ReactJS   -   ReactJS   -   ReactJS    */
+/*      ReactNative     -     ReactNative     -     ReactNative     -     ReactNative     -     ReactNative     -     ReactNative     -     ReactNative     -     ReactNative      */
+
+.skill8 {
+  background-image: url(./img/react-native.svg);
+  background-size: 100% 100%;;
+  background-position-x: center;
+}
+
+.skill8:hover {
+  transform: scale(1.1) skew(-0.01turn, 5deg);
+}
+
+/*    NodeJS   -   NodeJS   -   NodeJS   -   NodeJS   -   NodeJS   -   NodeJS   -   NodeJS   -   NodeJS    */
 
 .skill9 {
   background-image: url(./img/node-js.svg);
-  background-size: cover;
+  background-size: 100% 100%;;
   background-position-x: center;
 }
 
 .skill9:hover {
   transform: scale(1.1) skew(-0.01turn, 5deg);
 }
+
+/*    Git   -   Git   -   Git   -   Git   -   Git   -   Git   -   Git   -   Git    */
+
+.skill10 {
+  background-image: url(./img/git.svg);
+  image-resolution: from-image;
+  background-size: 100% 100%;
+}
+
+.skill10:hover {
+  transform: scale(1.1) skew(-0.01turn, 5deg);
+}
+
+/*    Oracle   -   Oracle   -   Oracle   -   Oracle   -   Oracle   -   Oracle   -   Oracle   -   Oracle    */
+
+.skill11 {
+  background-image: url(./img/oracle.svg);
+  image-resolution: from-image;
+  background-size: 100% 100%;
+}
+
+.skill11:hover {
+  transform: scale(1.1) skew(-0.01turn, 5deg);
+}
+
+
+/*    Postgres   -   Postgres   -   Postgres   -   Postgres   -   Postgres   -   Postgres   -   Postgres   -   Postgres    */
+
+.skill12 {
+  background-image: url(./img/postgresql.svg);
+  image-resolution: from-image;
+  background-size: 100% 100%;
+}
+
+.skill12:hover {
+  transform: scale(1.1) skew(-0.01turn, 5deg);
+}
+
+
+/*    MySql   -   MySql   -   MySql   -   MySql   -   MySql   -   MySql   -   MySql   -   MySql    */
+
+.skill13 {
+  background-image: url(./img/mysql.svg);
+  image-resolution: from-image;
+  background-size: 100% 100%;
+}
+
+.skill13:hover {
+  transform: scale(1.1) skew(-0.01turn, 5deg);
+}
+
+
+/*    TypeScript   -   TypeScript   -   TypeScript   -   TypeScript   -   TypeScript   -   TypeScript   -   TypeScript   -   TypeScript    */
+
+.skill14 {
+  background-image: url(./img/ts.svg);
+  image-resolution: from-image;
+  background-size: 100% 100%;
+}
+
+.skill14:hover {
+  transform: scale(1.1) skew(-0.01turn, 5deg);
+}
+
+
+/*    GitHub   -   GitHub   -   GitHub   -   GitHub   -   GitHub   -   GitHub   -   GitHub   -   GitHub    */
+
+.skill15 {
+  background-image: url(./img/gith.svg);
+  image-resolution: from-image;
+  background-size: 100% 100%;
+}
+
+.skill15:hover {
+  transform: scale(1.1) skew(-0.01turn, 5deg);
+}
+
+/*    Tomcat   -   Tomcat   -   Tomcat   -   Tomcat   -   Tomcat   -   Tomcat   -   Tomcat   -   Tomcat    */
+
+.skill16 {
+  background-image: url(./img/tomcat.svg);
+  image-resolution: from-image;
+  background-size: 100% 100%;
+}
+
+.skill16:hover {
+  transform: scale(1.1) skew(-0.01turn, 5deg);
+}
+
+/*    JBoss   -   JBoss   -   JBoss   -   JBoss   -   JBoss   -   JBoss   -   JBoss   -   JBoss    */
+
+.skill17 {
+  background-image: url(./img/redhat.svg);
+  image-resolution: from-image;
+  background-size: 100% 100%;
+}
+
+.skill17:hover {
+  transform: scale(1.1) skew(-0.01turn, 5deg);
+}
+
+
+/*    Office   -   Office   -   Office   -   Office   -   Office   -   Office   -   Office   -   Office    */
+
+.skill18 {
+  background-image: url(./img/office.svg);
+  image-resolution: from-image;
+  background-size: 100% 100%;
+}
+
+.skill18:hover {
+  transform: scale(1.1) skew(-0.01turn, 5deg);
+}
+
+
+
+
+
 
 .content {
   transition: all 0.2s;
@@ -531,6 +757,16 @@ small {
   height: 90vh;
 }
 
+#contact h3 {
+  font-size: min(2rem, 3.5vw);
+  margin-bottom: 0;
+}
+
+#contact h2 {
+  margin-bottom: 0;
+}
+
+
 footer {
   height: 10vh;
   display: flex;
@@ -559,8 +795,13 @@ footer {
 }
 
 @media all and (max-width: 1300px) {
+
+  .info {
+    max-width: 85vw;
+  }
+
   p{
-    font-size: 2vw;
+    font-size: 1.5rem;
   }
   .pCard {
     flex-direction: column-reverse;
@@ -580,11 +821,23 @@ footer {
   h1{
     font-size: 6vw;
   }
+  .imagen {
+    margin: 0 17vw;
+  }
 }
 
 @media all and (max-width: 901px) {
-  h2 {
-    font-size: 7vw;
+  
+  #knowledge .knowContainer {
+    width: 95%;
+  }
+
+  #knowledge .skill {
+    height: 30px;
+  }
+  
+  #knowledge .iknow {
+    flex-direction: column;
   }
 
   .img {
@@ -592,8 +845,6 @@ footer {
   }
 
   #img {
-    width: 200px;
-    height: 200px;
     border-top-right-radius: 50%;
   }
 
@@ -610,7 +861,7 @@ footer {
   }
 
   p {
-    font-size: 2.4vw;
+    font-size: 1rem;
   }
 
   .imagen {
@@ -620,8 +871,9 @@ footer {
 }
 
 @media all and (max-width: 900px) {
+
   p {
-    font-size: 16.6px;
+    font-size: 1rem;
   }
 
   span {
@@ -654,6 +906,7 @@ footer {
   min-width: 55px;
 }
 @media all and (max-width: 600px) {
+
   #skillset {
     flex-wrap: wrap;
   }
@@ -664,21 +917,27 @@ footer {
 }
 @media all and (max-height: 500px) {
 
-
   p {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 
   h1 {
     font-size: 7.7vw;
   }
 
-  .cont {
+  #resume {
     flex-direction: row;
   }
 
   .imagen {
-    margin: 0 0 0 5vw;
+    margin: 0 5vw 0 0;
+    align-self: center;
+  }
+
+  #img {
+    border-top-right-radius: 10%;
+    border-bottom-left-radius: 50%;
+    object-fit: cover;
   }
 
   .info {

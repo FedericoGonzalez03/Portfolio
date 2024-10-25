@@ -46,6 +46,8 @@ navLinks.forEach(link => {
 
 const resume = document.querySelector('#resume');
 const about = document.querySelector('#about');
+const certifications = document.querySelector('#certifications');
+const knowledge = document.querySelector('#knowledge');
 const projects = document.querySelector('#projects');
 const contact = document.querySelector('#contact');
 
@@ -62,15 +64,25 @@ window.addEventListener('scroll', function () {
       navLink.classList.remove('active')
     });
     navLinks[1].classList.add('active')
-  } else if (window.scrollY < projects.offsetTop + projects.scrollHeight) {
+  } else if ( window.scrollY < certifications.offsetTop + certifications.scrollHeight) {
     navLinks.forEach(navLink => {
       navLink.classList.remove('active')
     });
     navLinks[2].classList.add('active')
-  } else if (window.scrollY < contact.offsetTop + contact.scrollHeight) {
+  } else if ( window.scrollY < knowledge.offsetTop + knowledge.scrollHeight) {
     navLinks.forEach(navLink => {
       navLink.classList.remove('active')
     });
     navLinks[3].classList.add('active')
+  } else if (window.scrollY < projects.offsetTop + projects.scrollHeight) {
+    navLinks.forEach(navLink => {
+      navLink.classList.remove('active')
+    });
+    navLinks[4].classList.add('active')
+  } else if (window.scrollY < contact.offsetTop + contact.scrollHeight) {
+    navLinks.forEach(navLink => {
+      navLink.classList.remove('active')
+    });
+    navLinks[5].classList.add('active')
   }
 })
