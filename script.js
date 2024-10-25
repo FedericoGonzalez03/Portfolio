@@ -24,7 +24,13 @@ form.addEventListener('submit', function (e) {
     from_email: document.querySelector('#email').value,
     message: document.querySelector('#message').value
   }
-  emailjs.send('service_p5cw83c', 'template_k5tppxg', send);
+  emailjs.send('service_p5cw83c', 'template_k5tppxg', send).then((r) => {
+    if(r.status == 200) {
+      confirm('Mail enviado correctamente');
+    } else {
+      alert('Ha ocurrido un error enviando el mail');
+    }
+  });
 })
 
 
