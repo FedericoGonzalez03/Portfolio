@@ -15,6 +15,7 @@ function slideRight() {
   }
 }
 
+const validEmail = (email) => email.toLowerCase().match(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/);
 
 form.addEventListener('submit', function (e) {
   e.preventDefault();
@@ -24,6 +25,12 @@ form.addEventListener('submit', function (e) {
     from_email: document.querySelector('#email').value,
     message: document.querySelector('#message').value
   }
+
+  if (send.from_email == '' || send.from_name == '' || send.message == '' || !validEmail(send.from_email)) {
+    alert('Por favor, complete todos los campos correctamente');
+    return;
+  }
+
   emailjs.send('service_p5cw83c', 'template_k5tppxg', send).then((r) => {
     if(r.status == 200) {
       confirm('Mail enviado correctamente');

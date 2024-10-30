@@ -93,6 +93,7 @@ nav ul li a:hover {
     background-color: #fff;
     width: 30px;
     margin-right: 20px;
+    border-radius: 5px;
   }
 
   nav ul {
@@ -108,8 +109,9 @@ nav ul li a:hover {
     top: 50px;
     left: 60%;
     width: 40%;
-    height: 20vh;
+    height: 30vh;
     background-color: rgba(0, 0, 0, 0.975);
+    border-bottom-left-radius: 20px;
   }
 }
 
@@ -118,6 +120,7 @@ nav ul li a:hover {
 }
 
 .cont {
+  padding: 80px 0;
   background-color: rgb(6, 6, 11);
   display: flex;
   flex-direction: column;
@@ -125,7 +128,7 @@ nav ul li a:hover {
   justify-content: center;
   font-family: "Source Sans Pro", sans-serif;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .contProj {
@@ -175,20 +178,25 @@ h4 {
     margin: 0 23vw;
   };
   @media screen and (max-width: 1800px) {
-    margin: 0 22vw;
-  }
-  @media screen and (max-width: 1700px) {
     margin: 0 21vw;
   }
-  @media screen and (max-width: 1600px) {
-    margin: 0 20vw;
-  }
-  @media screen and (max-width: 1500px) {
+  @media screen and (max-width: 1700px) {
     margin: 0 19vw;
   }
-  @media screen and (max-width: 1400px) {
-    margin: 0 18vw;
+  @media screen and (max-width: 1600px) {
+    margin: 0 17vw;
   }
+  @media screen and (max-width: 1500px) {
+    margin: 0 15vw;
+  }
+  @media screen and (max-width: 1400px) {
+    margin: 0 13vw;
+  }
+  @media screen and (max-width: 1300px) {
+    margin: 0;
+    align-self: center;
+  }
+  
 }
 
 
@@ -282,7 +290,7 @@ span {
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .parallax3 {
@@ -295,7 +303,7 @@ span {
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .projects {
@@ -347,8 +355,16 @@ span {
   transition: transform 1s 0s;
 }
 
+
 .pCard img {
   width: 100%;
+}
+.card-no-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 5vw;
 }
 .card-content {
   display: flex;
@@ -422,12 +438,13 @@ h5 {
 
 #knowledge .knowContainer{
   width: 70%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding-top: min(4rem, 4vw);
-  gap: min(4rem, 4vw);
+  gap: min(2rem, 2vw);
   flex-wrap: wrap;
 }
 
@@ -437,7 +454,7 @@ h5 {
 
 #knowledge .iknow {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
@@ -445,6 +462,9 @@ h5 {
 #knowledge span {
   color: rgb(13, 75, 0);
   font-size: 1.5rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 #skillset {
@@ -477,11 +497,11 @@ h5 {
 }
 
 .cert p {
-  font-size: min(1.5rem, 3vw);
+  font-size: min(1.5rem, 5vw);
 }
 
 .cert h4 {
-  font-size: min(2rem, 4vw);
+  font-size: min(2rem, 6vw);
 }
 
 small {
@@ -504,222 +524,222 @@ small {
   height: 70px;
 }
 
-.skill1 {
+.html {
   background-image: url(./img/html.svg);
   background-size: 100% 100%;;
   background-position-x: center;
 }
 
-.skill1:hover {
+.html:hover {
   transform: scale(1.1) skew(-0.01turn, 5deg);
 }
 
 /*    CSS   -   CSS   -   CSS   -   CSS   -   CSS   -   CSS   -   CSS   -   CSS   -   CSS   -   CSS   */
 
-.skill2 {
+.css {
   background-image: url(./img/css.svg);
   background-size: 100% 100%;;
   background-position-x: center;
 }
 
-.skill2:hover {
+.css:hover {
   transform: scale(1.1) skew(-0.01turn, 5deg);
 }
 
 /*    JavaScript   -   JavaScript   -   JavaScript   -   JavaScript   -   JavaScript   -   JavaScript   -   JavaScript   */
 
-.skill3 {
+.js {
   background-image: url(./img/js.svg);
   background-size: 100% 100%;;
   background-position-x: center;
 }
 
-.skill3:hover {
+.js:hover {
   transform: scale(1.1) skew(-0.01turn, 5deg);
 }
 
 /*    BootStrap   -   BootStrap   -   BootStrap   -   BootStrap   -   BootStrap   -   BootStrap   -   BootStrap   -   BootStrap    */
 
-.skill4 {
+.bs {
   background-image: url(./img/bs.svg);
   background-size: 100% 100%;;
   background-position-x: center;
 }
 
-.skill4:hover {
+.bs:hover {
   transform: scale(1.1) skew(-0.01turn, 5deg);
 }
 
 /*       SQL      -      SQL      -      SQL      -      SQL      -      SQL      -      SQL      -      SQL      -      SQL       */
 
-.skill5 {
+.sql {
   background-image: url(./img/sql.svg);
   background-size: 100% 100%;;
   background-position-x: center;
 }
 
-.skill5:hover {
+.sql:hover {
   transform: scale(1.1) skew(-0.01turn, 5deg);
 }
 
 /*      REACT     -     REACT     -     REACT     -     REACT     -     REACT     -     REACT     -     REACT     -     REACT      */
 
-.skill6 {
+.react {
   background-image: url(./img/react.svg);
   background-size: 100% 100%;
   background-position-x: center;
 }
 
-.skill6:hover {
+.react:hover {
   transform: scale(1.1) skew(-0.01turn, 5deg);
 }
 
 /*      Java     -     Java     -     Java     -     Java     -     Java     -     Java     -     Java     -     Java      */
 
-.skill7 {
+.java {
   background-image: url(./img/java.svg);
   background-size: 100% 100%;;
   background-position-x: center;
 }
 
-.skill7:hover {
+.java:hover {
   transform: scale(1.1) skew(-0.01turn, 5deg);
 }
 
 /*      ReactNative     -     ReactNative     -     ReactNative     -     ReactNative     -     ReactNative     -     ReactNative     -     ReactNative     -     ReactNative      */
 
-.skill8 {
+.react-native {
   background-image: url(./img/react-native.svg);
   background-size: 100% 100%;;
   background-position-x: center;
 }
 
-.skill8:hover {
+.react-native:hover {
   transform: scale(1.1) skew(-0.01turn, 5deg);
 }
 
 /*    NodeJS   -   NodeJS   -   NodeJS   -   NodeJS   -   NodeJS   -   NodeJS   -   NodeJS   -   NodeJS    */
 
-.skill9 {
+.node-js {
   background-image: url(./img/node-js.svg);
   background-size: 100% 100%;;
   background-position-x: center;
 }
 
-.skill9:hover {
+.node-js:hover {
   transform: scale(1.1) skew(-0.01turn, 5deg);
 }
 
 /*    Git   -   Git   -   Git   -   Git   -   Git   -   Git   -   Git   -   Git    */
 
-.skill10 {
+.git {
   background-image: url(./img/git.svg);
   image-resolution: from-image;
   background-size: 100% 100%;
 }
 
-.skill10:hover {
+.git:hover {
   transform: scale(1.1) skew(-0.01turn, 5deg);
 }
 
 /*    Oracle   -   Oracle   -   Oracle   -   Oracle   -   Oracle   -   Oracle   -   Oracle   -   Oracle    */
 
-.skill11 {
+.oracle {
   background-image: url(./img/oracle.svg);
   image-resolution: from-image;
   background-size: 100% 100%;
 }
 
-.skill11:hover {
+.oracle:hover {
   transform: scale(1.1) skew(-0.01turn, 5deg);
 }
 
 
 /*    Postgres   -   Postgres   -   Postgres   -   Postgres   -   Postgres   -   Postgres   -   Postgres   -   Postgres    */
 
-.skill12 {
+.postgresql {
   background-image: url(./img/postgresql.svg);
   image-resolution: from-image;
   background-size: 100% 100%;
 }
 
-.skill12:hover {
+.postgresql:hover {
   transform: scale(1.1) skew(-0.01turn, 5deg);
 }
 
 
 /*    MySql   -   MySql   -   MySql   -   MySql   -   MySql   -   MySql   -   MySql   -   MySql    */
 
-.skill13 {
+.mysql {
   background-image: url(./img/mysql.svg);
   image-resolution: from-image;
   background-size: 100% 100%;
 }
 
-.skill13:hover {
+.mysql:hover {
   transform: scale(1.1) skew(-0.01turn, 5deg);
 }
 
 
 /*    TypeScript   -   TypeScript   -   TypeScript   -   TypeScript   -   TypeScript   -   TypeScript   -   TypeScript   -   TypeScript    */
 
-.skill14 {
+.ts {
   background-image: url(./img/ts.svg);
   image-resolution: from-image;
   background-size: 100% 100%;
 }
 
-.skill14:hover {
+.ts:hover {
   transform: scale(1.1) skew(-0.01turn, 5deg);
 }
 
 
 /*    GitHub   -   GitHub   -   GitHub   -   GitHub   -   GitHub   -   GitHub   -   GitHub   -   GitHub    */
 
-.skill15 {
+.gith {
   background-image: url(./img/gith.svg);
   image-resolution: from-image;
   background-size: 100% 100%;
 }
 
-.skill15:hover {
+.gith:hover {
   transform: scale(1.1) skew(-0.01turn, 5deg);
 }
 
 /*    Tomcat   -   Tomcat   -   Tomcat   -   Tomcat   -   Tomcat   -   Tomcat   -   Tomcat   -   Tomcat    */
 
-.skill16 {
+.tomcat {
   background-image: url(./img/tomcat.svg);
   image-resolution: from-image;
   background-size: 100% 100%;
 }
 
-.skill16:hover {
+.tomcat:hover {
   transform: scale(1.1) skew(-0.01turn, 5deg);
 }
 
 /*    JBoss   -   JBoss   -   JBoss   -   JBoss   -   JBoss   -   JBoss   -   JBoss   -   JBoss    */
 
-.skill17 {
+.jboss {
   background-image: url(./img/redhat.svg);
   image-resolution: from-image;
   background-size: 100% 100%;
 }
 
-.skill17:hover {
+.jboss:hover {
   transform: scale(1.1) skew(-0.01turn, 5deg);
 }
 
 
 /*    Office   -   Office   -   Office   -   Office   -   Office   -   Office   -   Office   -   Office    */
 
-.skill18 {
+.office {
   background-image: url(./img/office.svg);
   image-resolution: from-image;
   background-size: 100% 100%;
 }
 
-.skill18:hover {
+.office:hover {
   transform: scale(1.1) skew(-0.01turn, 5deg);
 }
 
@@ -758,6 +778,7 @@ small {
 
 #contact {
   height: 90vh;
+  padding: 0!important;
 }
 
 #contact h3 {
@@ -803,6 +824,10 @@ footer {
     max-width: 85vw;
   }
 
+  #img {
+    border-top-right-radius: 50%;
+  }
+
   p{
     font-size: 1.5rem;
   }
@@ -824,9 +849,6 @@ footer {
   h1{
     font-size: 6vw;
   }
-  .imagen {
-    margin: 0 17vw;
-  }
 }
 
 @media all and (max-width: 901px) {
@@ -838,17 +860,9 @@ footer {
   #knowledge .skill {
     height: 30px;
   }
-  
-  #knowledge .iknow {
-    flex-direction: column;
-  }
 
   .img {
     width: 40vw;
-  }
-
-  #img {
-    border-top-right-radius: 50%;
   }
 
   h1 {
@@ -865,11 +879,6 @@ footer {
 
   p {
     font-size: 1rem;
-  }
-
-  .imagen {
-    margin: 0;
-    align-self: center;
   }
 }
 
@@ -903,6 +912,9 @@ footer {
     border-right: none;
     border-top: 2px solid #000;
     border-bottom: 2px solid #000;
+  }
+  #email, #name, #message {
+    width: 70vw;
   }
 }
 .skill {
