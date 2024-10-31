@@ -83,7 +83,7 @@ nav ul li a {
 nav ul li a[class="active"] {
   color: rgb(83, 170, 37);
 }
-nav ul li a:hover {
+nav ul li a:not([class="active"]):hover {
   color: #fff;
 }
 
@@ -330,7 +330,6 @@ span {
   justify-content: center;
   align-items: center;
   gap: 60px;
-  padding: 30px 10px;
   margin-bottom: 40px;
   transition: transform 1s 0s;
   cursor: pointer;
@@ -744,6 +743,88 @@ small {
 }
 
 
+/*    Supabase   -   Supabase   -   Supabase   -   Supabase   -   Supabase   -   Supabase   -   Supabase   -   Supabase    */
+
+.supabase {
+  background-image: url(./img/supabase.svg);
+  image-resolution: from-image;
+  background-size: 100% 100%;
+}
+
+.supabase:hover {
+  transform: scale(1.1) skew(-0.01turn, 5deg);
+}
+
+
+/*    SVN   -   SVN   -   SVN   -   SVN   -   SVN   -   SVN   -   SVN   -   SVN    */
+
+.svn {
+  background-image: url(./img/svn.svg);
+  image-resolution: from-image;
+  background-size: 100% 100%;
+}
+
+.svn:hover {
+  transform: scale(1.1) skew(-0.01turn, 5deg);
+}
+
+
+/*    Expo   -   Expo   -   Expo   -   Expo   -   Expo   -   Expo   -   Expo   -   Expo    */
+
+.expo {
+  background-image: url(./img/expo.svg);
+  image-resolution: from-image;
+  background-size: 100% 100%;
+}
+
+.expo:hover {
+  transform: scale(1.1) skew(-0.01turn, 5deg);
+}
+
+
+/*    Jasper   -   Jasper   -   Jasper   -   Jasper   -   Jasper   -   Jasper   -   Jasper   -   Jasper    */
+
+.jasper {
+  background-image: url(./img/jasper.svg);
+  image-resolution: from-image;
+  background-size: 100% 100%;
+}
+
+.jasper:hover {
+  transform: scale(1.1) skew(-0.01turn, 5deg);
+}
+
+
+/*    Postman   -   Postman   -   Postman   -   Postman   -   Postman   -   Postman   -   Postman   -   Postman    */
+
+.postman {
+  background-image: url(./img/postman.svg);
+  image-resolution: from-image;
+  background-size: 100% 100%;
+}
+
+.postman:hover {
+  transform: scale(1.1) skew(-0.01turn, 5deg);
+}
+
+
+/*    SoapUI   -   SoapUI   -   SoapUI   -   SoapUI   -   SoapUI   -   SoapUI   -   SoapUI   -   SoapUI    */
+
+.soapui {
+  background-image: url(./img/soapui.svg);
+  image-resolution: from-image;
+  background-size: 100% 100%;
+}
+
+.soapui:hover {
+  transform: scale(1.1) skew(-0.01turn, 5deg);
+}
+
+
+
+
+
+
 
 
 
@@ -833,7 +914,6 @@ footer {
   }
   .pCard {
     flex-direction: column-reverse;
-    padding: 30px 0;
     gap: 20px;
   }
   #p2 {
