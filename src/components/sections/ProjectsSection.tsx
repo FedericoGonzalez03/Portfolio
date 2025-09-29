@@ -32,11 +32,11 @@ const initialProjectsData = [
   },
   {
     id: 3,
-    title: 'CRM for Collecting SRL',
+    title: 'Collecting SRL',
     description: {
-      en: 'A comprehensive CRM system designed for managing customer relationships and streamlining business processes, including a full webmail implementation.',
-      es: 'Un sistema CRM integral diseñado para gestionar las relaciones con los clientes y optimizar los procesos comerciales, incluida una implementación completa de webmail.',
-      pt: 'Um sistema CRM abrangente projetado para gerenciar relacionamentos com clientes e otimizar processos de negócios, incluindo uma implementação completa de webmail.',
+      en: 'A powerful and fully featured CRM solution built to manage customer relationships, track debts, and optimize business operations — including a complete integrated webmail system.',
+      es: 'Una solución CRM potente y completa, diseñada para gestionar las relaciones con los clientes, controlar deudas y optimizar las operaciones comerciales — con un sistema de webmail totalmente integrado.',
+      pt: 'Uma solução CRM robusta e completa, projetada para gerenciar relacionamentos com clientes, controlar dívidas e otimizar as operações do negócio — com um sistema de webmail totalmente integrado.',
     },
     techStack: ['React', 'Node.js', 'Express', 'Tailwind CSS', 'PostgreSQL', 'SMTP/IMAP'],
     liveDemo: 'https://example.com/crm-collecting-srl', // Placeholder
