@@ -26,11 +26,22 @@ const initialProjectsData = [
       es: 'Una plataforma de comercio electrónico completa para pedir pizzas en línea, con autenticación de usuarios e integración de pagos.',
       pt: 'Uma plataforma de comércio eletrônico completa para pedir pizzas online, com autenticação de usuários e integração de pagamentos.',
     },
-    techStack: ['React', 'Node.js', 'Express', 'PostgreSQL', 'Tailwind CSS'],
+    techStack: ['Next.js', 'React', 'Node.js', 'Express', 'PostgreSQL', 'Tailwind CSS', 'Stripe'],
     liveDemo: 'https://example.com/ecommerce', // Placeholder
     github: 'https://github.com/federicogonzalez/ecommerce-platform', // Placeholder
   },
-  //KodaTrack
+  {
+    id: 3,
+    title: 'CRM for Collecting SRL',
+    description: {
+      en: 'A comprehensive CRM system designed for managing customer relationships and streamlining business processes, including a full webmail implementation.',
+      es: 'Un sistema CRM integral diseñado para gestionar las relaciones con los clientes y optimizar los procesos comerciales, incluida una implementación completa de webmail.',
+      pt: 'Um sistema CRM abrangente projetado para gerenciar relacionamentos com clientes e otimizar processos de negócios, incluindo uma implementação completa de webmail.',
+    },
+    techStack: ['React', 'Node.js', 'Express', 'Tailwind CSS', 'PostgreSQL', 'SMTP/IMAP'],
+    liveDemo: 'https://example.com/crm-collecting-srl', // Placeholder
+    github: 'https://github.com/federicogonzalez/crm-collecting-srl', // Placeholder
+  },
 ];
 
 const ProjectsSection = () => {
