@@ -15,7 +15,7 @@ const Footer = () => {
             <Mail className="w-6 h-6" />
           </a>
           <a
-            href="https://linkedin.com/in/federicogonzalezsalomon"
+            href="https://www.linkedin.com/in/03-federico-gonzalez/"
             target="_blank"
             rel="noopener noreferrer" 
             className="cursor-target cursor-none text-neutral-400 hover:text-blue-400 transition-colors duration-200"
@@ -24,7 +24,7 @@ const Footer = () => {
             <Linkedin className="w-6 h-6" />
           </a>
           <a
-            href="https://github.com/federicogonzalezsalomon"
+            href="https://github.com/FedericoGonzalez03"
             target="_blank" 
             rel="noopener noreferrer"
             className="cursor-target cursor-none text-neutral-400 hover:text-purple-400 transition-colors duration-200"
