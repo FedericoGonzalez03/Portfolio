@@ -74,6 +74,14 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
     const scrollHandler = () => {
       if (!activeTarget || !cursorRef.current) return;
 
+      // Check if the activeTarget is still in the DOM
+      if (!document.contains(activeTarget)) {
+        if (currentLeaveHandler) {
+          currentLeaveHandler();
+        }
+        return;
+      }
+
       const mouseX = gsap.getProperty(cursorRef.current, 'x') as number;
       const mouseY = gsap.getProperty(cursorRef.current, 'y') as number;
 
@@ -91,6 +99,15 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
 
     window.addEventListener('scroll', scrollHandler, { passive: true });
     window.addEventListener('mousemove', moveHandler);
+
+    // Periodic check to ensure target elements are still in the DOM
+    const domCheckInterval = setInterval(() => {
+      if (activeTarget && !document.contains(activeTarget)) {
+        if (currentLeaveHandler) {
+          currentLeaveHandler();
+        }
+      }
+    }, 100); // Check every 100ms
 
     const mouseDownHandler = (): void => {
       if (!dotRef.current) return;
@@ -267,6 +284,10 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
       window.removeEventListener('mousemove', moveHandler);
       window.removeEventListener('mouseover', enterHandler);
       window.removeEventListener('scroll', scrollHandler);
+      window.removeEventListener('mousedown', mouseDownHandler);
+      window.removeEventListener('mouseup', mouseUpHandler);
+      
+      clearInterval(domCheckInterval);
 
       if (activeTarget) {
         cleanupTarget(activeTarget);

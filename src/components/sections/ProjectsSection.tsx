@@ -51,8 +51,9 @@ const ProjectsSection = () => {
     <Parallax
       urlImage={mario.src}
       className='flex items-center justify-center text-center py-20 px-4'
+      id="projects"
     >
-      <section id="projects">
+      <section>
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-100 mb-12 text-shadow-lg/90">
             {t.projects}

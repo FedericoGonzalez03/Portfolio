@@ -8,7 +8,7 @@ const Footer = () => {
         <p className="mb-4">&copy; {new Date().getFullYear()} • Federico González Salomón</p>
         <div className="flex justify-center space-x-6">
           <a
-            href="mailto:federico.gonzalez.salomon@example.com"
+            href="mailto:03.federico.gonzalez@gmail.com"
             className="cursor-target cursor-none text-neutral-400 hover:text-green-400 transition-colors duration-200"
             aria-label="Email address"
           >

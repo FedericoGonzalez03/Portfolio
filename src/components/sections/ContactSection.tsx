@@ -115,8 +115,9 @@ const ContactSection = () => {
         urlImage={kart.src}
         className='py-20 px-4'
         minHeight='0px'
+        id="contact"
       >
-        <section id="contact">
+        <section>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-100 mb-8  text-shadow-lg/90">
               {t.getInTouch}
