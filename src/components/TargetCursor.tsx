@@ -75,8 +75,7 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
     window.addEventListener('mousemove', moveHandler);
 
     const scrollHandler = () => {
-      if (!cursorRef.current) return;
-
+      if (!activeTarget || !cursorRef.current) return;
 
       const mouseX = gsap.getProperty(cursorRef.current, 'x') as number;
       const mouseY = gsap.getProperty(cursorRef.current, 'y') as number;
