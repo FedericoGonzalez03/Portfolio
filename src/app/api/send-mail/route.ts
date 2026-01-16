@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
           }
         </style>
 
-        <div style="font-family: 'Trebuchet MS', sans-serif; line-height: 1.6;">
+        <div style="font-family: Arial, sans-serif; line-height: 1.6;">
           <p><strong>Nombre:</strong> ${body.name}</p>
           <p><strong>Email:</strong> ${body.email}</p>
           <p><strong>Mensaje:</strong><br/>${body.message}</p>

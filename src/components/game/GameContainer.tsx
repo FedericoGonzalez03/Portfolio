@@ -131,20 +131,6 @@ const GameContainer = ({ onCoinCollect }: GameContainerProps) => {
       });
 
       if (hitEnemy) {
-        // Find the enemy element and trigger a mouseleave event before removing it
-        const enemyElement = document.querySelector(`[data-enemy-id="${hitEnemy.id}"]`);
-        if (enemyElement) {
-          // Dispatch mouseleave event to reset the cursor
-          const leaveEvent = new MouseEvent('mouseleave', {
-            view: window,
-            bubbles: true,
-            cancelable: true,
-            clientX: e.clientX,
-            clientY: e.clientY
-          });
-          enemyElement.dispatchEvent(leaveEvent);
-        }
-        
         setEnemies(prev => prev.filter(e => e.id !== hitEnemy.id));
         onCoinCollect(10); // Add 10 coins when hitting an enemy
         showToast(t.hitABug, 'success', 1000, false);
@@ -165,8 +151,6 @@ const GameContainer = ({ onCoinCollect }: GameContainerProps) => {
 
   return (
     <>
-      <TargetCursor targetSelector={'.cursor-target'} hideDefaultCursor/>
-
       {/* Enemies */}
       <div className="absolute inset-0 pointer-events-none">
         {enemies.map(enemy => (

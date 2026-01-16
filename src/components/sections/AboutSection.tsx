@@ -11,9 +11,8 @@ const AboutSection = () => {
       urlImage={bros.src}
       className='flex items-center justify-center text-center p-4'
       minHeight='0px'
-      id="about"
     >
-      <section className="py-20 px-4">
+      <section id="about" className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-100 mb-8 text-shadow-lg/90">
             {t.about}

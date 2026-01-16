@@ -16,14 +16,14 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<'en' | 'es' | 'pt'>('es'); // Default to 'es'
+  const [language, setLanguageState] = useState<'en' | 'es' | 'pt'>('en'); // Default to 'en'
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     // Ensure this runs only on the client
     if (typeof window !== 'undefined') {
       const savedLanguage = localStorage.getItem('language') as 'en' | 'es' | 'pt';
-      setLanguageState(savedLanguage || 'es'); // Set language from localStorage or default to 'es'
+      setLanguageState(savedLanguage || 'en'); // Set language from localStorage or default to 'en'
       setIsMounted(true); // Mark component as mounted
     }
   }, []);

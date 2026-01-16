@@ -24,7 +24,7 @@ const AnimatedName = () => {
 };
 
 const HeroSection = () => {
-  const { t, language} = useLanguage();
+  const { t } = useLanguage();
 
   return (
     <section id="hero" className='min-h-screen flex items-center justify-center p-4 pt-20'>
@@ -41,15 +41,15 @@ const HeroSection = () => {
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up delay-300">
           <a
-            href={language === 'en' ? '/CV_en.pdf' : '/CV.pdf'}
+            href="/federico_gonzalez_salomon_cv.pdf"
             download
-            className="cursor-target cursor-none inline-flex items-center px-8 py-3 bg-green-400 text-neutral-950 font-bold rounded-full shadow-lg hover:bg-green-500 transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-neutral-900"
+            className="cursor-target target-cursor-pointer inline-flex items-center px-8 py-3 bg-green-400 text-neutral-950 font-bold rounded-full shadow-lg hover:bg-green-500 transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-neutral-900"
           >
             <Download className="w-5 h-5 mr-2" /> {t.downloadCv}
           </a>
           <a
             href="#contact"
-            className="cursor-target cursor-none inline-flex items-center px-8 py-3 border-2 border-green-400 text-green-400 font-bold rounded-full shadow-lg hover:bg-neutral-900 transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-neutral-900"
+            className="cursor-target target-cursor-pointer inline-flex items-center px-8 py-3 border-2 border-green-400 text-green-400 font-bold rounded-full shadow-lg hover:bg-neutral-900 transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-neutral-900"
           >
             <Mail className="w-5 h-5 mr-2" /> {t.contact}
           </a>

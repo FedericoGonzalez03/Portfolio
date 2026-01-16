@@ -69,9 +69,9 @@ const Header = ({ coins }: HeaderProps) => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-100 bg-black shadow-md p-4 flex justify-between items-center h-18 truncate gap-4">
-      <div className='cursor-target cursor-none flex items-center gap-4'>
+      <div className='cursor-target target-cursor-pointer flex items-center gap-4'>
         <Link href="/">
-          <Image src={logo} alt="Logo FedericoGS" width={32} height={32} />
+          <Image src={logo} alt="Logo FedericoGS" width={32} height={32} className='cursor-none' />
         </Link>
         <h1 className="text-2xl font-bold text-green-400">Federico GS</h1>
       </div>
@@ -81,10 +81,10 @@ const Header = ({ coins }: HeaderProps) => {
         {/* Desktop Navigation */}
       <ul className="hidden md:flex gap-4">
         {links.map((link) => (
-          <li key={link.name[language].toLowerCase()} className='cursor-target'>
+          <li key={link.name[language].toLowerCase()} className='p-0' >
             <a
               href={link.href}
-              className="text-neutral-300 hover:text-green-400 transition-colors duration-300 text-sm cursor-none"
+              className="text-neutral-300 hover:text-green-400 transition-colors duration-300 text-sm cursor-none cursor-target target-cursor-pointer p-1"
             >
               {link.name[language]}
             </a>
@@ -94,7 +94,7 @@ const Header = ({ coins }: HeaderProps) => {
 
       {/* Mobile Hamburger Button */}
       <button
-        className="md:hidden p-2"
+        className="md:hidden p-2 cursor-target target-cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle menu"
       >
@@ -126,7 +126,7 @@ const Header = ({ coins }: HeaderProps) => {
             </h2>
             <button
               onClick={() => setIsOpen(false)}
-              className="p-2"
+              className="p-2 cursor-target target-cursor-pointer"
               aria-label="Close menu"
             >
               <svg
@@ -144,10 +144,10 @@ const Header = ({ coins }: HeaderProps) => {
           </div>
           <ul className="flex flex-col gap-4">
             {links.map((link) => (
-              <li key={link.name[language].toLowerCase()} className='cursor-target'>
+              <li key={link.name[language].toLowerCase()} className='p-0'>
                 <a
                   href={link.href}
-                  className='block py-2 text-neutral-300 hover:text-green-400 transition-colors duration-300 text-sm'
+                  className='block py-2 text-neutral-300 hover:text-green-400 transition-colors duration-300 text-sm cursor-none cursor-target target-cursor-pointer p-1'
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name[language]}

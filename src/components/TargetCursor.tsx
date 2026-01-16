@@ -1,14 +1,17 @@
+'use client';
 // from https://reactbits.dev/animations/target-cursor
 import React, { useEffect, useRef, useCallback, useMemo } from 'react';
 import { gsap } from 'gsap';
 
 export interface TargetCursorProps {
-  targetSelector: string;
+  targetSelector?: string;
+  pointerSelector?: string;
   hideDefaultCursor?: boolean;
 }
 
 const TargetCursor: React.FC<TargetCursorProps> = ({
-  targetSelector,
+  targetSelector = 'target-cursor',
+  pointerSelector = 'target-cursor-pointer',
   hideDefaultCursor = true
 }) => {
   const cursorRef = useRef<HTMLDivElement>(null);
@@ -72,15 +75,8 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
     window.addEventListener('mousemove', moveHandler);
 
     const scrollHandler = () => {
-      if (!activeTarget || !cursorRef.current) return;
+      if (!cursorRef.current) return;
 
-      // Check if the activeTarget is still in the DOM
-      if (!document.contains(activeTarget)) {
-        if (currentLeaveHandler) {
-          currentLeaveHandler();
-        }
-        return;
-      }
 
       const mouseX = gsap.getProperty(cursorRef.current, 'x') as number;
       const mouseY = gsap.getProperty(cursorRef.current, 'y') as number;
@@ -99,15 +95,6 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
 
     window.addEventListener('scroll', scrollHandler, { passive: true });
     window.addEventListener('mousemove', moveHandler);
-
-    // Periodic check to ensure target elements are still in the DOM
-    const domCheckInterval = setInterval(() => {
-      if (activeTarget && !document.contains(activeTarget)) {
-        if (currentLeaveHandler) {
-          currentLeaveHandler();
-        }
-      }
-    }, 100); // Check every 100ms
 
     const mouseDownHandler = (): void => {
       if (!dotRef.current) return;
@@ -140,6 +127,15 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
       if (!target || !cursorRef.current || !cornersRef.current) return;
 
       if (activeTarget === target) return;
+
+      // Check if target has target-cursor-pointer class
+      const isPointer = target.classList.contains(pointerSelector) || 
+                       target.closest(`.${pointerSelector}`);
+      if (isPointer) {
+        cursorRef.current.classList.add(pointerSelector);
+      } else {
+        cursorRef.current.classList.remove(pointerSelector);
+      }
 
       if (activeTarget) {
         cleanupTarget(activeTarget);
@@ -242,6 +238,11 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
         activeTarget = null;
         isAnimatingToTarget = false;
 
+        // Remove pointer class when leaving
+        if (cursorRef.current) {
+          cursorRef.current.classList.remove(pointerSelector);
+        }
+
         if (cornersRef.current) {
           const corners = Array.from(cornersRef.current);
           gsap.killTweensOf(corners);
@@ -284,10 +285,6 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
       window.removeEventListener('mousemove', moveHandler);
       window.removeEventListener('mouseover', enterHandler);
       window.removeEventListener('scroll', scrollHandler);
-      window.removeEventListener('mousedown', mouseDownHandler);
-      window.removeEventListener('mouseup', mouseUpHandler);
-      
-      clearInterval(domCheckInterval);
 
       if (activeTarget) {
         cleanupTarget(activeTarget);

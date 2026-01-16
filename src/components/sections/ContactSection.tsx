@@ -115,9 +115,8 @@ const ContactSection = () => {
         urlImage={kart.src}
         className='py-20 px-4'
         minHeight='0px'
-        id="contact"
       >
-        <section>
+        <section id="contact">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-100 mb-8  text-shadow-lg/90">
               {t.getInTouch}
@@ -169,25 +168,25 @@ const ContactSection = () => {
               </div>
               <button
                 type="submit"
-                className="cursor-target px-6 py-3 bg-green-500 text-neutral-950 font-semibold rounded-full shadow-lg hover:bg-green-600 transform hover:scale-105 transition-all duration-300"
+                className="cursor-target target-cursor-pointer px-6 py-3 bg-green-500 text-neutral-950 font-semibold rounded-full shadow-lg hover:bg-green-600 transform hover:scale-105 transition-all duration-300"
               >
                 {t.sendMessage}
               </button>
             </form>
             <div className="flex flex-wrap justify-center gap-6">
               <a
-                href="https://www.linkedin.com/in/03-federico-gonzalez"
+                href="https://linkedin.com/in/federicogonzalezsalomon"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="cursor-target inline-flex items-center px-6 py-3 border-2 border-blue-400 text-blue-400 rounded-full shadow-lg hover:bg-blue-900 transform hover:scale-105 transition-all duration-300"
+                className="cursor-target target-cursor-pointer inline-flex items-center px-6 py-3 border-2 border-blue-400 text-blue-400 rounded-full shadow-lg hover:bg-blue-900 transform hover:scale-105 transition-all duration-300"
               >
                 <Linkedin className="w-5 h-5 mr-2" /> LinkedIn
               </a>
               <a
-                href="https://github.com/FedericoGonzalez03"
+                href="https://github.com/federicogonzalezsalomon"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="cursor-target inline-flex items-center px-6 py-3 border-2 border-purple-300 text-purple-300 rounded-full shadow-lg hover:bg-purple-700 transform hover:scale-105 transition-all duration-300"
+                className="cursor-target target-cursor-pointer inline-flex items-center px-6 py-3 border-2 border-purple-300 text-purple-300 rounded-full shadow-lg hover:bg-purple-700 transform hover:scale-105 transition-all duration-300"
               >
                 <Github className="w-5 h-5 mr-2" /> GitHub
               </a>

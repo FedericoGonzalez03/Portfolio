@@ -8,26 +8,26 @@ const Footer = () => {
         <p className="mb-4">&copy; {new Date().getFullYear()} • Federico González Salomón</p>
         <div className="flex justify-center space-x-6">
           <a
-            href="mailto:03.federico.gonzalez@gmail.com"
-            className="cursor-target cursor-none text-neutral-400 hover:text-green-400 transition-colors duration-200"
+            href="mailto:federico.gonzalez.salomon@example.com"
+            className="cursor-target target-cursor-pointer text-neutral-400 hover:text-green-400 transition-colors duration-200"
             aria-label="Email address"
           >
             <Mail className="w-6 h-6" />
           </a>
           <a
-            href="https://www.linkedin.com/in/03-federico-gonzalez/"
+            href="https://linkedin.com/in/federicogonzalezsalomon"
             target="_blank"
             rel="noopener noreferrer" 
-            className="cursor-target cursor-none text-neutral-400 hover:text-blue-400 transition-colors duration-200"
+            className="cursor-target target-cursor-pointer text-neutral-400 hover:text-blue-400 transition-colors duration-200"
             aria-label="LinkedIn profile"
           >
             <Linkedin className="w-6 h-6" />
           </a>
           <a
-            href="https://github.com/FedericoGonzalez03"
+            href="https://github.com/federicogonzalezsalomon"
             target="_blank" 
             rel="noopener noreferrer"
-            className="cursor-target cursor-none text-neutral-400 hover:text-purple-400 transition-colors duration-200"
+            className="cursor-target target-cursor-pointer text-neutral-400 hover:text-purple-400 transition-colors duration-200"
             aria-label="GitHub profile" 
           >
             <Github className="w-6 h-6" />

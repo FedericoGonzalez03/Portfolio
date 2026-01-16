@@ -22,6 +22,38 @@ export const pt = {
     liveDemo: 'Ver Demo',
     sourceCode: 'Código Fonte',
     hitABug: 'Encontrou um bug! +10 moedas',
+    viewCaseStudy: 'Ver Estudo de Caso',
+    private: 'Privado',
+    backToProjects: 'Voltar aos Projetos',
+    viewLive: 'Ver Demo',
+    privateRepository: 'Repositório Privado',
+    viewCode: 'Ver Código',
+    overview: 'Visão Geral',
+    technicalDecisions: 'Decisões Técnicas',
+    challengesSolved: 'Desafios Resolvidos',
+    projectOverview: 'Visão Geral do Projeto',
+    contextProblem: 'Contexto e Problema',
+    myRole: 'Meu Papel',
+    keyFeatures: 'Funcionalidades-Chave',
+    technologyStack: 'Stack Tecnológico',
+    reason: 'Razão',
+    benefit: 'Benefício',
+    problem: 'Problema',
+    solution: 'Solução',
+    projectGallery: 'Galeria do Projeto',
+    interestedWorking: 'Interessado em trabalhar juntos?',
+    discussProject: 'Vamos discutir como posso ajudar a dar vida ao seu projeto.',
+    categoryLabels: {
+      saas: 'SaaS',
+      ecommerce: 'E-commerce',
+      landing: 'Landing Page',
+      corporate: 'Corporativo'
+    },
+    statusLabels: {
+      production: 'Em Produção',
+      development: 'Em Desenvolvimento',
+      archived: 'Arquivado'
+    },
 
     // FORM
     name: 'Nome',

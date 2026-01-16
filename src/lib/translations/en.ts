@@ -21,6 +21,38 @@ export const en = {
   liveDemo: 'Live Demo',
   sourceCode: 'Source Code',
   hitABug: 'Hit a bug! +10 coins',
+  viewCaseStudy: 'View Case Study',
+  private: 'Private',
+  backToProjects: 'Back to Projects',
+  viewLive: 'View Live',
+  privateRepository: 'Private Repository',
+  viewCode: 'View Code',
+  overview: 'Overview',
+  technicalDecisions: 'Technical Decisions',
+  challengesSolved: 'Challenges Solved',
+  projectOverview: 'Project Overview',
+  contextProblem: 'Context & Problem',
+  myRole: 'My Role',
+  keyFeatures: 'Key Features',
+  technologyStack: 'Technology Stack',
+  reason: 'Reason',
+  benefit: 'Benefit',
+  problem: 'Problem',
+  solution: 'Solution',
+  projectGallery: 'Project Gallery',
+  interestedWorking: 'Interested in working together?',
+  discussProject: "Let's discuss how I can help bring your project to life.",
+  categoryLabels: {
+    saas: 'SaaS',
+    ecommerce: 'E-commerce',
+    landing: 'Landing Page',
+    corporate: 'Corporate'
+  },
+  statusLabels: {
+    production: 'In Production',
+    development: 'In Development',
+    archived: 'Archived'
+  },
 
   // FORM
   name: 'Name',

@@ -20,7 +20,7 @@ const techStackCategories = [
       pt: 'Frameworks - Bibliotecas',
     },
     icon: Laptop,
-    items: ['React', 'React Native', 'Next.js', 'JasperReports', 'Chart.js', 'Express', 'Node.js', 'Theme UI', 'TailwindCSS'],
+    items: ['React', 'React Native', 'Next.js', 'JasperReports', 'Chart.js'],
   },
   {
     category: {
@@ -38,7 +38,7 @@ const techStackCategories = [
       pt: 'Ferramentas',
     },
     icon: Wrench,
-    items: ['Git', 'SVN', 'Tomcat', 'JBoss', 'Vercel', 'JasperStudio', 'Expo', 'Postman'],
+    items: ['Git', 'SVN', 'Tomcat', 'JBoss', 'Vercel', 'JasperStudio', 'Supabase', 'Expo'],
   },
 ];
 

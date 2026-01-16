@@ -13,8 +13,8 @@ const workExperienceData = [
     company: "ST Consultores",
     period: {
       en: "June 2023 – Present",
-      es: "Junio 2023 – Presente",
-      pt: "Junho 2023 – Presente"
+      es: "Junio 2023 – Actualidad",
+      pt: "Junho 2023 – Actualidade"
     },
     description: {
       en: [

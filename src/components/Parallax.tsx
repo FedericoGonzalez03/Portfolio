@@ -5,7 +5,6 @@ declare type TParallaxProps = {
   minHeight?: string;
   opacity?: number;
   className?: string;
-  id?: string;
 };
 
 const Parallax = (props: TParallaxProps) => {
@@ -16,7 +15,6 @@ const Parallax = (props: TParallaxProps) => {
         backgroundImage: `url(${props.urlImage})`,
         minHeight: props.minHeight || "500px",
       }}
-      id={props.id}
     >
       <div
         className="absolute inset-0 bg-black z-[-1]"
