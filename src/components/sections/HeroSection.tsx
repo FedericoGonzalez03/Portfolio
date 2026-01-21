@@ -24,7 +24,7 @@ const AnimatedName = () => {
 };
 
 const HeroSection = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <section id="hero" className='min-h-screen flex items-center justify-center p-4 pt-20'>
@@ -41,7 +41,7 @@ const HeroSection = () => {
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up delay-300">
           <a
-            href="/federico_gonzalez_salomon_cv.pdf"
+            href={language === 'en' ? '/CV_en.pdf' : '/CV.pdf'}
             download
             className="cursor-target target-cursor-pointer inline-flex items-center px-8 py-3 bg-green-400 text-neutral-950 font-bold rounded-full shadow-lg hover:bg-green-500 transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-neutral-900"
           >
