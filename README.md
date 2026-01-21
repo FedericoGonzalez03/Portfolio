@@ -30,19 +30,19 @@
 
 ## 🧰 Tech stack
 **Frontend**
-- React • Next.js • TypeScript • TailwindCSS
+- React • React Native • Next.js • TypeScript • TailwindCSS
 
 **Backend**
-- Node.js • Express • Java • FastAPI
+- Node.js • Express • Java • FastAPI • C#
 
 **Data**
-- PostgreSQL • Oracle
+- PostgreSQL • Oracle • MySQL • SQLServer
 
 **DevOps / Tools**
-- Git/GitHub • Docker • GitHub Actions • CI/CD • Windows • Linux
+- Git/GitHub • SVN • Docker • GitHub Actions • CI/CD • Windows • Linux • Expo • Vercel • Oracle Cloud
 
 <p>
-  <img src="https://skillicons.dev/icons?i=react,nextjs,ts,tailwind,nodejs,express,java,python,fastapi,postgres,git,docker,windows,linux" />
+  <img src="https://skillicons.dev/icons?i=react,nextjs,ts,tailwind,nodejs,express,java,python,fastapi,cs,postgres,git,docker,windows,linux" />
 </p>
 
 ---

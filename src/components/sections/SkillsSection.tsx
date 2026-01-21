@@ -11,7 +11,7 @@ const techStackCategories = [
       pt: 'Linguagens',
     },
     icon: Code,
-    items: ['Java', 'JavaScript', 'TypeScript', 'C#'],
+    items: ['Java', 'JavaScript', 'TypeScript', 'C#', 'Python'],
   },
   {
     category: {
@@ -20,7 +20,7 @@ const techStackCategories = [
       pt: 'Frameworks - Bibliotecas',
     },
     icon: Laptop,
-    items: ['React', 'React Native', 'Next.js', 'JasperReports', 'Chart.js'],
+    items: ['React', 'React Native', 'Next.js', 'Chart.js', 'FastAPI'],
   },
   {
     category: {
@@ -33,12 +33,12 @@ const techStackCategories = [
   },
   {
     category: {
-      en: 'Tools',
-      es: 'Herramientas',
-      pt: 'Ferramentas',
+      en: 'DevOps — Tools',
+      es: 'DevOps — Herramientas',
+      pt: 'DevOps — Ferramentas',
     },
     icon: Wrench,
-    items: ['Git', 'SVN', 'Tomcat', 'JBoss', 'Vercel', 'JasperStudio', 'Supabase', 'Expo'],
+    items: ['Git/GitHub', 'GitHub Actions', 'SVN', 'Tomcat', 'JBoss', 'Vercel', 'JasperStudio', 'Expo', 'Docker', 'Oracle Cloud'],
   },
 ];
 
