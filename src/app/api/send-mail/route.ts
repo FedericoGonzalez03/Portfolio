@@ -53,8 +53,9 @@ export async function POST(req: NextRequest) {
     });
 
     return Response.json({ success: true }, { status: 200 });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error enviando correo:', error);
-    return Response.json({ success: false, error: error.message }, { status: 500 });
+    const message = error instanceof Error ? error.message : 'Unknown error';
+    return Response.json({ success: false, error: message }, { status: 500 });
   }
 }

@@ -38,4 +38,6 @@ const Enemy = memo(({ id, x, y, type, visibility }: EnemyProps) => {
   );
 });
 
+Enemy.displayName = 'Enemy';
+
 export default Enemy;
