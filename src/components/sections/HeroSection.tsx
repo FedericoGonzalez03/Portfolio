@@ -1,6 +1,7 @@
 'use client';
 import { Download, Mail } from 'lucide-react';
 import { useLanguage } from '@/lib/context/LanguageContext';
+import { useDesktopPointer } from '@/lib/useDesktopPointer';
 
 const AnimatedName = () => {
   return (
@@ -25,6 +26,7 @@ const AnimatedName = () => {
 
 const HeroSection = () => {
   const { t, language } = useLanguage();
+  const hasDesktopPointer = useDesktopPointer();
 
   return (
     <section id="hero" className='min-h-screen flex items-center justify-center p-4 pt-20'>
@@ -36,9 +38,11 @@ const HeroSection = () => {
         <p className="text-lg md:text-xl text-neutral-300 mb-8 animate-fade-in-up delay-200 text-center">
           {t.personalDescription}
         </p>
-        <p className="text-sm md:text-base text-green-400 mb-6 animate-fade-in-up delay-300 text-center italic">
-          <span className="opacity-80">{t.gameHint}</span>
-        </p>
+        {hasDesktopPointer ? (
+          <p className="text-sm md:text-base text-green-400 mb-6 animate-fade-in-up delay-300 text-center italic">
+            <span className="opacity-80">{t.gameHint}</span>
+          </p>
+        ) : null}
         <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up delay-300">
           <a
             href={language === 'en' ? '/CV_en.pdf' : '/CV.pdf'}

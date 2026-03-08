@@ -5,6 +5,7 @@ import logo from '@/public/logo.png';
 import Link from 'next/link';
 import { useState } from 'react';
 import { useLanguage } from '@/lib/context/LanguageContext';
+import { useDesktopPointer } from '@/lib/useDesktopPointer';
 
 interface HeaderProps {
   coins: number;
@@ -14,6 +15,7 @@ const Header = ({ coins }: HeaderProps) => {
 
   const { language } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
+  const hasDesktopPointer = useDesktopPointer();
 
   const links = [
     {
@@ -73,7 +75,7 @@ const Header = ({ coins }: HeaderProps) => {
         <Link href="/">
           <Image src={logo} alt="Logo FedericoGS" width={32} height={32} className='cursor-none' />
         </Link>
-        <h1 className="text-2xl font-bold text-green-400">Federico GS</h1>
+        <h1 className="text-2xl font-bold text-green-400">FedericoGS</h1>
       </div>
 
       <div className="flex items-center gap-2 md:gap-6 flex-row-reverse md:flex-row ">
@@ -165,9 +167,11 @@ const Header = ({ coins }: HeaderProps) => {
       />
       
       <div className='flex items-center gap-2'>
-        <span className="text-green-400 font-bold text-sm">
-          <span className="inline-block ">🪙</span> {coins}
-        </span>
+        {hasDesktopPointer ? (
+          <span className="text-green-400 font-bold text-sm">
+            <span className="inline-block ">🪙</span> {coins}
+          </span>
+        ) : null}
         <LanguageSelector />
       </div>
 

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Enemy from './Enemy';
 import { useToast } from '../ToastProvider';
 import { useLanguage } from '@/lib/context/LanguageContext';
-import TargetCursor from '../TargetCursor';
+import { useDesktopPointer } from '@/lib/useDesktopPointer';
 
 interface GameContainerProps {
   onCoinCollect: (amount: number) => void;
@@ -22,10 +22,15 @@ const GameContainer = ({ onCoinCollect }: GameContainerProps) => {
   const [bulletHoles, setBulletHoles] = useState<Array<{ id: number; x: number; y: number }>>([]);
   const { showToast } = useToast();
   const { t } = useLanguage();
+  const hasDesktopPointer = useDesktopPointer();
 
   useEffect(() => {
+    if (!hasDesktopPointer) {
+      setEnemies([]);
+      return;
+    }
+
     const generateEnemies = () => {
-      [0 ]
       const newEnemies = Array.from({ length: 10 }, (_, i) => ({
         id: i,
         x: Math.random() * (document.documentElement.scrollWidth - 50) + 25,
@@ -38,9 +43,11 @@ const GameContainer = ({ onCoinCollect }: GameContainerProps) => {
     };
 
     generateEnemies();
-  }, []);
+  }, [hasDesktopPointer]);
 
   useEffect(() => {
+    if (!hasDesktopPointer) return;
+
     let animationFrameId: number;
     let lastX = 0;
     let lastY = 0;
@@ -147,7 +154,11 @@ const GameContainer = ({ onCoinCollect }: GameContainerProps) => {
         cancelAnimationFrame(animationFrameId);
       }
     };
-  }, [enemies, onCoinCollect]);
+  }, [enemies, onCoinCollect, hasDesktopPointer, showToast, t.hitABug]);
+
+  if (!hasDesktopPointer) {
+    return null;
+  }
 
   return (
     <>

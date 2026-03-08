@@ -2,6 +2,7 @@
 // from https://reactbits.dev/animations/target-cursor
 import React, { useEffect, useRef, useCallback, useMemo } from 'react';
 import { gsap } from 'gsap';
+import { useDesktopPointer } from '@/lib/useDesktopPointer';
 
 export interface TargetCursorProps {
   targetSelector?: string;
@@ -17,6 +18,7 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
   const cursorRef = useRef<HTMLDivElement>(null);
   const cornersRef = useRef<NodeListOf<HTMLDivElement>>(null);
   const dotRef = useRef<HTMLDivElement>(null);
+  const hasDesktopPointer = useDesktopPointer();
   const constants = useMemo(
     () => ({
       borderWidth: 3,
@@ -37,6 +39,8 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
   }, []);
 
   useEffect(() => {
+    if (!hasDesktopPointer || !cursorRef.current) return;
+
     if (!cursorRef.current) return;
 
     const originalCursor = document.body.style.cursor;
@@ -291,7 +295,11 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
 
       document.body.style.cursor = originalCursor;
     };
-  }, [targetSelector, moveCursor, constants, hideDefaultCursor]);
+  }, [targetSelector, pointerSelector, moveCursor, constants, hideDefaultCursor, hasDesktopPointer]);
+
+  if (!hasDesktopPointer) {
+    return null;
+  }
 
   return (
     <div ref={cursorRef} className="target-cursor-wrapper">
