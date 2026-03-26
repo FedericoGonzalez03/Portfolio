@@ -146,7 +146,7 @@ const HeroSection = () => {
     <section id="hero" className="relative min-h-screen overflow-hidden bg-[#040704] pt-24 sm:pt-28">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,197,94,0.12),transparent_32%),radial-gradient(circle_at_bottom_right,rgba(34,197,94,0.1),transparent_28%)]" />
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(34,197,94,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(34,197,94,0.05)_1px,transparent_1px)] bg-[size:60px_60px] opacity-50" />
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-[46vw] bg-[radial-gradient(circle_at_20%_35%,rgba(34,197,94,0.14),transparent_60%)]" />
+      <div className="pointer-events-none absolute inset-y-0 left-0 bg-[radial-gradient(circle_at_20%_35%,rgba(34,197,94,0.14),transparent_60%)]" />
       <div className="pointer-events-none absolute bottom-[-12rem] right-[-8rem] h-[28rem] w-[28rem] rounded-full bg-green-500/8 blur-3xl" />
 
       <div className="relative z-10 mx-auto flex min-h-[calc(100vh-7rem)] w-full max-w-[1480px] items-center px-4 pb-12 sm:px-8 lg:px-12 xl:px-16">
