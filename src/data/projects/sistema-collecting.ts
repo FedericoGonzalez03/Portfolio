@@ -29,7 +29,7 @@ export const sistemaCollecting: Project = {
     ]
   },
   links: {
-    liveDemo: 'https://sistema-collecting-frontend-git-demo-fgs.vercel.app',
+    liveDemo: 'https://demo-collecting.vercel.app',
     // isPrivate: true
   },
   translations: {
