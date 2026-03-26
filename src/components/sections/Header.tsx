@@ -5,7 +5,7 @@ import logo from '@/public/logo.png';
 import Link from 'next/link';
 import { useState } from 'react';
 import { useLanguage } from '@/lib/context/LanguageContext';
-import { useDesktopPointer } from '@/lib/useDesktopPointer';
+// import { useDesktopPointer } from '@/lib/useDesktopPointer';
 
 interface HeaderProps {
   coins: number;
@@ -15,7 +15,7 @@ const Header = ({ coins }: HeaderProps) => {
 
   const { language } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
-  const hasDesktopPointer = useDesktopPointer();
+  // const hasDesktopPointer = useDesktopPointer();
 
   const links = [
     {
@@ -167,11 +167,11 @@ const Header = ({ coins }: HeaderProps) => {
       />
       
       <div className='flex items-center gap-2'>
-        {hasDesktopPointer ? (
+        {/* {hasDesktopPointer ? (
           <span className="text-green-400 font-bold text-sm">
             <span className="inline-block ">🪙</span> {coins}
           </span>
-        ) : null}
+        ) : null} */}
         <LanguageSelector />
       </div>
 

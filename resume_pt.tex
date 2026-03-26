@@ -1,0 +1,135 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+    \usepackage[left=0.8in,right=0.8in,bottom=0.8in,top=0.8in]{geometry}
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+    
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Federico González}}\\
+    {\large \scshape {Desenvolvedor Full Stack}}\\
+	Montevideo, Uruguay $\cdot$ 03.federico.gonzalez@gmail.com $\cdot$ +59895152599 $\cdot$ https://portfolio-fgs.vercel.app/pt\\
+\end{center}
+
+%==== Experience ====%
+\header{Experiência}
+\vspace{1mm}
+
+\textbf{ST Consultores} \hfill Montevideo, Uruguay\\
+\textit{Desenvolvedor Full Stack} \hfill Jun 2023 - Presente\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Desenvolvi e mantive aplicações full-stack usando Java, JavaScript, React e bancos de dados Oracle e Postgres.
+	\item Implantei e gerenciei aplicações em servidores JBoss e Tomcat.
+	\item Colaborei com equipes multifuncionais para projetar, desenvolver e implantar novas funcionalidades.
+	\item Contribuí para todo o ciclo de vida de desenvolvimento de software, desde o levantamento de requisitos, estimativa e design até a implementação, testes e implantação.
+	\item Melhorei o desempenho e a escalabilidade das aplicações escrevendo código eficiente e otimizando consultas de banco de dados.
+	\item Integrei APIs e serviços de terceiros para aprimorar a funcionalidade da aplicação.
+	\item Desenvolvi APIs REST e SOAP para facilitar o fluxo de dados entre cliente e servidor, e para expor dados para integrações de sistemas externos.
+	\item Elaborei manuais e documentação para usuários finais e desenvolvedores.
+\end{itemize}
+\vspace{-1mm}
+\textit{Ferramentas: TypeScript, Java, JavaScript, React, Node, SQL, Oracle, Postgres, JBoss, Tomcat, APIs REST, APIs SOAP, Git.}
+
+\vspace{2mm}
+\hrule
+\vspace{2mm}
+
+\textbf{Disco SA} \hfill Montevideo, Uruguay\\
+\textit{Assistente de Vendas} \hfill Jun 2023 - Presente\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Forneci atendimento e suporte excepcional ao cliente em um ambiente de varejo dinâmico.
+    \item Mantive a aparência e organização da loja para aprimorar a experiência de compra.
+    \item Auxiliei no gerenciamento de estoque e processos de recebimento de fornecedores.
+    \item Obtive valiosa experiência em relações com clientes e vendas.
+\end{itemize}
+\vspace{-1mm}
+
+%==== Education ====%
+\header{Educação}
+\textbf{Universidade ORT}\hfill Uruguay\\
+Engenharia de Sistemas \textit{Média: 88} \hfill Mar 2022 - Presente\\
+\vspace{2mm}
+
+
+
+
+
+\header{Certificações}
+\textbf{Certificado de Inglés C2 EF Set} \hfill EF SET\\
+O nível alcançado é C2 Proficiente de acordo com o Quadro Europeu Comum de Referência (QECR). https://cert.efset.org/es/XiQmLL \hfill Mar 2026\\
+\vspace*{2mm}
+\textbf{Curso Oracle Certified Associate Java Programmer (OCAJP) 1Z0-808} \hfill Learn IT University\\
+Concluí com sucesso o treinamento em programação Java core, cobrindo conceitos-chave do OCAJP 1Z0-808, como POO, tipos de dados, operadores, controle de fluxo, métodos e tratamento de exceções. https://ude.my/UC-90514bcb-d4bc-48ba-873f-1712e5075ecb \hfill Jan 2024\\
+\vspace*{2mm}
+
+\ 
+\end{document}

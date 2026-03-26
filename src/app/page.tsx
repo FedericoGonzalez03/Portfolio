@@ -26,7 +26,7 @@ function App() {
       {/* Global container for dark mode and background */}
       <div className="bg-neutral-950 text-neutral-100 transition-colors duration-300 relative">
         {/* Game Container - handles enemies and game mechanics */}
-        <GameContainer onCoinCollect={handleCoinCollect} />
+        {/* <GameContainer onCoinCollect={handleCoinCollect} /> */}
         
         {/* Header with nav and coin counter */}
         <Header coins={coins} />
