@@ -18,7 +18,7 @@ const workExperienceData = [
     },
     description: {
       en: [
-        "Developed and maintained full-stack applications using Java, JavaScript, React, and Oracle or Postgres.",
+        "Developed and maintained full-stack applications using Java, JavaScript, React, Oracle and Postgres databases.",
         "Deployed and managed applications on JBoss and Tomcat servers.",
         "Collaborated with cross-functional teams to design, develop, and deploy new features.",
         "Contributed to the entire software development lifecycle, from requirements gathering, estimation, and design to implementation, testing, and deployment.",
@@ -28,7 +28,7 @@ const workExperienceData = [
         "Designed manuals and documentation for end-users and developers.",
       ],
       es: [
-        "Desarrollé y mantuve aplicaciones full-stack utilizando Java, JavaScript, React y Oracle o Postgres.",
+        "Desarrollé y mantuve aplicaciones full-stack utilizando Java, JavaScript, React, bases de datos Oracle y Postgres.",
         "Desplegué y gestioné aplicaciones en servidores JBoss y Tomcat.",
         "Colaboré con equipos multifuncionales para diseñar, desarrollar y desplegar nuevas funcionalidades.",
         "Contribuí a todo el ciclo de vida del desarrollo de software, desde la recopilación de requisitos, estimación y diseño hasta la implementación, pruebas y despliegue.",
@@ -38,7 +38,7 @@ const workExperienceData = [
         "Diseñé manuales y documentación para usuarios finales y desarrolladores.",
       ],
       pt: [
-        "Desenvolvi e mantive aplicações full-stack usando Java, JavaScript, React e Oracle ou Postgres.",
+        "Desenvolvi e mantive aplicações full-stack usando Java, JavaScript, React, bases de dados Oracle e Postgres.",
         "Implantei e gerenciei aplicações em servidores JBoss e Tomcat.",
         "Colaborei com equipes multifuncionais para projetar, desenvolver e implantar novos recursos.",
         "Contribuí para todo o ciclo de vida do desenvolvimento de software, desde a coleta de requisitos, estimativa e design até a implementação, teste e implantação.",
