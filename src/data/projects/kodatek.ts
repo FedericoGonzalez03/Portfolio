@@ -4,199 +4,198 @@ export const kodatek: Project = {
   slug: 'kodatek',
   category: 'landing',
   client: 'KodaTek (Own Company)',
-  year: '2024',
+  year: '2024-2026',
   status: 'production',
   techStack: [
     'Next.js 15',
     'React 19',
     'TypeScript',
     'TailwindCSS 4',
-    'Claude AI',
     'Pollinations AI',
-    'Cal.com API',
+    'Cal.com API v2',
     'Nodemailer',
+    'Zoho Mail SMTP',
     'Framer Motion',
-    'Zoho Mail'
+    'Google Ads / PayPal Hosted Buttons'
   ],
   images: {
     hero: '/projects/kodatek/hero.webp',
     gallery: [
       '/projects/kodatek/chatbot.webp',
-      '/projects/kodatek/services.webp',
+      '/projects/kodatek/solutions.webp',
+      '/projects/kodatek/restaurants.webp',
       '/projects/kodatek/contact.webp'
     ]
   },
   links: {
     liveDemo: 'https://kodatekuy.com',
-    isPrivate: false,
-    github: '#'
   },
   translations: {
     en: {
-      title: 'KodaTek Landing Page',
-      tagline: 'AI-powered landing page with conversational chatbot and automated scheduling',
-      description: 'Modern landing page for KodaTek, my custom software development company, featuring an AI conversational assistant that automates lead capture and qualification, answers questions about services, and schedules discovery meetings directly to my calendar without manual intervention.',
-      context: 'Created for KodaTek, my own software development company. Needed a modern digital presence that not only presented company services but automated lead capture and qualification through an AI conversational assistant. The goal was reducing friction in the initial consultation process and enabling meeting scheduling without manual intervention, transforming interested visitors into qualified leads automatically through an interactive experience.',
-      role: 'Founder & Full-Stack Developer end-to-end. As founder of KodaTek, developed complete solution from start to finish: designed and implemented interface with Next.js 15, developed APIs for AI chat, transactional email sending and external service integration, implemented conversational chatbot with Claude (via Pollinations AI) including function calling for meeting scheduling, configured project deployment and environment variable management for Vercel deployment, and connected with Cal.com API v2 for calendar management and availability, and Zoho Mail for email notifications.',
+      title: 'KodaTek Website',
+      tagline: 'SEO-focused multi-page website with AI scheduling assistant, industry solution pages and resource hub',
+      description: 'Production website for KodaTek that evolved from a single landing page into a broader acquisition and discovery platform for Uruguayan businesses. It combines a persuasive homepage, service pages, industry-specific solution pages, educational resources, contact flows, a paid maintenance offer, and an AI assistant that can answer questions and schedule discovery calls.',
+      context: 'Built for KodaTek, my own software company. What started as a landing page became a much larger marketing and acquisition system after expanding the information architecture around services, industries and search intent. The goal shifted from simply presenting the company to creating a site that could attract qualified traffic, educate prospects, route them to the right offer, capture inquiries, and still let interested visitors book a conversation with minimal friction.',
+      role: 'Founder & Full-Stack Developer end-to-end. I designed and implemented the full App Router codebase, built reusable SEO and content systems, created the service/solution/resource page architecture, implemented the homepage AI chat assistant with Pollinations tool calling and Cal.com scheduling, integrated contact email delivery, Google Ads, Klaviyo, Vercel analytics, and PayPal hosted subscriptions for the maintenance offer, and added automated tests for pages, metadata, sitemap and shared components.',
       features: [
-        'Modern responsive landing page with visual effects (grid, gradients) and interactive service cards with glow effect',
-        'Conversational AI Chatbot (Koda AI) integrated with Claude via Pollinations AI',
-        'Function calling system for executing actions (query availability, schedule meetings)',
-        'Customized knowledge base about KodaTek services and processes',
-        'Floating chat widget interface with animations and loading states',
-        'Automatic scheduling system: real-time availability query from Cal.com API v2, slots presentation grouped by day and user timezone, automatic calendar event creation',
-        'Flexible duration management (15, 30, 45, 60, 75, 90 minutes)',
-        'Transactional email sending from contact form with Zoho Mail SMTP integration',
-        'Toast notifications for instant user action feedback',
-        'Interactive components with advanced effects: GlowCard with orange hover glow, DelayedAnimationContainer with staggered animations',
-        'Dynamic legal pages with Markdown rendering (terms and privacy policy)'
+        '39-page production website spanning homepage, services, contact, about, legal, thank-you, maintenance, industry solutions and resource guides',
+        'Service hub plus 10 commercial service landing pages tailored to Uruguayan search intent',
+        'Solutions hub with a filterable explorer and 18 solution entries combining static pages with dynamic /soluciones/[servicio]/[industria] generation',
+        'Resource hub with 8 long-form playbooks, FAQ sections, internal linking and diagnosis CTAs',
+        'Shared SEO layer with canonical metadata, Open Graph/Twitter cards, Organization, LocalBusiness, Breadcrumb, FAQ and Service JSON-LD, plus generated sitemap support',
+        'Homepage-only floating Koda chat widget powered by Pollinations using the claude-fast model with function calling',
+        'Tool-based scheduling flow that gets current date, queries Cal.com availability, normalizes meeting durations and books meetings with timezone-aware slots',
+        'Reusable contact system with integrated homepage contact/footer block, dedicated contact page, form validation and redirect to a thank-you page',
+        'Transactional email delivery through Nodemailer and Zoho SMTP for contact form submissions',
+        'Dedicated monthly landing-page maintenance sales page with PayPal Hosted Buttons subscription checkout',
+        'Global conversion and performance instrumentation through Google Ads, Klaviyo, Vercel Analytics, Speed Insights, plus 48 automated tests across pages, components and helpers'
       ],
       techDecisions: [
         {
-          title: 'Next.js 15 with App Router and React Server Components',
-          reason: 'Leverage latest Next.js features for automatic optimization (Code Splitting, Image Optimization), improved SEO, and strategic mixing of server/client components.',
-          benefit: 'Static sections render on server while interactive components (chat, forms) are client-side, achieving optimal balance between performance and interactivity. Results in better Core Web Vitals and reduced initial JavaScript bundle.'
+          title: 'Next.js 15 App Router with shared SEO builders',
+          reason: 'The site grew from a single landing page into 39 routes, so I needed a structure that kept metadata, schema, routing and layout logic consistent across both static and generated pages.',
+          benefit: 'Reusable helpers generate canonical metadata, Open Graph/Twitter tags, breadcrumb/FAQ/service JSON-LD and shared layout behavior, which reduced duplication and made new pages faster to publish safely.'
         },
         {
-          title: 'Pollinations AI as Proxy for Claude',
-          reason: 'Access to advanced AI models (Claude) without needing to manage API keys from multiple providers, with native support for function calling and flexible system prompts.',
-          benefit: 'Fast and economical implementation of conversational AI capabilities with full control over tools and system prompts. Simplified integration compared to direct provider APIs, though with trade-off of third-party dependency mitigated by optional API key configuration and exhaustive logging.'
+          title: 'Structured content model for industry and SEO pages',
+          reason: 'Service and industry combinations were multiplying, so hand-authoring each page independently would create content drift and slow future expansion.',
+          benefit: 'A shared content model in pseo.ts, plus generateStaticParams, solutionsCatalog.ts and sitemap.ts, lets the site scale dynamic solution routes while keeping copy, links, filters and indexing aligned.'
         },
         {
-          title: 'Cal.com API v2 for Calendar Management',
-          reason: 'Cal.com provides robust API for programmatically querying availability and creating bookings, with support for multiple timezones and flexible durations.',
-          benefit: 'Complete automation of scheduling flow without building calendar logic from scratch. Native handling of complex scenarios like timezone conversions, availability conflicts, and duration rounding to allowed values (15, 30, 45, 60, 75, 90 min).'
+          title: 'Pollinations AI with tool calling and Cal.com booking helpers',
+          reason: 'The assistant still needed to answer questions and convert qualified interest into scheduled calls without building a full agent platform from scratch.',
+          benefit: 'The homepage chat uses Pollinations with the claude-fast model, tool calls for current date, availability lookup and meeting booking, and a round-based API loop so Koda can handle multi-step scheduling inside one conversation.'
         },
         {
-          title: 'Function Calling with AI for User Actions',
-          reason: 'Allows chatbot to execute real actions (query availability, schedule meetings) instead of just answering questions, providing natural conversational experience.',
-          benefit: 'User describes their need in natural language and AI coordinates necessary API calls. Implemented loop system with round limit (MAX_ROUNDS = 5) to handle multiple sequential function calls and prevent infinite loops. Enables complex multi-step workflows in single conversation.'
+          title: 'Reusable commercial sections plus centralized layout integrations',
+          reason: 'The site now includes service pages, resource pages, a contact flow, a maintenance offer and conversion scripts, so repeating these concerns page by page would be brittle.',
+          benefit: 'Shared components such as ServicesOverview, InternalLinkSection, FaqAccordion, HomeContactFooter and Footer, together with layout-level Google Ads, Klaviyo, Vercel Analytics and Speed Insights, keep UX and tracking consistent across the site.'
         }
       ],
       challenges: [
         {
-          problem: 'Managing multiple sequential tool calls: Chatbot needed to execute multiple functions in sequence (get current date → query availability → schedule meeting). Pollinations response could include tool calls that generated new tool calls, creating potential for infinite loops.',
-          solution: 'Implemented round-based system with loop allowing model to execute multiple sequential actions, evaluate intermediate results, and make informed decisions. Round limit (MAX_ROUNDS = 5) prevents infinite loops while allowing necessary multi-step workflows. Each round processes tool results and feeds them back to model for next decision.'
+          problem: 'Scaling the site from a single landing page into a 39-page acquisition website created a duplication risk across metadata, schemas, CTAs, FAQs and internal linking. Manually repeating that structure on every new page would make the codebase harder to maintain and easier to break.',
+          solution: 'I extracted shared SEO builders, reusable page sections and common layout concerns, then backed them with tests for metadata, sitemap and shared UI. That let new pages reuse the same primitives instead of copying page-specific implementations.'
         },
         {
-          problem: 'Converting natural language to API parameters: Users express meeting duration in natural language ("hour and a half", "1 hour", "45 minutes"), but Cal.com API only accepts specific values (15, 30, 45, 60, 75, 90). Mismatched values caused API errors.',
-          solution: 'Implemented rounding logic to nearest allowed value, configured chatbot system prompt to interpret common expressions and convert them correctly, and added validation layer that catches invalid durations before API calls. Result: users can request meetings naturally without knowing technical constraints.'
+          problem: 'Industry pages needed to grow in both breadth and consistency: the site now combines service pages, static solution pages and dynamic /soluciones/[servicio]/[industria] routes. Without a shared content model, messaging, filtering and indexing would drift quickly.',
+          solution: 'I modeled the programmatic content in pseo.ts, derived explorer data from solutionsCatalog.ts, generated static params for build-time rendering, and generated sitemap entries from the same data source. This kept solution discovery, interlinking and SEO aligned as new industries were added.'
         },
         {
-          problem: 'Timezone handling in scheduling: Cal.com API requires dates in ISO 8601 with UTC, but needed to show times to user in their local timezone to avoid confusion and booking errors. Mixed timezone representations caused frequent user mistakes.',
-          solution: 'API returns timeISO in UTC for each available slot, used toLocaleTimeString with user timezone (required by model via chat) to display local times in UI, and always send UTC back to API for booking confirmation. This eliminates ambiguity and common errors in multi-timezone systems while maintaining user-friendly display.'
+          problem: 'The AI assistant still has to manage multi-step scheduling flows: get the current date, query availability, present timezone-aware slots and book the meeting, all while avoiding repeated tool calls or infinite loops.',
+          solution: 'The chat API uses a capped multi-round execution loop (MAX_ROUNDS = 5), explicit tool handlers, duration normalization for Cal.com accepted values, and strict knowledge-base rules that stop the model from repeating schedule_meeting after success. The UI also surfaces tool activity separately so the conversation remains understandable.'
         }
       ]
     },
     es: {
-      title: 'Landing Page de KodaTek',
-      tagline: 'Landing page con IA y chatbot conversacional con agendamiento automatizado',
-      description: 'Landing page moderna para KodaTek, mi empresa de desarrollo de software personalizado, con asistente de IA conversacional que automatiza la captación y calificación de leads, responde preguntas sobre servicios y agenda reuniones de descubrimiento directamente en mi calendario sin intervención manual.',
-      context: 'Creado para KodaTek, mi propia empresa de desarrollo de software. Necesitaba una presencia digital moderna que no solo presentara los servicios de la empresa, sino que automatizara la captación y calificación de leads mediante un asistente de IA conversacional. El objetivo era reducir la fricción en el proceso de consulta inicial y permitir el agendamiento de reuniones sin intervención manual, transformando visitantes interesados en leads calificados de forma automatizada mediante una experiencia interactiva.',
-      role: 'Fundador & Full-Stack Developer de inicio a fin. Como fundador de KodaTek, desarrollé la solución completa de principio a fin: diseñé e implementé la interfaz con Next.js 15, desarrollé APIs para chat con IA, envío de emails transaccionales e integración con servicios externos, implementé chatbot conversacional con Claude (vía Pollinations AI) incluyendo function calling para agendamiento de reuniones, configuré deployment del proyecto y gestión de variables de entorno para deployment en Vercel, y conecté con Cal.com API v2 para gestión de calendario y disponibilidad, y Zoho Mail para notificaciones por correo.',
+      title: 'Sitio Web de KodaTek',
+      tagline: 'Sitio multi-página orientado a SEO con asistente de IA para agendamiento, páginas por industria y hub de recursos',
+      description: 'Sitio en producción para KodaTek que evolucionó de una landing page única a una plataforma más amplia de captación y descubrimiento para empresas uruguayas. Combina homepage comercial, páginas de servicios, páginas de soluciones por industria, recursos educativos, flujos de contacto, una oferta paga de mantenimiento y un asistente de IA que responde preguntas y agenda llamadas de descubrimiento.',
+      context: 'Creado para KodaTek, mi propia empresa de software. Lo que comenzó como una landing page terminó convirtiéndose en un sistema mucho más amplio de marketing y adquisición al expandir la arquitectura de información alrededor de servicios, industrias e intención de búsqueda. El objetivo dejó de ser solo presentar la empresa y pasó a ser atraer tráfico calificado, educar prospectos, dirigirlos a la oferta correcta, captar consultas y seguir permitiendo que los visitantes interesados agenden una conversación con la menor fricción posible.',
+      role: 'Fundador & Full-Stack Developer de punta a punta. Diseñé e implementé todo el codebase con App Router, construí sistemas reutilizables de SEO y contenido, armé la arquitectura de páginas de servicios/soluciones/recursos, implementé el asistente de IA de la homepage con tool calling sobre Pollinations y agendamiento con Cal.com, integré envío de correos de contacto, Google Ads, Klaviyo, analytics de Vercel y suscripciones con PayPal para la oferta de mantenimiento, y agregué tests automáticos para páginas, metadata, sitemap y componentes compartidos.',
       features: [
-        'Landing page moderna y responsiva con efectos visuales (grid, gradientes) y cards de servicios interactivas con efecto glow',
-        'Chatbot de IA Conversacional (Koda AI) integrado con Claude vía Pollinations AI',
-        'Sistema de function calling para ejecutar acciones (consultar disponibilidad, agendar reuniones)',
-        'Base de conocimientos personalizada sobre servicios y procesos de KodaTek',
-        'Interfaz de chat flotante tipo widget con animaciones y estados de carga',
-        'Sistema de agendamiento automático: consulta de disponibilidad en tiempo real desde Cal.com API v2, presentación de slots agrupados por día y zona horaria del usuario, creación automática de eventos de calendario',
-        'Gestión de duraciones flexibles (15, 30, 45, 60, 75, 90 minutos)',
-        'Envío de emails transaccionales desde formulario de contacto con integración Zoho Mail SMTP',
-        'Toast notifications para feedback instantáneo de acciones del usuario',
-        'Componentes interactivos con efectos avanzados: GlowCard con brillo naranja en hover, DelayedAnimationContainer con animaciones escalonadas',
-        'Páginas legales dinámicas con renderizado de Markdown (términos y política de privacidad)'
+        'Sitio en producción de 39 páginas que incluye homepage, servicios, contacto, nosotros, legales, gracias, mantenimiento, soluciones por industria y guías de recursos',
+        'Hub de servicios más 10 landing pages comerciales orientadas a intención de búsqueda en Uruguay',
+        'Hub de soluciones con explorador filtrable y 18 entradas de solución que combinan páginas estáticas con generación dinámica en /soluciones/[servicio]/[industria]',
+        'Hub de recursos con 8 playbooks extensos, secciones de FAQ, enlazado interno y CTAs de diagnóstico',
+        'Capa SEO compartida con metadata canónica, Open Graph/Twitter cards, JSON-LD de Organization, LocalBusiness, Breadcrumb, FAQ y Service, más soporte de sitemap generado',
+        'Widget flotante de chat Koda en la homepage, impulsado por Pollinations con el modelo claude-fast y function calling',
+        'Flujo de agendamiento por tools que obtiene la fecha actual, consulta disponibilidad en Cal.com, normaliza duraciones y crea reuniones con horarios adaptados a la zona horaria del usuario',
+        'Sistema reutilizable de contacto con bloque integrado de contacto/footer en la homepage, página de contacto dedicada, validación de formulario y redirección a página de gracias',
+        'Envío de emails transaccionales mediante Nodemailer y Zoho SMTP para formularios de contacto',
+        'Landing page dedicada para mantenimiento mensual de landings con checkout de suscripción vía PayPal Hosted Buttons',
+        'Instrumentación global de conversión y performance con Google Ads, Klaviyo, Vercel Analytics, Speed Insights y 48 tests automáticos sobre páginas, componentes y helpers'
       ],
       techDecisions: [
         {
-          title: 'Next.js 15 con App Router y React Server Components',
-          reason: 'Aprovechar las últimas features de Next.js para optimización automática (Code Splitting, Image Optimization), mejorar SEO y permitir mezclar server/client components estratégicamente.',
-          benefit: 'Las secciones estáticas se renderizan en el servidor, mientras que componentes interactivos (chat, formularios) son client-side, logrando el balance óptimo entre performance e interactividad. Resulta en mejores Core Web Vitals y bundle inicial de JavaScript reducido.'
+          title: 'Next.js 15 con App Router y builders SEO compartidos',
+          reason: 'El sitio creció de una sola landing a 39 rutas, así que necesitaba una estructura que mantuviera consistentes la metadata, los schemas, el routing y la lógica de layout entre páginas estáticas y generadas.',
+          benefit: 'Helpers reutilizables generan metadata canónica, Open Graph/Twitter tags, JSON-LD de breadcrumb/FAQ/service y comportamiento compartido de layout, lo que redujo duplicación y permitió publicar nuevas páginas más rápido y con menos riesgo.'
         },
         {
-          title: 'Pollinations AI como Proxy para Claude',
-          reason: 'Acceso a modelos de IA avanzados (Claude) sin necesidad de gestionar API keys de múltiples proveedores, con soporte nativo para function calling y system prompts flexibles.',
-          benefit: 'Implementación rápida y económica de capacidades de IA conversacional, con control total sobre tools y system prompts. Integración simplificada comparada con APIs directas de proveedores, aunque con trade-off de dependencia third-party mitigado con configuración de API key opcional y logging exhaustivo.'
+          title: 'Modelo de contenido estructurado para páginas por industria y SEO',
+          reason: 'Las combinaciones entre servicios e industrias crecieron rápido, y escribir cada página de forma aislada iba a generar drift de contenido y frenar la expansión.',
+          benefit: 'Un modelo centralizado en pseo.ts, junto con generateStaticParams, solutionsCatalog.ts y sitemap.ts, permite escalar rutas dinámicas de soluciones manteniendo alineados copy, enlaces, filtros e indexación.'
         },
         {
-          title: 'Cal.com API v2 para Gestión de Calendario',
-          reason: 'Cal.com proporciona una API robusta para consultar disponibilidad y crear bookings programáticamente, con soporte de múltiples zonas horarias y duraciones flexibles.',
-          benefit: 'Automatización completa del flujo de agendamiento sin construir lógica de calendario desde cero. Manejo nativo de escenarios complejos como conversiones de zona horaria, conflictos de disponibilidad, y redondeo de duraciones a valores permitidos (15, 30, 45, 60, 75, 90 min).'
+          title: 'Pollinations AI con tool calling y helpers de reserva sobre Cal.com',
+          reason: 'El asistente debía seguir respondiendo preguntas y convertir interés calificado en reuniones agendadas sin construir desde cero una plataforma agentic completa.',
+          benefit: 'El chat de la homepage usa Pollinations con el modelo claude-fast, tool calls para fecha actual, consulta de disponibilidad y booking de reuniones, y un loop por rounds en la API para que Koda pueda resolver agendamientos de varios pasos dentro de una sola conversación.'
         },
         {
-          title: 'Function Calling con IA para Acciones del Usuario',
-          reason: 'Permite que el chatbot ejecute acciones reales (consultar disponibilidad, agendar reuniones) en lugar de solo responder preguntas, proporcionando experiencia conversacional natural.',
-          benefit: 'El usuario describe su necesidad en lenguaje natural y la IA coordina las llamadas a APIs necesarias. Implementé un sistema de loops con límite de rounds (MAX_ROUNDS = 5) para manejar múltiples function calls secuenciales y prevenir loops infinitos. Permite workflows complejos de múltiples pasos en una sola conversación.'
+          title: 'Secciones comerciales reutilizables e integraciones centralizadas en layout',
+          reason: 'Ahora el sitio incluye páginas de servicios, páginas de recursos, flujo de contacto, oferta de mantenimiento y scripts de conversión, así que repetir esas responsabilidades página por página sería frágil.',
+          benefit: 'Componentes compartidos como ServicesOverview, InternalLinkSection, FaqAccordion, HomeContactFooter y Footer, junto con Google Ads, Klaviyo, Vercel Analytics y Speed Insights cargados desde layout, mantienen consistente la UX y el tracking en todo el sitio.'
         }
       ],
       challenges: [
         {
-          problem: 'Gestión de múltiples tool calls secuenciales: El chatbot necesitaba ejecutar múltiples funciones en secuencia (obtener fecha actual → consultar disponibilidad → agendar reunión). La respuesta de Pollinations podía incluir tool calls que generaban nuevos tool calls, creando potencial para loops infinitos.',
-          solution: 'Implementé un sistema de rounds con loop que permite que el modelo ejecute múltiples acciones secuenciales, evalúe resultados intermedios y tome decisiones informadas. El límite de rounds (MAX_ROUNDS = 5) previene loops infinitos mientras permite workflows multi-paso necesarios. Cada round procesa resultados de tools y los retroalimenta al modelo para la siguiente decisión.'
+          problem: 'Escalar el sitio desde una landing page única a un sitio de captación de 39 páginas generó riesgo de duplicación en metadata, schemas, CTAs, FAQs y enlazado interno. Repetir manualmente esa estructura en cada página nueva hubiera hecho el codebase más difícil de mantener y más fácil de romper.',
+          solution: 'Extraje builders SEO compartidos, secciones reutilizables y responsabilidades comunes de layout, y luego las respaldé con tests para metadata, sitemap y UI compartida. Así, las nuevas páginas reutilizan primitivas estables en lugar de copiar implementaciones específicas.'
         },
         {
-          problem: 'Conversión de lenguaje natural a parámetros de API: Los usuarios expresan duración de reuniones en lenguaje natural ("hora y media", "1 hora", "45 minutos"), pero Cal.com API solo acepta valores específicos (15, 30, 45, 60, 75, 90). Valores no coincidentes causaban errores de API.',
-          solution: 'Implementé lógica de redondeo al valor permitido más cercano, configuré el system prompt del chatbot para interpretar expresiones comunes y convertirlas correctamente, y agregué capa de validación que captura duraciones inválidas antes de llamadas a API. Resultado: usuarios pueden solicitar reuniones naturalmente sin conocer restricciones técnicas.'
+          problem: 'Las páginas por industria tenían que crecer en volumen y consistencia: el sitio ahora combina páginas de servicio, páginas de solución estáticas y rutas dinámicas en /soluciones/[servicio]/[industria]. Sin un modelo de contenido compartido, el mensaje, los filtros y la indexación iban a desviarse rápido.',
+          solution: 'Modelé el contenido programático en pseo.ts, derivé los datos del explorador desde solutionsCatalog.ts, generé static params para el render de build y generé entradas del sitemap desde la misma fuente de datos. Eso mantuvo alineados descubrimiento, interlinking y SEO a medida que se sumaron nuevas industrias.'
         },
         {
-          problem: 'Manejo de zonas horarias en agendamiento: Cal.com API requiere fechas en ISO 8601 con UTC, pero necesitaba mostrar horarios al usuario en su zona horaria local para evitar confusión y errores de reserva. Representaciones mixtas de zona horaria causaban errores frecuentes del usuario.',
-          solution: 'La API devuelve timeISO en UTC para cada slot disponible, usé toLocaleTimeString con timezone del usuario (lo requiere el modelo por chat) para mostrar horarios locales en la UI, y siempre envío UTC de vuelta a la API para confirmación de reserva. Esto elimina la ambigüedad y errores comunes en sistemas multi-zona horaria mientras mantiene visualización amigable para el usuario.'
+          problem: 'El asistente de IA todavía tiene que manejar flujos de agendamiento de varios pasos: obtener fecha actual, consultar disponibilidad, presentar slots con zona horaria y crear la reunión, todo evitando tool calls repetidos o loops infinitos.',
+          solution: 'La API de chat usa un loop multi-round con tope (MAX_ROUNDS = 5), handlers explícitos para cada tool, normalización de duraciones compatibles con Cal.com y reglas estrictas en la base de conocimiento para impedir repetir schedule_meeting después de un éxito. La UI además muestra la actividad de tools por separado para que la conversación siga siendo entendible.'
         }
       ]
     },
     pt: {
-      title: 'Landing Page da KodaTek',
-      tagline: 'Landing page com IA e chatbot conversacional com agendamento automatizado',
-      description: 'Landing page moderna para KodaTek, minha empresa de desenvolvimento de software personalizado, com assistente de IA conversacional que automatiza a captura e qualificação de leads, responde perguntas sobre serviços e agenda reuniões de descoberta diretamente no meu calendário sem intervenção manual.',
-      context: 'Criado para KodaTek, minha própria empresa de desenvolvimento de software. Precisava de uma presença digital moderna que não apenas apresentasse os serviços da empresa, mas automatizasse a captura e qualificação de leads através de um assistente de IA conversacional. O objetivo era reduzir o atrito no processo de consulta inicial e permitir o agendamento de reuniões sem intervenção manual, transformando visitantes interessados em leads qualificados de forma automatizada através de uma experiência interativa.',
-      role: 'Fundador & Full-Stack Developer de ponta a ponta. Como fundador da KodaTek, desenvolvi a solução completa do início ao fim: projetei e implementei a interface com Next.js 15, desenvolvi APIs para chat com IA, envio de emails transacionais e integração com serviços externos, implementei chatbot conversacional com Claude (via Pollinations AI) incluindo function calling para agendamento de reuniões, configurei deployment do projeto e gestão de variáveis de ambiente para deployment no Vercel, e conectei com Cal.com API v2 para gestão de calendário e disponibilidade, e Zoho Mail para notificações por e-mail.',
+      title: 'Site da KodaTek',
+      tagline: 'Site multi-página focado em SEO com assistente de IA para agendamento, páginas por indústria e hub de recursos',
+      description: 'Site em produção da KodaTek que evoluiu de uma landing page única para uma plataforma mais ampla de aquisição e descoberta para empresas uruguaias. Combina homepage comercial, páginas de serviços, páginas de soluções por indústria, recursos educativos, fluxos de contato, uma oferta paga de manutenção e um assistente de IA que responde perguntas e agenda chamadas de descoberta.',
+      context: 'Criado para a KodaTek, minha própria empresa de software. O que começou como uma landing page virou um sistema bem mais amplo de marketing e aquisição depois da expansão da arquitetura de informação em torno de serviços, indústrias e intenção de busca. O objetivo deixou de ser apenas apresentar a empresa e passou a ser atrair tráfego qualificado, educar prospects, direcioná-los para a oferta certa, capturar consultas e ainda permitir que visitantes interessados agendem uma conversa com o mínimo de atrito.',
+      role: 'Fundador & Full-Stack Developer de ponta a ponta. Desenhei e implementei todo o codebase com App Router, construí sistemas reutilizáveis de SEO e conteúdo, criei a arquitetura de páginas de serviços/soluções/recursos, implementei o assistente de IA da homepage com tool calling via Pollinations e agendamento com Cal.com, integrei envio de emails de contato, Google Ads, Klaviyo, analytics da Vercel e assinaturas com PayPal para a oferta de manutenção, e adicionei testes automatizados para páginas, metadata, sitemap e componentes compartilhados.',
       features: [
-        'Landing page moderna e responsiva com efeitos visuais (grid, gradientes) e cards de serviços interativos com efeito glow',
-        'Chatbot de IA Conversacional (Koda AI) integrado com Claude via Pollinations AI',
-        'Sistema de function calling para executar ações (consultar disponibilidade, agendar reuniões)',
-        'Base de conhecimentos personalizada sobre serviços e processos da KodaTek',
-        'Interface de chat flutuante tipo widget com animações e estados de carregamento',
-        'Sistema de agendamento automático: consulta de disponibilidade em tempo real da Cal.com API v2, apresentação de slots agrupados por dia e fuso horário do usuário, criação automática de eventos de calendário',
-        'Gestão de durações flexíveis (15, 30, 45, 60, 75, 90 minutos)',
-        'Envio de emails transacionais do formulário de contato com integração Zoho Mail SMTP',
-        'Toast notifications para feedback instantâneo de ações do usuário',
-        'Componentes interativos com efeitos avançados: GlowCard com brilho laranja no hover, DelayedAnimationContainer com animações escalonadas',
-        'Páginas legais dinâmicas com renderização de Markdown (termos e política de privacidade)'
+        'Site em produção com 39 páginas cobrindo homepage, serviços, contato, sobre, páginas legais, obrigado, manutenção, soluções por indústria e guias de recursos',
+        'Hub de serviços mais 10 landing pages comerciais orientadas à intenção de busca no Uruguai',
+        'Hub de soluções com explorador filtrável e 18 entradas de solução combinando páginas estáticas com geração dinâmica em /soluciones/[servicio]/[industria]',
+        'Hub de recursos com 8 playbooks longos, seções de FAQ, links internos e CTAs de diagnóstico',
+        'Camada de SEO compartilhada com metadata canônica, Open Graph/Twitter cards, JSON-LD de Organization, LocalBusiness, Breadcrumb, FAQ e Service, além de sitemap gerado',
+        'Widget flutuante de chat Koda na homepage, impulsionado por Pollinations com o modelo claude-fast e function calling',
+        'Fluxo de agendamento por tools que obtém a data atual, consulta disponibilidade no Cal.com, normaliza durações e cria reuniões com horários adaptados ao fuso horário do usuário',
+        'Sistema reutilizável de contato com bloco integrado de contato/footer na homepage, página dedicada de contato, validação de formulário e redirecionamento para página de agradecimento',
+        'Envio de emails transacionais com Nodemailer e Zoho SMTP para submissões do formulário de contato',
+        'Landing page dedicada para manutenção mensal de landings com checkout de assinatura via PayPal Hosted Buttons',
+        'Instrumentação global de conversão e performance com Google Ads, Klaviyo, Vercel Analytics, Speed Insights e 48 testes automatizados sobre páginas, componentes e helpers'
       ],
       techDecisions: [
         {
-          title: 'Next.js 15 com App Router e React Server Components',
-          reason: 'Aproveitar as últimas features do Next.js para otimização automática (Code Splitting, Image Optimization), melhorar SEO e permitir misturar server/client components estrategicamente.',
-          benefit: 'As seções estáticas renderizam no servidor enquanto componentes interativos (chat, formulários) são client-side, alcançando o equilíbrio ideal entre performance e interatividade. Resulta em melhores Core Web Vitals e bundle inicial de JavaScript reduzido.'
+          title: 'Next.js 15 com App Router e builders de SEO compartilhados',
+          reason: 'O site cresceu de uma única landing para 39 rotas, então eu precisava de uma estrutura que mantivesse metadata, schemas, routing e lógica de layout consistentes entre páginas estáticas e geradas.',
+          benefit: 'Helpers reutilizáveis geram metadata canônica, Open Graph/Twitter tags, JSON-LD de breadcrumb/FAQ/service e comportamento compartilhado de layout, reduzindo duplicação e acelerando a publicação segura de novas páginas.'
         },
         {
-          title: 'Pollinations AI como Proxy para Claude',
-          reason: 'Acesso a modelos de IA avançados (Claude) sem necessidade de gerenciar API keys de múltiplos provedores, com suporte nativo para function calling e system prompts flexíveis.',
-          benefit: 'Implementação rápida e econômica de capacidades de IA conversacional, com controle total sobre tools e system prompts. Integração simplificada comparada com APIs diretas de provedores, embora com trade-off de dependência third-party mitigada com configuração de API key opcional e logging exaustivo.'
+          title: 'Modelo de conteúdo estruturado para páginas por indústria e SEO',
+          reason: 'As combinações entre serviços e indústrias cresceram rápido, e escrever cada página de forma isolada geraria drift de conteúdo e lentidão para expandir.',
+          benefit: 'Um modelo central em pseo.ts, junto com generateStaticParams, solutionsCatalog.ts e sitemap.ts, permite escalar rotas dinâmicas de soluções mantendo alinhados copy, links, filtros e indexação.'
         },
         {
-          title: 'Cal.com API v2 para Gestão de Calendário',
-          reason: 'Cal.com fornece uma API robusta para consultar disponibilidade e criar bookings programaticamente, com suporte de múltiplos fusos horários e durações flexíveis.',
-          benefit: 'Automação completa do fluxo de agendamento sem construir lógica de calendário do zero. Tratamento nativo de cenários complexos como conversões de fuso horário, conflitos de disponibilidade, e arredondamento de durações para valores permitidos (15, 30, 45, 60, 75, 90 min).'
+          title: 'Pollinations AI com tool calling e helpers de booking sobre Cal.com',
+          reason: 'O assistente ainda precisava responder perguntas e converter interesse qualificado em reuniões marcadas sem construir do zero uma plataforma agentic completa.',
+          benefit: 'O chat da homepage usa Pollinations com o modelo claude-fast, tool calls para data atual, consulta de disponibilidade e criação de reunião, além de um loop por rounds na API para que o Koda resolva agendamentos de múltiplas etapas dentro de uma única conversa.'
         },
         {
-          title: 'Function Calling com IA para Ações do Usuário',
-          reason: 'Permite que o chatbot execute ações reais (consultar disponibilidade, agendar reuniões) em vez de apenas responder perguntas, proporcionando experiência conversacional natural.',
-          benefit: 'O usuário descreve sua necessidade em linguagem natural e a IA coordena as chamadas a APIs necessárias. Implementei um sistema de loops com limite de rounds (MAX_ROUNDS = 5) para lidar com múltiplos function calls sequenciais e prevenir loops infinitos. Permite workflows complexos de múltiplas etapas em uma única conversa.'
+          title: 'Seções comerciais reutilizáveis e integrações centralizadas no layout',
+          reason: 'O site agora inclui páginas de serviços, páginas de recursos, fluxo de contato, oferta de manutenção e scripts de conversão, então repetir essas responsabilidades página por página seria frágil.',
+          benefit: 'Componentes compartilhados como ServicesOverview, InternalLinkSection, FaqAccordion, HomeContactFooter e Footer, junto com Google Ads, Klaviyo, Vercel Analytics e Speed Insights carregados no layout, mantêm UX e tracking consistentes em todo o site.'
         }
       ],
       challenges: [
         {
-          problem: 'Gestão de múltiplos tool calls sequenciais: O chatbot precisava executar múltiplas funções em sequência (obter data atual → consultar disponibilidade → agendar reunião). A resposta do Pollinations podia incluir tool calls que geravam novos tool calls, criando potencial para loops infinitos.',
-          solution: 'Implementei um sistema de rounds com loop que permite que o modelo execute múltiplas ações sequenciais, avalie resultados intermediários e tome decisões informadas. O limite de rounds (MAX_ROUNDS = 5) previne loops infinitos enquanto permite workflows multi-passo necessários. Cada round processa resultados de tools e os retroalimenta ao modelo para a próxima decisão.'
+          problem: 'Escalar o site de uma landing page única para um site de aquisição com 39 páginas criou risco de duplicação em metadata, schemas, CTAs, FAQs e links internos. Repetir manualmente essa estrutura em cada nova página deixaria o codebase mais difícil de manter e mais fácil de quebrar.',
+          solution: 'Extraí builders de SEO compartilhados, seções reutilizáveis e responsabilidades comuns de layout, e depois cobri isso com testes de metadata, sitemap e UI compartilhada. Assim, novas páginas reutilizam primitivas estáveis em vez de copiar implementações específicas.'
         },
         {
-          problem: 'Conversão de linguagem natural para parâmetros de API: Os usuários expressam duração de reuniões em linguagem natural ("hora e meia", "1 hora", "45 minutos"), mas Cal.com API só aceita valores específicos (15, 30, 45, 60, 75, 90). Valores não coincidentes causavam erros de API.',
-          solution: 'Implementei lógica de arredondamento para o valor permitido mais próximo, configurei o system prompt do chatbot para interpretar expressões comuns e convertê-las corretamente, e adicionei camada de validação que captura durações inválidas antes de chamadas à API. Resultado: usuários podem solicitar reuniões naturalmente sem conhecer restrições técnicas.'
+          problem: 'As páginas por indústria precisavam crescer em volume e consistência: o site agora combina páginas de serviço, páginas de solução estáticas e rotas dinâmicas em /soluciones/[servicio]/[industria]. Sem um modelo de conteúdo compartilhado, mensagem, filtros e indexação se desalinham rapidamente.',
+          solution: 'Modelei o conteúdo programático em pseo.ts, derivei os dados do explorador a partir de solutionsCatalog.ts, gerei static params para render em build e gerei entradas do sitemap a partir da mesma fonte de dados. Isso manteve alinhados discovery, interlinking e SEO à medida que novas indústrias foram adicionadas.'
         },
         {
-          problem: 'Tratamento de fusos horários no agendamento: Cal.com API requer datas em ISO 8601 com UTC, mas precisava mostrar horários ao usuário em seu fuso horário local para evitar confusão e erros de reserva. Representações mistas de fuso horário causavam erros frequentes do usuário.',
-          solution: 'A API retorna timeISO em UTC para cada slot disponível, usei toLocaleTimeString com timezone do usuário (requerido pelo modelo via chat) para mostrar horários locais na UI, e sempre envio UTC de volta para a API para confirmação de reserva. Isso elimina a ambiguidade e erros comuns em sistemas multi-fuso horário enquanto mantém visualização amigável para o usuário.'
+          problem: 'O assistente de IA ainda precisa lidar com fluxos de agendamento em várias etapas: obter a data atual, consultar disponibilidade, mostrar slots com fuso horário e criar a reunião, tudo isso evitando tool calls repetidos ou loops infinitos.',
+          solution: 'A API de chat usa um loop multi-round com limite (MAX_ROUNDS = 5), handlers explícitos para cada tool, normalização de durações compatíveis com os valores aceitos pelo Cal.com e regras rígidas na base de conhecimento para impedir repetir schedule_meeting depois de um sucesso. A UI também mostra a atividade das tools separadamente para que a conversa continue clara.'
         }
       ]
     }

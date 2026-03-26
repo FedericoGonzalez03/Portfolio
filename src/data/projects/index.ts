@@ -1,13 +1,15 @@
 import { sistemaCollecting } from './sistema-collecting';
-import { elCanario } from './el-canario';
+import { lacteosUruguay } from './lacteosuruguay';
 import { kodatek } from './kodatek';
+import { ortegaConstrucciones } from './ortega-construcciones';
 import { Project } from './types';
 
 export const projects: Project[] = [
   sistemaCollecting,
-  elCanario,
-  kodatek
+  lacteosUruguay,
+  kodatek,
+  ortegaConstrucciones
 ];
 
-export { sistemaCollecting, elCanario, kodatek };
+export { sistemaCollecting, lacteosUruguay, kodatek, ortegaConstrucciones };
 export type { Project, ProjectTranslations } from './types';

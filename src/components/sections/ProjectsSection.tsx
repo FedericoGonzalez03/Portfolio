@@ -26,13 +26,13 @@ const ProjectsSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-100 mb-12 text-shadow-lg/90">
             {t.projects}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-wrap gap-8 justify-center">
             {projects.map((project) => {
               const content = project.translations[language];
               return (
                 <div
                   key={project.slug}
-                  className="cursor-target bg-neutral-950 rounded-xl shadow-lg border-2 border-green-700 overflow-hidden flex flex-col transform hover:scale-105 transition-transform duration-300"
+                  className="w-full max-w-100 cursor-target bg-neutral-950 rounded-xl shadow-lg border-2 border-green-700 overflow-hidden flex flex-col transform hover:scale-105 transition-transform duration-300"
                 >
                   {/* Project Image */}
                   <div className="relative h-48 w-full bg-neutral-900">
