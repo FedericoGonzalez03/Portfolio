@@ -30,9 +30,10 @@ const ProjectsSection = () => {
             {projects.map((project) => {
               const content = project.translations[language];
               return (
-                <div
+                <Link
+                  href={`/projects/${project.slug}`}
                   key={project.slug}
-                  className="w-full max-w-100 cursor-target bg-neutral-950 rounded-xl shadow-lg border-2 border-green-700 overflow-hidden flex flex-col transform hover:scale-105 transition-transform duration-300"
+                  className="w-full max-w-100 cursor-target target-cursor-pointer bg-neutral-950 rounded-xl shadow-lg border-2 border-green-700 overflow-hidden flex flex-col transform hover:scale-105 transition-transform duration-300"
                 >
                   {/* Project Image */}
                   <div className="relative h-48 w-full bg-neutral-900">
@@ -73,13 +74,12 @@ const ProjectsSection = () => {
 
                     {/* Actions */}
                     <div className="flex flex-col gap-3 mt-auto">
-                      <Link
-                        href={`/projects/${project.slug}`}
+                      <div
                         className="cursor-target target-cursor-pointer inline-flex items-center justify-center gap-2 px-4 py-2 bg-green-600 hover:bg-green-500 text-white font-semibold rounded-lg transition-colors"
                       >
                         {t.viewCaseStudy}
                         <ArrowRight className="w-4 h-4" />
-                      </Link>
+                      </div>
 
                       <div className="flex justify-center gap-3">
                         {project.links.liveDemo && (
@@ -110,7 +110,7 @@ const ProjectsSection = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>

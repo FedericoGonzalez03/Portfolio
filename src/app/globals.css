@@ -75,8 +75,9 @@ body {
   position: relative;
 }
 
-#heroName.animated-title span {
+#heroName.animated-title [data-letter] {
   position: relative;
+  display: inline-block;
   animation: glow 5s ease-in-out infinite;
   animation-delay: calc(0.1s * var(--i));
 }
@@ -84,6 +85,40 @@ body {
 @keyframes glow {
   0%, 100% { color: var(--color-green-400); }
   30%, 70% { color: var(--color-foreground); }
+}
+
+@keyframes heroTerminalLine {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroCaret {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.hero-terminal-line {
+  animation: heroTerminalLine 0.32s ease forwards;
+}
+
+.hero-terminal-caret {
+  display: inline-block;
+  width: 0.55rem;
+  height: 1rem;
+  border-radius: 2px;
+  background: var(--color-green-400);
+  vertical-align: middle;
+  animation: heroCaret 1.1s step-end infinite;
 }
 
 @tailwind base;

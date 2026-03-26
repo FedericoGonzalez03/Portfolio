@@ -19,7 +19,8 @@ export const ortegaConstrucciones: Project = {
     gallery: [
       '/projects/ortega-construcciones/services.webp',
       '/projects/ortega-construcciones/process.webp',
-      '/projects/ortega-construcciones/contact.webp'
+      '/projects/ortega-construcciones/contact.webp',
+      '/projects/ortega-construcciones/footer.webp'
     ]
   },
   links: {

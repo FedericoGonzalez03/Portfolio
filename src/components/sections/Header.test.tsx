@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
-import { afterEach, describe, expect, it, vi } from 'vitest';
+import { fireEvent, render, screen } from '@testing-library/react';
+import { describe, expect, it, vi } from 'vitest';
 import Header from './Header';
 
 vi.mock('next/image', () => ({
@@ -22,42 +22,26 @@ vi.mock('@/lib/context/LanguageContext', () => ({
   }),
 }));
 
-const setMatchMedia = (matchesDesktopPointer: boolean) => {
-  Object.defineProperty(window, 'matchMedia', {
-    writable: true,
-    value: vi.fn().mockImplementation((query: string) => ({
-      matches: query === '(hover: hover) and (pointer: fine)' ? matchesDesktopPointer : false,
-      media: query,
-      onchange: null,
-      addEventListener: vi.fn(),
-      removeEventListener: vi.fn(),
-      addListener: vi.fn(),
-      removeListener: vi.fn(),
-      dispatchEvent: vi.fn(),
-    })),
-  });
-};
-
 describe('Header', () => {
-  afterEach(() => {
-    vi.restoreAllMocks();
+  it('renders the desktop navigation and language selector', () => {
+    render(<Header />);
+
+    expect(screen.getByRole('link', { name: /logo federicogs/i })).toHaveAttribute('href', '/');
+    expect(screen.getAllByRole('link', { name: 'Home' })[0]).toHaveAttribute('href', '/#hero');
+    expect(screen.getAllByRole('link', { name: 'Projects' })[0]).toHaveAttribute('href', '/#projects');
+    expect(screen.getByText('Language selector')).toBeInTheDocument();
   });
 
-  it('hides the coin counter on coarse pointer devices', () => {
-    setMatchMedia(false);
+  it('opens and closes the mobile drawer', () => {
+    render(<Header />);
 
-    render(<Header coins={7} />);
+    const drawer = screen.getByTestId('mobile-drawer');
+    expect(drawer.className).toContain('translate-x-full');
 
-    expect(screen.queryByText('🪙')).not.toBeInTheDocument();
-  });
+    fireEvent.click(screen.getByRole('button', { name: /toggle menu/i }));
+    expect(drawer.className).toContain('translate-x-0');
 
-  it('shows the coin counter on desktop pointer devices', async () => {
-    setMatchMedia(true);
-
-    render(<Header coins={7} />);
-
-    await waitFor(() => {
-      expect(screen.getByText('🪙')).toBeInTheDocument();
-    });
+    fireEvent.click(screen.getByRole('button', { name: /close menu/i }));
+    expect(drawer.className).toContain('translate-x-full');
   });
 });

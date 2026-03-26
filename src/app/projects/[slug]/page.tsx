@@ -30,6 +30,10 @@ export default function ProjectDetailPage() {
 
   return (
     <div className="min-h-screen bg-neutral-950 text-neutral-100">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,197,94,0.12),transparent_32%),radial-gradient(circle_at_bottom_right,rgba(34,197,94,0.1),transparent_28%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(34,197,94,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(34,197,94,0.05)_1px,transparent_1px)] bg-[size:60px_60px] opacity-50" />
+      <div className="pointer-events-none absolute inset-y-0 left-0 bg-[radial-gradient(circle_at_20%_35%,rgba(34,197,94,0.14),transparent_60%)]" />
+
       {/* Header */}
       <header className="sticky top-0 z-50 bg-neutral-950/80 backdrop-blur-md border-b border-neutral-800">
         <div className="container mx-auto px-4 py-4">
@@ -45,7 +49,7 @@ export default function ProjectDetailPage() {
 
       {/* Hero Section */}
       <section className="relative py-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-green-950/20 to-transparent"></div>
+        <div className="absolute inset-0"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             {/* Category & Status Badges */}
@@ -62,10 +66,10 @@ export default function ProjectDetailPage() {
                   {project.client}
                 </span>
               )}
-              <span className="px-3 py-1 text-xs font-semibold bg-neutral-800 text-neutral-300 border border-neutral-700 rounded-full flex items-center gap-1">
+              {/* <span className="px-3 py-1 text-xs font-semibold bg-neutral-800 text-neutral-300 border border-neutral-700 rounded-full flex items-center gap-1">
                 <Calendar className="w-3 h-3" />
                 {project.year}
-              </span>
+              </span> */}
             </div>
 
             {/* Title */}
@@ -310,7 +314,7 @@ export default function ProjectDetailPage() {
       )}
 
       {/* Footer CTA */}
-      <section className="container mx-auto px-4 py-16">
+      <section className="container mx-auto px-4 py-16 ">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             {t.interestedWorking}

@@ -89,8 +89,13 @@ const ExperienceSection = () => {
   const { t, language } = useLanguage();
 
   return (
-    <section id="work-experience" className="py-20 px-4">
-      <div className="max-w-4xl mx-auto">
+    <section id="work-experience" className="relative overflow-hidden bg-[#040704] px-4 py-20">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(34,197,94,0.1),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(34,197,94,0.08),transparent_26%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(34,197,94,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(34,197,94,0.04)_1px,transparent_1px)] bg-[size:60px_60px] opacity-40" />
+      <div className="pointer-events-none absolute right-[-7rem] top-12 h-72 w-72 rounded-full bg-green-500/8 blur-3xl" />
+      <div className="pointer-events-none absolute bottom-[-8rem] left-[-7rem] h-64 w-64 rounded-full bg-green-500/6 blur-3xl" />
+
+      <div className="relative z-10 max-w-4xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-neutral-100 mb-12 text-center">
           {t.workExperience}
         </h2>
@@ -108,14 +113,14 @@ const ExperienceSection = () => {
               <div className="absolute top-0 -left-7 w-0 h-0 border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent border-l-[8px] border-l-green-400"></div>
               
               {/* Experience card */}
-              <div className="bg-neutral-900 p-6 rounded-xl shadow-lg border border-neutral-700">
+              <div className="rounded-xl border border-green-500/15 bg-black/35 p-6 shadow-[0_18px_48px_rgba(0,0,0,0.28)] backdrop-blur-sm">
                 <h3 className="text-xl md:text-2xl font-bold text-green-400 mb-2">
                   {experience.title[language]}
                 </h3>
                 <p className="text-lg text-neutral-300 mb-4">
                   {experience.company} | {experience.period[language]}
                 </p>
-                <ul className="list-disc list-inside text-neutral-300 space-y-2 experiende-description">
+                <ul className="experience-description list-disc list-inside text-neutral-300 space-y-2">
                   {experience.description[language].map((item, idx) => (
                     <li key={idx}>{item}</li>
                   ))}

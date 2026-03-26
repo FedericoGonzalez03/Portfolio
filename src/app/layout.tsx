@@ -4,6 +4,8 @@ import "./globals.css";
 import { LanguageProvider } from "@/lib/context/LanguageContext";
 import { ToastProvider } from "@/components/ToastProvider";
 import TargetCursor from "@/components/TargetCursor";
+import Header from "@/components/sections/Header";
+import Footer from "@/components/sections/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -72,9 +74,14 @@ export default function RootLayout({
       >
         <ToastProvider>
           <LanguageProvider>
-            
-            <TargetCursor targetSelector={'.cursor-target'} hideDefaultCursor/> 
-            {children}
+            <div id="page-top" className="relative flex min-h-screen flex-col bg-neutral-950 text-neutral-100 transition-colors duration-300">
+              <TargetCursor targetSelector={'.cursor-target'} hideDefaultCursor/>
+              <Header />
+              <main className="flex-1">
+                {children}
+              </main>
+              <Footer />
+            </div>
           </LanguageProvider>
         </ToastProvider>
       </body>
