@@ -18,7 +18,7 @@ const workExperienceData = [
     },
     description: {
       en: [
-        "Developed and maintained full-stack applications using Java, JavaScript, React, Oracle and Postgres databases.",
+        "Developed and maintained full-stack applications using Java, JavaScript, TypeScript, React, Oracle and Postgres databases.",
         "Deployed and managed applications on JBoss and Tomcat servers.",
         "Collaborated with cross-functional teams to design, develop, and deploy new features.",
         "Contributed to the entire software development lifecycle, from requirements gathering, estimation, and design to implementation, testing, and deployment.",
@@ -28,7 +28,7 @@ const workExperienceData = [
         "Designed manuals and documentation for end-users and developers.",
       ],
       es: [
-        "Desarrollé y mantuve aplicaciones full-stack utilizando Java, JavaScript, React, bases de datos Oracle y Postgres.",
+        "Desarrollé y mantuve aplicaciones full-stack utilizando Java, JavaScript, TypeScript, React, bases de datos Oracle y Postgres.",
         "Desplegué y gestioné aplicaciones en servidores JBoss y Tomcat.",
         "Colaboré con equipos multifuncionales para diseñar, desarrollar y desplegar nuevas funcionalidades.",
         "Contribuí a todo el ciclo de vida del desarrollo de software, desde la recopilación de requisitos, estimación y diseño hasta la implementación, pruebas y despliegue.",
@@ -38,7 +38,7 @@ const workExperienceData = [
         "Diseñé manuales y documentación para usuarios finales y desarrolladores.",
       ],
       pt: [
-        "Desenvolvi e mantive aplicações full-stack usando Java, JavaScript, React, bases de dados Oracle e Postgres.",
+        "Desenvolvi e mantive aplicações full-stack usando Java, JavaScript, TypeScript, React, bases de dados Oracle e Postgres.",
         "Implantei e gerenciei aplicações em servidores JBoss e Tomcat.",
         "Colaborei com equipes multifuncionais para projetar, desenvolver e implantar novos recursos.",
         "Contribuí para todo o ciclo de vida do desenvolvimento de software, desde a coleta de requisitos, estimativa e design até a implementação, teste e implantação.",
@@ -52,34 +52,43 @@ const workExperienceData = [
   {
     id: 2,
     title: {
-      en: "Sales Assistant",
-      es: "Auxiliar de ventas",
-      pt: "Assistente de vendas"
+      en: "Full-Stack Developer",
+      es: "Desarrollador Full-Stack",
+      pt: "Desenvolvedor Full-Stack"
     },
-    company: "Disco SA",
+    company: "KodaTek",
     period: {
-      en: "April 2022 – June 2023",
-      es: "Abril 2022 – Junio 2023",
-      pt: "Abril 2022 – Junho 2023"
+      en: "December 2021 – Present",
+      es: "Diciembre 2021 – Actualidad",
+      pt: "Dezembro 2021 – Actualidade"
     },
     description: {
       en: [
-        "Provided exceptional customer service and support in a fast-paced retail environment.",
-        "Maintained store appearance and organization to enhance the shopping experience.",
-        "Assisted in inventory management and supplier receiving processes.",
-        "Obtained valuable experience in customer relations and sales."
+        "Developed and maintained full-stack web applications for client projects, with strong focus on backend development.",
+        "Built and maintained REST APIs using Node.js and Express to support business logic, integrations, and internal processes.",
+        "Designed and optimized database structures, queries, and data flows using PostgreSQL.",
+        "Developed responsive frontend interfaces using React, Next.js, JavaScript, and TypeScript.",
+        "Built workflow automations using n8n to connect services, streamline operations, and reduce manual tasks.",
+        "Integrated third-party services and external APIs to extend application functionality and support automation workflows.",
+        "Participated in the full software development lifecycle, from requirements analysis and technical design to implementation, deployment, and support."
       ],
       es: [
-        "Brindé un servicio y soporte al cliente excepcionales en un entorno minorista dinámico.",
-        "Mantuve la apariencia y organización de la tienda para mejorar la experiencia de compra.",
-        "Apoyé en la gestión de inventario y procesos de recepción de proveedores.",
-        "Obtuve una valiosa experiencia en relaciones con clientes y ventas."
+        "Desarrollé y mantuve aplicaciones web full-stack para proyectos de clientes, con fuerte foco en desarrollo backend.",
+        "Construí y mantuve APIs REST usando Node.js y Express para soportar lógica de negocio, integraciones y procesos internos.",
+        "Diseñé y optimicé estructuras de bases de datos, consultas y flujos de datos usando PostgreSQL.",
+        "Desarrollé interfaces frontend responsivas usando React, Next.js, JavaScript y TypeScript.",
+        "Construí automatizaciones de flujos de trabajo usando n8n para conectar servicios, optimizar operaciones y reducir tareas manuales.",
+        "Integré servicios de terceros y APIs externas para extender la funcionalidad de las aplicaciones y soportar flujos de automatización.",
+        "Participé en todo el ciclo de vida del desarrollo de software, desde el análisis de requisitos y diseño técnico hasta la implementación, despliegue y soporte."
       ],
       pt: [
-        "Prestei um atendimento e suporte ao cliente excepcionais em um ambiente de varejo dinâmico.",
-        "Mantive a aparência e organização da loja para melhorar a experiência de compra.",
-        "Auxiliei na gestão de estoque e processos de recebimento de fornecedores.",
-        "Obtive uma valiosa experiência em relações com clientes e vendas."
+        "Desenvolvi e mantive aplicações web full-stack para projetos de clientes, com forte foco em desenvolvimento backend.",
+        "Criei e mantive APIs REST usando Node.js e Express para suportar regras de negócio, integrações e processos internos.",
+        "Projetei e otimizei estruturas de banco de dados, consultas e fluxos de dados usando PostgreSQL.",
+        "Desenvolvi interfaces frontend responsivas usando React, Next.js, JavaScript e TypeScript.",
+        "Criei automações de fluxos de trabalho usando n8n para conectar serviços, otimizar operações e reduzir tarefas manuais.",
+        "Integrei serviços de terceiros e APIs externas para ampliar a funcionalidade das aplicações e suportar fluxos de automação.",
+        "Participei de todo o ciclo de vida do desenvolvimento de software, desde a análise de requisitos e design técnico até a implementação, implantação e suporte."
       ]
     }
   }
